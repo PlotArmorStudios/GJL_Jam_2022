@@ -24,7 +24,7 @@ public class KidneyBase : MonoBehaviour
 
     public Transform RespawnPos;//lazy ref example, for 'checkpoint' position
     private GameObject _playerRef;//GameObject... Or is it?
-    private HealthRef _healthScript;//default should be 100, and already attached
+    private Health _healthScript;//default should be 100, and already attached
         //health ref. "Default" is 100. So scale based on that?
 
         //revive mechanic stats, to deduct current HP from.
@@ -39,9 +39,9 @@ public class KidneyBase : MonoBehaviour
         //for the Player singleton reference tag system wise
         _playerRef = GameObject.FindGameObjectWithTag("Player");
         //health ref, attached to this game object
-        _healthScript = gameObject.GetComponent<HealthRef>();
+        _healthScript = gameObject.GetComponent<Health>();
         if (_healthScript == null) {
-            gameObject.AddComponent<HealthRef>();//add a new health script, improv wise
+            gameObject.AddComponent<Health>();//add a new health script, improv wise
             Debug.LogWarning("No Health Script attached on start, adding default values");
         }//endif
 
@@ -53,7 +53,7 @@ public class KidneyBase : MonoBehaviour
     }
     private void _revivePlayer() {//tdl, add Game Over call/check
         //... after timer?/countdown?
-        _healthScript.HealthCount(ReviveCost);
+        _healthScript.TakeDamage(ReviveCost);
             //cheap cost-scale math.
         ReviveCost += CostScale; CostScale *= 2;
             // Ensure above formula is in line with designed life cost later
