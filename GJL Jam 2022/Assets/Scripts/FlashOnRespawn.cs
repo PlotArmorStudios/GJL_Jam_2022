@@ -4,7 +4,7 @@ using UnityEngine;
 public class FlashOnRespawn : MonoBehaviour
 {
     [SerializeField] private float _maxFlashTime;
-    [SerializeField] private MeshRenderer _playerMeshRenderer;
+    [SerializeField] private SkinnedMeshRenderer _playerMeshRenderer;
     [SerializeField] private Material _meshMaterial;
     [SerializeField] private Material _transparentMaterial;
     
