@@ -10,23 +10,26 @@ using UnityEngine;
  * use "_" in front of all private member variables to further differentiate from
  * local and public variables.
  */
-public class PlayerMovement : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float turnSmoothTime = 0.1f;
     [SerializeField] private Transform _cam;
 
     private CharacterController _characterController;
+    private Vector3 _movement;
+
+    private Run _run;
 
     private float _horizontal;
     private float _vertical;
-    private Vector3 _movement;
 
     private float turnSmoothVelocity;
 
     private void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        _run = GetComponent<Run>();
     }
 
     private void Update()
@@ -39,15 +42,25 @@ public class PlayerMovement : MonoBehaviour
 
         if (_movement.magnitude >= .1f)
         {
-            float targetAngle = Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg * _cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-
-            //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
-            //Vector3 moveDirection = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
-
-            //keep movement direction Y-Axis independent for jumping.
-            //moveDirection.y = moveDirection.y;
-            _characterController.Move(_movement.normalized * _speed * Time.deltaTime);
+            Move();
+            _run.AnimateRun(true);
         }
+        else
+        {
+            _run.AnimateRun(false);
+        }
+    }
+
+    private void Move()
+    {
+        float targetAngle = Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg + _cam.eulerAngles.y;
+        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+
+        //keep movement direction Y-Axis independent for jumping.
+        //moveDirection.y = moveDirection.y;
+        _characterController.Move(moveDirection.normalized * _speed * Time.deltaTime);
     }
 }
