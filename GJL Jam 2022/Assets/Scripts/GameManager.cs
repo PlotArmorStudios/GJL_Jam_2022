@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseGame()
     {
-        
+        Debug.Log("Lost Game.");
     }
 
     public void DespawnPlayer()
