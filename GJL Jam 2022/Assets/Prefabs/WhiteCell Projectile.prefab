@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4033266926012727119}
   - component: {fileID: 1161363209194638213}
   m_Layer: 0
-  m_Name: WhiteCell_projectiles
+  m_Name: WhiteCell Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
