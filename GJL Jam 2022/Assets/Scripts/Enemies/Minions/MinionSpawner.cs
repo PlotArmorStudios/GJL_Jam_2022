@@ -11,7 +11,7 @@ public class MinionSpawner : MonoBehaviour
     [SerializeField] private int _maxLevel;
     private int _currMaxLevel, _currMinLevel;
     [SerializeField] private float _minSize, _maxSize;
-    [SerializeField] private int _minDamage, _maxDamage;
+    [SerializeField] private float _minDamage, _maxDamage;
     [SerializeField] private float _minSpeed, _maxSpeed;
 
     private StickyMinionPool _stickyMinionPool;
@@ -42,7 +42,7 @@ public class MinionSpawner : MonoBehaviour
         float multiplier = level / _maxLevel;
         MinionStats stats = new MinionStats(
             level,
-            _minDamage + (int)(_maxDamage * multiplier),
+            _minDamage + (_maxDamage * multiplier),
             _minSpeed + (_maxSpeed * multiplier),
             _minSize + (_maxSize * multiplier)
         );

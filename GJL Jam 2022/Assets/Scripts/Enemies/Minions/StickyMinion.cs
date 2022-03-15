@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public enum MinionState { Spawning, ChasePlayer, StuckToPlayer, Dead }
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class StickyMinion : Enemy
+public class StickyMinion : MonoBehaviour
 {   
     [Header("Movement Attributes")]
     [SerializeField, Tooltip("How long in seconds the minion waits after spawning before chasing the player")] private float _timeBeforeMove = 0.5f;
@@ -30,17 +30,22 @@ public class StickyMinion : Enemy
 
     private Transform _player;
     private NavMeshAgent _navMeshAgent;
+    private EnemyHealth _health;
     
     
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player").transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _health = GetComponent<EnemyHealth>();
+        _health._onDie += Die;
     }
 
     private void OnEnable() 
     {
         ChangeState(MinionState.Spawning);
+        _health.ResetHealth();
+        _navMeshAgent.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -59,12 +64,14 @@ public class StickyMinion : Enemy
     
     private IEnumerator FollowPlayer()
     {
+        _navMeshAgent.enabled = true;
         while (_state == MinionState.ChasePlayer)
         {
             Debug.Log("Following player");
             _navMeshAgent.destination = _player.position;
             yield return new WaitForSeconds(Time.deltaTime);
         }
+        _navMeshAgent.enabled = false;
     }
     
     private IEnumerator DamageOverTime()
@@ -73,8 +80,11 @@ public class StickyMinion : Enemy
 
         for (int i = 0; i < _numAttacks; i++)
         {
-            //_player.GetComponent<Health>().TakeDamage()
+            _player.GetComponent<Health>().TakeDamage(Stats._damage);
+            yield return new WaitForSeconds(_timeBetweenAttacks);
         }
+
+        ChangeState(MinionState.Dead);
     }
 
     private void ChangeState(MinionState state)
@@ -101,7 +111,7 @@ public class StickyMinion : Enemy
         }
     }
 
-    protected override void Die()
+    private void Die()
     {
         ChangeState(MinionState.Dead);
     }

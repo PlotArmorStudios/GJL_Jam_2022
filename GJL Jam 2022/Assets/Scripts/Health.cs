@@ -23,7 +23,7 @@ using UnityEngine;
 public abstract class Health : MonoBehaviour
 {
     //base Health variables, for referencing.
-    [SerializeField] private int _maxHealth = 100; //public reference, for easy User-Interface editing
+    [SerializeField] protected int _maxHealth = 100; //public reference, for easy User-Interface editing
     protected float CurrentHealth { get; set; }
 
     //different types, depending on if it's a "temp" or "stationary" actor/thing
