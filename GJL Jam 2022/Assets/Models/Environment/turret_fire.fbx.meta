@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48071cbf1b2bc4446921aec08eeb7b22
+guid: 6fbc034ca3bccbc4d8704a7bf72f7bef
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: b646783fada8a0d44996cd854c09179b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Turret
-    second: {fileID: 2100000, guid: 7fed1f0f8bc54df40973cb2c80493244, type: 2}
+      name: Material.002
+    second: {fileID: 2100000, guid: 5e908d21e4618f444abf4a73f77771fe, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
