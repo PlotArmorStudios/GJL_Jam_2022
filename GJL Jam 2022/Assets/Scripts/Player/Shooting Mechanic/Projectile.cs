@@ -8,6 +8,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float _force;
 
     private Rigidbody _rigidbody;
+    
+    //Can be used for specific aim direction
+    public Vector3 Direction { get; set; }
 
     private void OnEnable()
     {

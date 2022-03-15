@@ -8,9 +8,7 @@ public class JellyShotAimer : MonoBehaviour
     [SerializeField] private float _defaultRayRange = 1000;
 
     private Vector3 _destination;
-    private bool _leftHand;
-    private Vector3 _storedTargetPoint;
-    public Vector3 Destination => _destination;
+    private Vector3 _direction;
 
     private void Update()
     {
@@ -33,15 +31,14 @@ public class JellyShotAimer : MonoBehaviour
         {
             _destination = ray.GetPoint(_defaultRayRange);
         }
-    }
 
-    public void ToggleSpawnPoint()
-    {
+        _direction = transform.position - _destination;
         
     }
 
     public void InstantiateProjectile(Transform spawnPoint)
     {
         Instantiate(jellyShotToggler.CurrentJelly, spawnPoint.position, spawnPoint.rotation);
+        jellyShotToggler.CurrentJelly.GetComponent<Projectile>().Direction = _direction;
     }
 }
