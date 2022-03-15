@@ -30,6 +30,50 @@ Transform:
   m_Father: {fileID: 7168358987884174059}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1680588094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680588095}
+  - component: {fileID: 1803617635934183106}
+  m_Layer: 0
+  m_Name: Jelly Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1680588095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680588094}
+  m_LocalRotation: {x: -0.69929826, y: 0.1232264, z: 0.32143182, w: 0.62648135}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4582866744456589667}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -72.826, y: -91.631, z: 128.714}
+--- !u!114 &1803617635934183106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680588094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76afd1288bc149c3bb8ded174770f1b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jellyShotAimer: {fileID: 68137127985434597}
 --- !u!1 &7168358987884174058
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,6 +90,8 @@ GameObject:
   - component: {fileID: 400375146}
   - component: {fileID: 2752814257323682611}
   - component: {fileID: 7168358989538503193}
+  - component: {fileID: 7168358989538503192}
+  - component: {fileID: 68137127985434597}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -183,6 +229,37 @@ MonoBehaviour:
   _transparentMaterial: {fileID: 2100000, guid: ac758af4036350044b61736c7b1063aa, type: 2}
   _amplitude: 1.2
   _frequency: 20
+--- !u!114 &7168358989538503192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168358987884174058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c45c4902e6253428f9d7c810461607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7168358988344018426}
+  _jellyToShoot: 1
+  _damageJelly: {fileID: 8690292611238724528, guid: 819d7efc77babc14397a9ee3159ac2ba, type: 3}
+  _freezingJelly: {fileID: 4155284570777990458, guid: 213acf280efe09f419aff91dcc9b4ba7, type: 3}
+--- !u!114 &68137127985434597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168358987884174058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90f44a971fd4c07819f995c200d5331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jellyShotToggler: {fileID: 7168358989538503192}
+  _cam: {fileID: 0}
+  _defaultRayRange: 1000
 --- !u!1 &7168358988728542844
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +360,11 @@ Transform:
 --- !u!137 &2591052001621011665 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4571605982943762130, guid: aa4c932565f8e8a4092355185087638f, type: 3}
+  m_PrefabInstance: {fileID: 7168358988344018431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4582866744456589667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2530251679569251172, guid: aa4c932565f8e8a4092355185087638f, type: 3}
   m_PrefabInstance: {fileID: 7168358988344018431}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &7168358988344018426
