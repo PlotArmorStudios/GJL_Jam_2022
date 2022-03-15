@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool _sharedInstance;
-    public List<GameObject> _pooledObjects;
-    public List<GameObject> _activeObjects;
+    private List<GameObject> _pooledObjects;
+    private List<GameObject> _activeObjects;
     [SerializeField] private GameObject _objectPrefab;
     [SerializeField] private int _initialPoolSize = 30;
     
@@ -35,7 +35,7 @@ public class ObjectPool : MonoBehaviour
             GameObject pooledObject = _pooledObjects[i];
             if(!pooledObject.activeInHierarchy)
             {
-                pooledObject.SetActive(pooledObject);
+                pooledObject.SetActive(true);
                 _activeObjects.Add(pooledObject);
                 return pooledObject;
             }

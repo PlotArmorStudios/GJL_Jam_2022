@@ -11,6 +11,11 @@ public class EnemyHealth : Health
         CurrentHealth = _maxHealth;
     }
 
+    public void SetNewMaxHealth(int maxHealth)
+    {
+        _maxHealth = maxHealth;
+    }
+
     protected override void Die()
     {
         _onDie.Invoke();

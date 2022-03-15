@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public enum MinionState { Spawning, ChasePlayer, StuckToPlayer, Dead }
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth))]
 public class StickyMinion : MonoBehaviour
 {   
     [Header("Movement Attributes")]
@@ -69,7 +69,7 @@ public class StickyMinion : MonoBehaviour
         {
             Debug.Log("Following player");
             _navMeshAgent.destination = _player.position;
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return new WaitForSeconds(0.1f);
         }
         _navMeshAgent.enabled = false;
     }
@@ -87,15 +87,25 @@ public class StickyMinion : MonoBehaviour
         ChangeState(MinionState.Dead);
     }
 
+    private IEnumerator StickToPlayer()
+    {
+        Vector3 offset = transform.position - _player.position;
+        while (_state == MinionState.StuckToPlayer)
+        {
+            transform.position = _player.position + offset;
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+    }
+
     private void ChangeState(MinionState state)
     {
         _state = state;
-
+        Debug.Log("Switched state to " + state);
         switch(state) 
         {
             case MinionState.Spawning:
                 _onSpawn.Invoke();
-                Spawn();
+                StartCoroutine(Spawn());
                 break;
             case MinionState.ChasePlayer:
                 _onStartChase.Invoke();
@@ -104,6 +114,7 @@ public class StickyMinion : MonoBehaviour
             case MinionState.StuckToPlayer:
                 _onStickToPlayer.Invoke();
                 StartCoroutine(DamageOverTime());
+                StartCoroutine(StickToPlayer());
                 break;
             case MinionState.Dead:
                 _onDie.Invoke();
