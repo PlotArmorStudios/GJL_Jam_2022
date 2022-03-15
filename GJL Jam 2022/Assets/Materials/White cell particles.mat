@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: White cell
+  m_Name: White cell particles
   m_Shader: {fileID: -6465566751694194690, guid: 85949d579b1fd3b49b7fdfb2464afeaa, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -36,13 +36,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_35166057f8e542a996e147604c357661: 0.547
-    - Vector1_4b355aa15f5642eea072e0f1eb305e72: 1
-    - Vector1_5f325848660342e0a019ae44ee6d4991: 1
-    - Vector1_8b3e1466f24640a498164d5ea95d9df3: 3
-    - Vector1_b3e76de9fa454228a85e4bccb0b9043e: 1
-    - Vector1_cadbea99ab15429db371e47a774d881c: 0.7
+    - Vector1_35166057f8e542a996e147604c357661: 0
+    - Vector1_4b355aa15f5642eea072e0f1eb305e72: 0.08
+    - Vector1_5f325848660342e0a019ae44ee6d4991: 0.05
+    - Vector1_8b3e1466f24640a498164d5ea95d9df3: 20
+    - Vector1_b3e76de9fa454228a85e4bccb0b9043e: 0.3
+    - Vector1_cadbea99ab15429db371e47a774d881c: 1.34
     m_Colors:
-    - Color_02afc476d6544810ad3c04e5849615ea: {r: 0.8867924, g: 0.883207, b: 0.7738519, a: 0}
-    - Color_f02ec3204adb4514b39e43e1321a551b: {r: 0.10980392, g: 0.08627451, b: 0.07058824, a: 0}
+    - Color_02afc476d6544810ad3c04e5849615ea: {r: 0.9245283, g: 0.89753026, b: 0.72828406, a: 0}
+    - Color_f02ec3204adb4514b39e43e1321a551b: {r: 0.11320752, g: 0.10092557, b: 0.10092557, a: 0}
   m_BuildTextureStacks: []
