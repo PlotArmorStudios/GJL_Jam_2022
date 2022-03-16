@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 /*
@@ -30,6 +29,10 @@ public class PlayerControl : MonoBehaviour
 
     private float turnSmoothVelocity;
     private float _verticalVelocity;
+    private float _falltime;
+    
+    //Preparing to switch to rigidbody movement
+    private Rigidbody _rigidBody;
 
     private void Start()
     {
@@ -56,9 +59,14 @@ public class PlayerControl : MonoBehaviour
             _run.AnimateRun(false);
         }
 
-        //Having issues with ground detection no working
-        //"Feet" object constantly moves after 1 jump. Y transform does not change however.
-        //Jump();
+        //Will likely convert to rigidbody movement for better results
+        Jump();
+
+        if (_groundDetect.ToggleGroundedState() && _falltime > 0)
+        {
+            _falltime = 0;
+            _verticalVelocity = 0;
+        }
     }
 
     private void Jump()
@@ -68,11 +76,26 @@ public class PlayerControl : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 _verticalVelocity = _jumpForce;
+
+                if (Movement.magnitude > 0.1f)
+                    MoveDirection = new Vector3(MoveDirection.x, _verticalVelocity, MoveDirection.z);
+                else
+                    MoveDirection = new Vector3(0, _verticalVelocity, 0);
+
+                _characterController.Move(MoveDirection.normalized * _speed * Time.deltaTime);
             }
         }
         else
         {
-            _verticalVelocity -= _gravity * Time.deltaTime;
+            _falltime += Time.deltaTime;
+            _verticalVelocity -= _gravity * _falltime * _falltime;
+
+            if (Movement.magnitude > 0.1f)
+                MoveDirection = new Vector3(MoveDirection.x, _verticalVelocity, MoveDirection.z);
+            else
+                MoveDirection = new Vector3(0, _verticalVelocity, 0);
+
+            _characterController.Move(MoveDirection.normalized * _speed * Time.deltaTime);
         }
     }
 
@@ -82,6 +105,7 @@ public class PlayerControl : MonoBehaviour
         float angle =
             Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
+        //Set rotation and move direction based on angle calculated from movement vectors
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
         MoveDirection = Quaternion.Euler(0f, targetAngle, 0f) * new Vector3(0, _verticalVelocity, 1);
 
