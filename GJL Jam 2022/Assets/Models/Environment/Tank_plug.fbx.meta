@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b6524e3730ee2a498c73dd653129dde
+guid: cd83fcca21f1c0f43ad39fa315869e39
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Pipes
-    second: {fileID: 2100000, guid: fb2b88a053bbc4f45b778a8fc6485a30, type: 2}
+      name: Tank
+    second: {fileID: 2100000, guid: 4e20ade711cb0284faaa15ee7448067a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
