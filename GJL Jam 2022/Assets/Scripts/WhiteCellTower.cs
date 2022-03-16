@@ -5,7 +5,7 @@ using UnityEngine;
 public class WhiteCellTower : MonoBehaviour
 {
     /* Code written by Andrew Letailleur, @ 15 March, 2022
- * Code edited by ______ ______, @ 15 March, 2022 */
+ * Code edited by Andrew Letailleur, @ 16 March, 2022 */
 
     #region Summary & Credits
 
@@ -29,49 +29,50 @@ public class WhiteCellTower : MonoBehaviour
 
     #endregion
 
+    //Future/Temp notes
+    ///Go from 'stationary' short term, to 'long term' timer based health, in testing.
+
+
     //publlic variables, to be declared on top. Easy editing wise
-        //lifespan timer variables
+    //lifespan timer variables
     public float LifespanTimer = 5.0f;//seconds of life. Consider triple/quadupling that timer, if required?
         //Only enable "_timer" if not doing a 'delayed' Destroy, optimization wise.
 
         //bullet/projectile variables
     public float BulletsPerSecond = 1.0f;//for "one bullet per second", tempo wise
-    private float _bps_timer;//timer to set, dependant on the public "Bullets Per Second" value
     public float BulletVelocity = 15f;//tinker/taylor, until it is set properly
+    private float _bps_timer;//timer to set, dependant on the public "Bullets Per Second" value
 
-    //public for now, debug wise. But, need to figure out how to auto grab the 'key fire point/transform' of gun.
-    public Transform _firePoint;//where to fire pellet from, instead of "center mass".
 
+    //all set up, private references wise. May need adjustments, if attached to a different prefab.
+    private GameObject _turretSpark;//to maybe rapidly enable/disable, upon spawn.
+    private Transform _firePoint;//where to fire pellet from, instead of "center mass".
     //current target/AOE, depending on 'distance' to nearest enemy/boss per 'tick' check?
     private Transform _curTarget;//this should shift after a check, before firing at position wise.
 
-    //to grab/serialize as an easy reference later, GameObject projectile wise
-    private GameObject _bullet;//equals a "tiny sphere", to fire/fling at enemy. "Cell" wise...
+    //Public for now. Need to grab/serialize as an easy reference later, GameObject projectile wise. Until then, it's public
+    public GameObject Bullet;//equals a "tiny sphere", to fire/fling at enemy. "Cell" wise...
 
     // Start is called before the first frame update
     void Start()
     {
             //first, initiate/setup timers
-        Destroy(gameObject, LifespanTimer); //destroy on start/enable/spawn, 
+        //Destroy(gameObject, LifespanTimer); //destroy on start/enable/spawn, //DONOT enable until testing is done
         _bps_timer = 1.0f;//to represent 'a' second
         //_timer = MaxTimer; //only enable this if NOT, Destroy this after a public delay/etc.
+            //manually set to key indexes of White Cell tower.
+        _turretSpark = gameObject.transform.GetChild(2).gameObject;
+        _firePoint = gameObject.transform.GetChild(3).gameObject.transform;
 
-        _firePoint = gameObject.transform.GetChild(2);//manually set to last index of White Cell tower.
+//        BulletVelocity = Bullet.GetComponent<Projectile>();//get Force value?
+
+        //TDL, figure out how to auto-assign bullets/etc, without requiring a Resources folder?
+        //_bullet = null;//Will require Resources folder, to auto-assign/load; //Resources.Load<GameObject>("Assets/Prefabs/WhiteCell Projectile.prefab");
+            ///ref: https://docs.unity3d.com/ScriptReference/Resources.html
+
+        //firepoint transform is automatically set to key rotation, so it shouldn't be an issue.
             //Said manual is set to 2, under "turret_fire" gameobject, transform wise.
 
-        CreatePrefabBullet();//for prototype referencing. Otherwise, _bullet should grab/reference a prefab.
-
-        //TODO, "Assign new/white cell projectile Material to auto generated _bullet, at/upon start. 
-    }
-
-    private void CreatePrefabBullet() {
-        //prototype setup, 'Bullet' prefab creation wise. Includes Mesh Filter and Render on CreatePrimative.
-        _bullet = GameObject.CreatePrimitive(PrimitiveType.Sphere);//includes Mesh Filter and Render
-        _bullet.AddComponent<Rigidbody>();//add rigidbody just to be sure, on _bullet prefab;
-        _bullet.GetComponent<SphereCollider>().isTrigger = true;//just to ensure it 'phases' through rigidbodies, before disappearing.
-        //        _bullet.AddComponent<???Projectile???>();//guessed variable, "in reference" to Projectile Script.
-
-        //any other variables, reference here if/as needed. Prototype reference wise. :)
     }
 
 
@@ -83,16 +84,24 @@ public class WhiteCellTower : MonoBehaviour
         //If previous target still active/alive, rotate to that previous 'target', aim wise
         if (_curTarget != null) //IE: IF there is a Targeted Enemy, adjust scope/aim.
         { //Consider making it "2.5D" Friendly, to bar 'rotating' turret glitch from target?
+            Debug.Log("Adjusting Rotation check...");
             Vector3 _sameAim = _curTarget.position;//debug 'fix' code, under being mindful to avoid a turret visual bug.
-            _sameAim.y = gameObject.transform.position.y;//to keep the 'aim' of the singular turret on the same viewpoint.
-            gameObject.transform.LookAt(_sameAim); //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
+//            _sameAim.y = gameObject.transform.position.y;//to keep the 'aim' of the singular turret on the same viewpoint.
+            gameObject.transform.LookAt(_sameAim, transform.forward); //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
         }//added lines take into account, the 'turret glitch' if the entire model rotates 'upwards/downwards', visual wise.
+
+
 
         //step B: After X seconds? (Timer wise?), fire bullet. And do an enemy count/check, from those with the "Enemy" Tag/string.
         if (_bps_timer <= 0.0f) 
         {//only call TargetEnemy when required. NOT constantly, to 'save' on RAM/memory usage?
             TargetEnemy();// foreach inefficient. Could be called at occasionally?
-            FireCell(); _bps_timer = 1.0f; 
+            if (Bullet != null) {
+                FireCell();
+            } else {
+                Debug.LogWarning("ERROR: No bullet loaded, it's empty.");
+            }//endif
+            _bps_timer = 1.0f; 
         }//...after, a delay?
         else { _bps_timer -= (Time.deltaTime * BulletsPerSecond); }//deduct by firing rate, yo
 
@@ -107,12 +116,13 @@ public class WhiteCellTower : MonoBehaviour
     //counts the amount of enemies with the "Enemy" tag (not boss), iteratively setting aim to the nearest enemy to the turret.
     private void TargetEnemy()
     {//ref: https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html
-        _curTarget = null;
+        _curTarget = null;//clear the target, before assigning a new object ref
         GameObject[] _foes = GameObject.FindGameObjectsWithTag("Enemy");
+        Debug.Log("Amount of Enemies found: " + _foes.Length);
 
         foreach (GameObject _foe in _foes)
         {
-            if (_curTarget = null)
+            if (_curTarget == null)
             { _curTarget = _foe.transform; }
             else
             {//compare by (a-b).magnitute, transform.position wise
@@ -132,15 +142,13 @@ public class WhiteCellTower : MonoBehaviour
 
     //fire a projectile, from the "White Cell tower", defense bullet wise.
     private void FireCell() {
-        //hack rotationary, 'flip back' edition
-        Quaternion _fireRotate = _firePoint.transform.rotation;
-        _fireRotate.z -= 90f;//aim adjustment from 'end barrel' stroke, hack wise.
-            //Just so that red arrow points forward. Fix/[REDACT] this, if model or aim point's fixed.
-        //consider an added transform from the 'aim' here, if projectile test bugs upon spawning.
-        GameObject go = Instantiate(_bullet, _firePoint.transform.position, _fireRotate);
+        //no need to adjust rotation, as that's all~ set up in the "_firePoint" transform
+        GameObject go = Instantiate(Bullet,
+            _firePoint.transform.position,
+            _firePoint.transform.rotation);
         Rigidbody rb = go.GetComponent<Rigidbody>();
         //depending on scale, times it by a factor of 1/10/100?
-        rb.AddForce(transform.right * BulletVelocity);
+//        rb.AddForce(transform.forward * BulletVelocity); //projectile script does it in-object
         //rb.AddTorque, if wanting cell to 'spin' at random?
 //        Debug.LogWarning("Object is spawned at: " + go.transform.position + ", Time Spawned = " + Time.fixedTime);
     }
