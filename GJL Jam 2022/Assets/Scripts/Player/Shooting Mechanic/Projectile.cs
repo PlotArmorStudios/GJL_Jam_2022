@@ -17,4 +17,9 @@ public class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.AddRelativeForce(Vector3.forward * _force, ForceMode.Impulse);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
+    }
 }
