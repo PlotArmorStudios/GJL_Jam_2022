@@ -12,7 +12,7 @@ public class StickyMinion : MonoBehaviour
 {   
     [Header("Movement Attributes")]
     [SerializeField, Tooltip("How long in seconds the minion waits after spawning before chasing the player")] private float _timeBeforeMove = 0.5f;
-    [SerializeField, Tooltip("How  close the minion has to get to the player in order to stick")] private float _distanceWhenStick = 3f;
+    [SerializeField, Tooltip("How close the minion has to get to the player in order to stick")] private float _distanceWhenStick = 3f;
 
     [Header("Damage Attributes")]
     [SerializeField] private float _timeBetweenAttacks = 1f;
@@ -20,10 +20,10 @@ public class StickyMinion : MonoBehaviour
     [SerializeField, Tooltip("How many times a stuck enemy will damage the player before it dies")] private int _numAttacks = 3;
     
     [Header("Events")]
-    public UnityEvent _onSpawn;
-    public UnityEvent _onStartChase;
-    public UnityEvent _onStickToPlayer;
-    public UnityEvent _onDie;
+    public UnityEvent OnSpawn;
+    public UnityEvent OnStartChase;
+    public UnityEvent OnStickToPlayer;
+    public UnityEvent OnDie;
 
     public MinionStats Stats { get; set; }
     private MinionState _state;
@@ -31,6 +31,7 @@ public class StickyMinion : MonoBehaviour
     private Transform _player;
     private NavMeshAgent _navMeshAgent;
     private EnemyHealth _health;
+    private Collider[] _colliders;
     
     
     private void Awake()
@@ -38,7 +39,8 @@ public class StickyMinion : MonoBehaviour
         _player = GameObject.FindWithTag("Player").transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
-        _health._onDie += Die;
+        _health.OnDie += Die;
+        _colliders = GetComponents<Collider>();
     }
 
     private void OnEnable() 
@@ -46,11 +48,12 @@ public class StickyMinion : MonoBehaviour
         ChangeState(MinionState.Spawning);
         _health.ResetHealth();
         _navMeshAgent.enabled = false;
+        SetCollidersActive(true);
     }
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.tag != "Player") return;
+        if (other.tag != "Player" || _state != MinionState.ChasePlayer) return;
         
         Debug.Log("GOT EEM");
         ChangeState(MinionState.StuckToPlayer);
@@ -58,12 +61,16 @@ public class StickyMinion : MonoBehaviour
 
     private IEnumerator Spawn()
     {
+        OnSpawn?.Invoke();
+
         yield return new WaitForSeconds(_timeBeforeMove);
         ChangeState(MinionState.ChasePlayer);
     }
     
     private IEnumerator FollowPlayer()
     {
+        OnStartChase?.Invoke();
+
         _navMeshAgent.enabled = true;
         while (_state == MinionState.ChasePlayer)
         {
@@ -74,7 +81,7 @@ public class StickyMinion : MonoBehaviour
         _navMeshAgent.enabled = false;
     }
     
-    private IEnumerator DamageOverTime()
+    private IEnumerator DealDamageOverTime()
     {
         yield return new WaitForSeconds(_timeBeforePlayerDamage);
 
@@ -89,11 +96,30 @@ public class StickyMinion : MonoBehaviour
 
     private IEnumerator StickToPlayer()
     {
+        OnStickToPlayer?.Invoke();
+
+        SetCollidersActive(false);
         Vector3 offset = transform.position - _player.position;
         while (_state == MinionState.StuckToPlayer)
         {
             transform.position = _player.position + offset;
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    private IEnumerator TriggerDeath()
+    {
+        OnDie?.Invoke();
+
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+    }
+
+    private void SetCollidersActive(bool active)
+    {
+        foreach (Collider c in _colliders)
+        {
+            c.enabled = active;
         }
     }
 
@@ -104,20 +130,17 @@ public class StickyMinion : MonoBehaviour
         switch(state) 
         {
             case MinionState.Spawning:
-                _onSpawn.Invoke();
                 StartCoroutine(Spawn());
                 break;
             case MinionState.ChasePlayer:
-                _onStartChase.Invoke();
                 StartCoroutine(FollowPlayer());
                 break;
             case MinionState.StuckToPlayer:
-                _onStickToPlayer.Invoke();
-                StartCoroutine(DamageOverTime());
+                StartCoroutine(DealDamageOverTime());
                 StartCoroutine(StickToPlayer());
                 break;
             case MinionState.Dead:
-                _onDie.Invoke();
+                StartCoroutine(TriggerDeath());
                 break;
         }
     }

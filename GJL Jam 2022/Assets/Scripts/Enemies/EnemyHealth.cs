@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {   
-    public event Action _onDie;
+    public event Action OnDie;
     public void ResetHealth()
     {
         CurrentHealth = _maxHealth;
@@ -18,6 +18,6 @@ public class EnemyHealth : Health
 
     protected override void Die()
     {
-        _onDie.Invoke();
+        OnDie?.Invoke();
     }
 }
