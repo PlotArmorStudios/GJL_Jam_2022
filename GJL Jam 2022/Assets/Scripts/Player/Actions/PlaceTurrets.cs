@@ -12,9 +12,8 @@ public class PlaceTurrets : MonoBehaviour
     private void PlaceTower()
     {
         Vector3 towerPlacementVector = transform.position + transform.forward * _towerPlacementDistance;
-        var towerRotation = transform.rotation;
-        towerRotation.y += 180;
-        Instantiate(_whiteCellTower, towerPlacementVector, towerRotation);
+        var towerRotation = gameObject.transform.parent.transform.rotation;
+        Instantiate(_whiteCellTower, towerPlacementVector, towerRotation * Quaternion.Euler(0, 180, 0));
     }
 
     private void OnDrawGizmos()
