@@ -13,7 +13,7 @@ public class PlaceTurrets : MonoBehaviour
     {
         Vector3 towerPlacementVector = transform.position + transform.forward * _towerPlacementDistance;
         var towerRotation = transform.rotation;
-        towerRotation.y *= -5;
+        towerRotation.y += 180;
         Instantiate(_whiteCellTower, towerPlacementVector, towerRotation);
     }
 
