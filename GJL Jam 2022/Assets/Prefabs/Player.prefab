@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7168358989538503193}
   - component: {fileID: 7168358989538503192}
   - component: {fileID: 68137127985434597}
+  - component: {fileID: 8409555648679590763}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -343,6 +344,19 @@ MonoBehaviour:
   jellyShotToggler: {fileID: 7168358989538503192}
   _cam: {fileID: 0}
   _defaultRayRange: 1000
+--- !u!114 &8409555648679590763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168358987884174058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a64767d4bd24ce59b6ccf1f1a785d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7168358988344018426}
 --- !u!1 &7168358988728542844
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +483,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &701696763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050827912606415022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa969c3edada504591e2bdf8e467adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSouce: {fileID: 6507941744558763126}
+  _attackSound: {fileID: 8300000, guid: 524517bf17492c844af829351d9b1529, type: 3}
+--- !u!114 &1349451522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8050827912606415022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1c6828f05b22342b4ac7ee4d34a686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerPlacementDistance: 0
+  _whiteCellTower: {fileID: 0}
 --- !u!114 &4366836027728834876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,17 +526,3 @@ MonoBehaviour:
   _audioSource: {fileID: 6507941744558763126}
   _leftFootClip: {fileID: 8300000, guid: 09aa24706330c0e45ad41a6dddd64aa1, type: 3}
   _rightFootClip: {fileID: 8300000, guid: 09aa24706330c0e45ad41a6dddd64aa1, type: 3}
---- !u!114 &701696763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8050827912606415022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa969c3edada504591e2bdf8e467adc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioSouce: {fileID: 6507941744558763126}
-  _attackSound: {fileID: 8300000, guid: 524517bf17492c844af829351d9b1529, type: 3}
