@@ -11,8 +11,14 @@ public class PlaceTurrets : MonoBehaviour
 
     private void PlaceTower()
     {
-        Vector3 towerPlacementVector = transform.position;
-        towerPlacementVector.z += _towerPlacementDistance;
-        Instantiate(_whiteCellTower, towerPlacementVector, Quaternion.identity);
+        Vector3 towerPlacementVector = transform.position + transform.forward * _towerPlacementDistance;
+        var towerRotation = gameObject.transform.parent.transform.rotation;
+        Instantiate(_whiteCellTower, towerPlacementVector, towerRotation * Quaternion.Euler(0, 180, 0));
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, transform.forward * 10);
     }
 }
