@@ -11,7 +11,7 @@ public class KidneyHealth : Health
 
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerDeath += TakeDamage;
+        PlayerHealth.OnPlayerDeath -= TakeDamage;
     }
 
     protected override void Die()
