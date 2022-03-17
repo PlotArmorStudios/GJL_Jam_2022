@@ -1,4 +1,5 @@
 #define PlayerHealthDebug
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,19 +7,15 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
-    public static event Action<float> OnDamageKidney;
+    public static event Action<float> OnPlayerDeath;
     [SerializeField] private float _kidneyDamage = 30f;
 
-    [ContextMenu("Take Damage Test")]
-    private void TakeDamageTestMethod()
-    {
-        TakeDamage(50);
-    }
-    
     protected override void Die()
     {
         //Kidney takes damage when player dies
-        OnDamageKidney?.Invoke(_kidneyDamage);
+        OnPlayerDeath?.Invoke(_kidneyDamage);
+        //player will still respawn even after kidney dies
+        GameManager.Instance.DespawnPlayer();
 
         #region DebugLogs
 
