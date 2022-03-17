@@ -25,12 +25,11 @@ using UnityEngine.UI;
 public abstract class Health : MonoBehaviour
 {
     //base Health variables, for referencing.
-    [SerializeField] protected int _maxHealth = 100; //public reference, for easy User-Interface editing
-    [SerializeField] protected Image _healthBar;
-    [SerializeField] protected TMP_Text _healthText;
+    [SerializeField] private int _maxHealth = 100; //public reference, for easy User-Interface editing
+    [SerializeField] private Image _healthBar;
+    [SerializeField] private TMP_Text _healthText;
     
     protected float CurrentHealth { get; set; }
-    protected float _changingHealth;
 
     //different types, depending on if it's a "temp" or "stationary" actor/thing
     public enum Type
@@ -45,12 +44,10 @@ public abstract class Health : MonoBehaviour
     {
         //simple set health to max value on initiation/setup of attached game object.
         CurrentHealth = _maxHealth; //can assign an int value to a float value
-        _healthText.text = CurrentHealth + " / " + _maxHealth.ToString();
     }
 
     public virtual void TakeDamage(float damage)
     {
-        _changingHealth = CurrentHealth;
         CurrentHealth -= damage;
 
         StartCoroutine(DepleteHPBar());
@@ -66,16 +63,13 @@ public abstract class Health : MonoBehaviour
         TakeDamage(50);
     }
 
-    protected virtual IEnumerator DepleteHPBar()
+    private IEnumerator DepleteHPBar()
     {
         //yield return _healthBar.fillAmount != CurrentHealth / _maxHealth;
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
         {
             _healthBar.fillAmount -= .05f;
-
-            _changingHealth = _healthBar.fillAmount * _maxHealth;
-            
-            _healthText.text = _changingHealth.ToString("0") + " / " + _maxHealth.ToString();
+            _healthText.text = CurrentHealth.ToString() + " / " + _maxHealth.ToString();
             
             yield return null;
         }
