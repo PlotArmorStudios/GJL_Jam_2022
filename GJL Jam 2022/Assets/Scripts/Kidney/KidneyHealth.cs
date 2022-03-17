@@ -11,7 +11,7 @@ public class KidneyHealth : Health
 
     private void OnDisable()
     {
-        PlayerHealth.OnDamageKidney += TakeDamage;
+        PlayerHealth.OnDamageKidney -= TakeDamage;
     }
 
     public override void TakeDamage(float damage)

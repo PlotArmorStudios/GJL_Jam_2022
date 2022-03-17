@@ -29,13 +29,31 @@ public class MinionSpawner : MonoBehaviour
     SpawnerState _state = SpawnerState.Spawning;
     private Transform[] _spawnPoints;
 
+
     public UnityEvent OnStartSpawning;
     public UnityEvent OnPauseSpawning;
 
     private void Awake() 
     {
         _stickyMinionPool =  GetComponent<StickyMinionPool>();
+        InitaliseSpawnPoints();
+        PlayerHealth.OnDamageKidney += StopSpawning;
+    }
+
+    private void InitaliseSpawnPoints()
+    {
         _spawnPoints = GetComponentsInChildren<Transform>();
+        Transform[] spawns = new Transform[_spawnPoints.Length - 1];
+        int count = 0;
+        foreach (Transform spawn in _spawnPoints)
+        {
+            if (spawn.gameObject != gameObject)
+            {
+                spawns[count] = spawn;
+                count++;
+            }
+        }
+        _spawnPoints = spawns;
     }
 
     private void OnEnable() 
@@ -59,13 +77,21 @@ public class MinionSpawner : MonoBehaviour
         }
     }
 
-    public void StartSpawning()
+    public void StartSpawning(float timeBeforeStartSpawning)
     {
-        StartCoroutine(SpawnEnemies(_currTimeBetweenSpawns));
+        StartCoroutine(SpawnEnemies(_currTimeBetweenSpawns, timeBeforeStartSpawning));
     }
 
-    private IEnumerator SpawnEnemies(float timeBetweenSpawns)
+    private void StopSpawning(float unused = 0f)
     {
+        Debug.Log("Player respawned");
+        StopAllCoroutines();
+        StartSpawning(10f);
+    }
+
+    private IEnumerator SpawnEnemies(float timeBetweenSpawns, float timeBeforeStart)
+    {
+        yield return new WaitForSeconds(timeBeforeStart);
         while (_state == SpawnerState.Spawning)
         {
             SpawnStickyMinion();
@@ -80,7 +106,7 @@ public class MinionSpawner : MonoBehaviour
         switch (_state)
         {
             case SpawnerState.Spawning:
-                StartSpawning();
+                StartSpawning(0f);
                 OnStartSpawning?.Invoke();
                 break;
             case SpawnerState.Waiting:
