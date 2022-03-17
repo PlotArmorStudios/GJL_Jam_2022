@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 10620bd862879af4db8d14a3a0737aa0, type: 2}
 --- !u!1001 &1562354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,6 +945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!43 &31007554
@@ -1173,6 +1177,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -1911,6 +1919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 75
@@ -2023,6 +2035,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -2471,6 +2487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_path (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
@@ -2800,6 +2820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!43 &121966177
@@ -3095,6 +3119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 105
@@ -3241,6 +3269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 88
@@ -3353,6 +3385,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -3554,6 +3590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!4 &165850034 stripped
@@ -3623,6 +3663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2883813b9d6c6e44bbacbce86b1f9b90, type: 3}
+--- !u!224 &178379088 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 788798196564272895, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+  m_PrefabInstance: {fileID: 1186325498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &180180677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3685,6 +3730,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -3915,6 +3964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &202563703
@@ -4036,6 +4089,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -4675,6 +4732,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -9758,6 +9819,62 @@ Transform:
   m_Father: {fileID: 836521854}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &302964082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302964084}
+  - component: {fileID: 302964083}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &302964083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302964082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084d16207981b064c803b4847f255cdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 26c73a81284b4324fa78bf016d3123ba, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &302964084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302964082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &303600194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6814281189683662740, guid: dbca4af04e165b649831ff320c52a387, type: 3}
@@ -10074,6 +10191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!1001 &313249520
@@ -10201,6 +10322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!1001 &315827227
@@ -10217,6 +10342,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -10451,7 +10580,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &328718026
 Transform:
@@ -11203,6 +11332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 89
@@ -11311,6 +11444,10 @@ PrefabInstance:
     - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_Name
       value: Metal_plate_path (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
@@ -11603,6 +11740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!1001 &389055662
@@ -11853,6 +11994,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -12309,6 +12454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 86
@@ -12479,6 +12628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &425896993
@@ -12600,6 +12753,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -13897,6 +14054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!4 &511282498 stripped
@@ -14324,6 +14485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 84
@@ -14518,6 +14683,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -14854,6 +15023,95 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &558794778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 239828354, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 239828354, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031150849, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031150849, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183389251, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183389251, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870981093, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870981093, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6464531
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2577834
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.990488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601333088336255899, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901422673432822772, guid: a128486f6e7971443af2d038547d22ca, type: 3}
+      propertyPath: m_Name
+      value: Minion Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a128486f6e7971443af2d038547d22ca, type: 3}
 --- !u!4 &561400978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
@@ -15089,6 +15347,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -15534,6 +15796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_path (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
@@ -15742,6 +16008,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -15977,6 +16247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!43 &604106256
@@ -16205,6 +16479,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -16541,6 +16819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &633813784
@@ -16605,6 +16887,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -16787,6 +17073,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -18454,6 +18744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!1001 &719364257
@@ -18518,6 +18812,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -18609,6 +18907,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -19780,6 +20082,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 773869281, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+      propertyPath: _damageShotUI.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 773869281, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+      propertyPath: _damageShotUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 1186325509}
+    - target: {fileID: 773869281, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+      propertyPath: _damageShotUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 1186325508}
+    - target: {fileID: 773869281, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+      propertyPath: _damageShotUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 1186325507}
+    - target: {fileID: 773869281, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+      propertyPath: _damageShotUI.Array.data[3]
+      value: 
+      objectReference: {fileID: 178379088}
     - target: {fileID: 773869282, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
       propertyPath: _healthBar
       value: 
@@ -25165,6 +25487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &807103599
@@ -25229,6 +25555,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -25299,6 +25629,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -25393,6 +25727,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -35792,6 +36130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!43 &870408298
@@ -36260,6 +36602,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -41824,6 +42170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_path (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
@@ -42188,6 +42538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!4 &977412964 stripped
@@ -42503,6 +42857,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -42864,6 +43222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!4 &1008435372 stripped
@@ -43154,6 +43516,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -43685,6 +44051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &1044741722
@@ -43806,6 +44176,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -44492,6 +44866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!4 &1100186772 stripped
@@ -44623,6 +45001,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -45609,6 +45991,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5842038389914155151, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5842038390360104227, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -45697,9 +46083,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 5842038390635160161, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842038391004912391, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842038391486517290, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6344900364550090997, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
@@ -45780,6 +46178,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1186325507 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2022433785739319943, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+  m_PrefabInstance: {fileID: 1186325498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1186325508 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3413916570021937980, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+  m_PrefabInstance: {fileID: 1186325498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1186325509 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 402272913329723664, guid: faa5d55c77b1e7144938f150462aacf7, type: 3}
+  m_PrefabInstance: {fileID: 1186325498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1187983954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 542113813468220843, guid: 2883813b9d6c6e44bbacbce86b1f9b90, type: 3}
@@ -45843,6 +46256,10 @@ PrefabInstance:
     - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_Name
       value: Metal_plate_path (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
@@ -45980,6 +46397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!1001 &1212453525
@@ -46044,6 +46465,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -46893,6 +47318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 76
@@ -47067,6 +47496,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -47418,6 +47851,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -48542,6 +48979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 90
@@ -48876,6 +49317,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -50016,6 +50461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -50133,6 +50582,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -50738,6 +51191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!43 &1442887588
@@ -50928,6 +51385,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -51213,6 +51674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &1461175970
@@ -51229,6 +51694,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -51860,6 +52329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &1495589251
@@ -51995,6 +52468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!4 &1505215006 stripped
@@ -52082,6 +52559,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -52444,6 +52925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!4 &1534659279 stripped
@@ -52682,6 +53167,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -53158,6 +53647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_path (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
@@ -53523,6 +54016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!43 &1581914779
@@ -53761,6 +54258,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -54139,6 +54640,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -54531,6 +55036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_path (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
@@ -54619,6 +55128,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -55318,6 +55831,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a5b9280b7f54f44a417fb197a1a046, type: 3}
+--- !u!1 &1680116418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8992215398045023003, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
+  m_PrefabInstance: {fileID: 1687623107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1680116419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680116418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace2ae02cdbf12e44b2d5f11dbfdc885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &1680116420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680116418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b527a3100dc1094fb0cdc6581589324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1682607324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55394,35 +55948,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1877961462, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_Offset.z
-      value: 2
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.22374
+      value: -32.339382
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.737589
+      value: 2.5715642
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.8980784
+      value: 2.8795164
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69664085
+      value: 0.6966409
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06481155
+      value: 0.06481154
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.71141434
+      value: 0.7114144
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023006, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.066185996
+      value: -0.06618599
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398045023007, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_RenderPostProcessing
@@ -55482,11 +56036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398539548710, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.8538107
+      value: -2.21
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398539548710, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -4.879321
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398701119354, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55502,7 +56056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398701119354, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69664085
+      value: 0.6966409
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398701119354, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -55510,7 +56064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398701119354, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7114144
+      value: 0.71141434
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398701119354, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -55530,15 +56084,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398858086359, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.697702
+      value: 0.69770205
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398858086359, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.052162785
+      value: 0.052162796
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398858086359, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.71249807
+      value: 0.71249795
       objectReference: {fileID: 0}
     - target: {fileID: 8992215398858086359, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -55558,7 +56112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69534665
+      value: 0.69534683
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -55566,19 +56120,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.71009284
+      value: 0.71009266
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0791153
+      value: -0.079115264
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399398880985, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.8538107
+      value: -2.21
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399398880985, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -4.879321
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399496105116, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_Follow
@@ -55614,17 +56168,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399496105117, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.9393222
+      value: 2.9393196
       objectReference: {fileID: 0}
     - target: {fileID: 8992215400020303474, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.8538107
+      value: -2.21
       objectReference: {fileID: 0}
     - target: {fileID: 8992215400020303474, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -4.879321
+      value: -1.08
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8992215398045023000, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
 --- !u!43 &1688610758
 Mesh:
@@ -56093,6 +56648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 79
@@ -56393,6 +56952,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -56865,6 +57428,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -57461,6 +58028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -57525,6 +58096,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -57784,6 +58359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_path (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
@@ -57862,6 +58441,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -58217,6 +58800,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -58908,6 +59495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &1811444741
@@ -58924,6 +59515,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -59376,6 +59971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &1823886458
@@ -59510,6 +60109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!1001 &1828897738
@@ -59574,6 +60177,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -59742,6 +60349,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -60097,6 +60708,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -60499,6 +61114,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -66402,6 +67021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!4 &1923387535 stripped
@@ -66497,6 +67120,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -66811,6 +67438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!4 &1942511312 stripped
@@ -67107,6 +67738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &1960060784
@@ -67123,6 +67758,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -68681,6 +69320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &2010317000
@@ -68745,6 +69388,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -68877,6 +69524,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -69117,6 +69768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &2028863278
@@ -69250,6 +69905,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -69524,6 +70183,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
@@ -70075,6 +70738,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -71562,6 +72229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &2111741322
@@ -71626,6 +72297,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -71856,6 +72531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_evac (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
 --- !u!43 &2122641888
@@ -72037,6 +72716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_2 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
       value: 101
@@ -72149,6 +72832,10 @@ PrefabInstance:
     - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
       propertyPath: m_Name
       value: Metal_plate_1 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
@@ -72313,6 +73000,10 @@ PrefabInstance:
     - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_Name
       value: Metal_plate_2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498484608836925293, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307356162775657943, guid: 6e186491374f215409d462a9e2ae6490, type: 3}
       propertyPath: m_RootOrder
@@ -72696,6 +73387,10 @@ PrefabInstance:
     - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_Name
       value: Metal_plate_path
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921469694654233766, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7456616446168865224, guid: 9597c102af6e7fd4db5e3cd019752a7a, type: 3}
       propertyPath: m_PolyMesh.m_Mesh
@@ -73118,6 +73813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_plate_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7546216809954991740, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f075328be14b364eb1ae454a9ded353, type: 3}
 --- !u!1001 &5197198116285019228
@@ -73316,6 +74015,10 @@ PrefabInstance:
     - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
       propertyPath: m_Name
       value: Metal_plate_evac
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085346635568147461, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 570d73565a349e0498d0f7dcc4d0eaf6, type: 3}
