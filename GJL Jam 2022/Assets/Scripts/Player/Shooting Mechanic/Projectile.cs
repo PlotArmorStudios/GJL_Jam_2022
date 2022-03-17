@@ -15,11 +15,17 @@ public class Projectile : MonoBehaviour
     private void OnEnable()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.AddRelativeForce(Vector3.forward * _force, ForceMode.Impulse);
+        //_rigidbody.AddRelativeForce(Direction * _force, ForceMode.Impulse);
     }
 
+    public void Shoot(Vector3 direction, float force)
+    {
+        Debug.Log(direction);
+        _rigidbody.velocity = direction.normalized * force * Time.deltaTime;
+    }
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("Player")) return;
         Destroy(gameObject);
     }
 }
