@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jellyShotAimer: {fileID: 68137127985434597}
-  ammoManager: {fileID: 0}
+  ammoManager: {fileID: 1310338023}
 --- !u!1 &1695276473032849098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  _maxAmmo: 4
+  _maxAmmo: 6
 --- !u!1 &7168358988728542844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +1946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _towerPlacementDistance: 3
   _whiteCellTower: {fileID: 2512190706144104, guid: f7ff8de659ef8244fab0037e0c54a108, type: 3}
+  _turretAmmoManager: {fileID: 1310338022}
 --- !u!114 &4366836027728834876
 MonoBehaviour:
   m_ObjectHideFlags: 0

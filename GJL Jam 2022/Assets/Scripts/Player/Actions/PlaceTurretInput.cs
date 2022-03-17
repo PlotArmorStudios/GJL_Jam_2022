@@ -16,7 +16,8 @@ public class PlaceTurretInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            _animator.SetTrigger("Place Tower");
+            if (_turretAmmoManager.CurrentDamageAmmo > 0)
+                _animator.SetTrigger("Place Tower");
         }
     }
 }

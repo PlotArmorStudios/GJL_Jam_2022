@@ -11,11 +11,6 @@ public class PlaceTurrets : MonoBehaviour
 
     [SerializeField] private TurretAmmoManager _turretAmmoManager;
 
-    private void Start()
-    {
-        _turretAmmoManager = GetComponent<TurretAmmoManager>();
-    }
-
     private void PlaceTower()
     {
         Vector3 towerPlacementVector = transform.position + transform.forward * _towerPlacementDistance;
