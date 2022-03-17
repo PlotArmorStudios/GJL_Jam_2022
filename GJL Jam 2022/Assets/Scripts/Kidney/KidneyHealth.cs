@@ -6,12 +6,12 @@ public class KidneyHealth : Health
 {
     private void OnEnable()
     {
-        PlayerHealth.OnPlayerDeath += TakeDamage;
+        PlayerHealth.OnDamageKidney += TakeDamage;
     }
 
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerDeath -= TakeDamage;
+        PlayerHealth.OnDamageKidney -= TakeDamage;
     }
 
     public override void TakeDamage(float damage)
@@ -29,7 +29,6 @@ public class KidneyHealth : Health
 
         //player will still respawn even after kidney dies
         GameManager.Instance.DespawnPlayer();
-        PlayerHealth.OnPlayerDeath += TakeDamage;
     }
 
     protected override void Die()

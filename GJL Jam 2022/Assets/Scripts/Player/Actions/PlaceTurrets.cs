@@ -8,11 +8,7 @@ public class PlaceTurrets : MonoBehaviour
 {
     [SerializeField] private float _towerPlacementDistance;
     [SerializeField] private GameObject _whiteCellTower;
-    [SerializeField] private int _maxTurretAmmo;
-    [SerializeField] private List<RectTransform> _turretUI;
-    
-    private int _currentTurretAmmo;
-    
+
     private void PlaceTower()
     {
         Vector3 towerPlacementVector = transform.position + transform.forward * _towerPlacementDistance;

@@ -18,24 +18,17 @@ public class JellyShotToggler : MonoBehaviour
 
     private Transform _currentSpawnPoint;
     private GameObject _currentJelly;
-    private JellyAmmoManager _jellyAmmoManager;
     public GameObject CurrentJelly => _currentJelly;
 
     private void Start()
     {
-        _jellyAmmoManager = GetComponent<JellyAmmoManager>();
         ToggleJellyToShoot();
     }
 
     void Update()
     {
         if (Input.GetButton("Fire1"))
-        {
-            if (_jellyToShoot == JellyToShoot.DamageJelly && _jellyAmmoManager.CurrentDamageAmmo > 0)
-                _animator.SetBool("Shooting", true);
-            else if (_jellyToShoot != JellyToShoot.DamageJelly)
-                _animator.SetBool("Shooting", true);
-        }
+            _animator.SetBool("Shooting", true);
         else
             _animator.SetBool("Shooting", false);
 

@@ -1,38 +1,24 @@
 #define PlayerHealthDebug
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerHealth : Health
 {
-    public static event Action<float> OnPlayerDeath;
+    public static event Action<float> OnDamageKidney;
     [SerializeField] private float _kidneyDamage = 30f;
-    [SerializeField] private Image _secondHPBar;
 
-    protected override IEnumerator DepleteHPBar()
+    [ContextMenu("Take Damage Test")]
+    private void TakeDamageTestMethod()
     {
-        while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
-        {
-            _healthBar.fillAmount -= .05f;
-            _secondHPBar.fillAmount = _healthBar.fillAmount;
-
-            _changingHealth = _healthBar.fillAmount * _maxHealth;
-
-            _healthText.text = _changingHealth.ToString("0") + " / " + _maxHealth.ToString();
-            
-            yield return null;
-        }
+        TakeDamage(50);
     }
-
+    
     protected override void Die()
     {
         //Kidney takes damage when player dies
-        OnPlayerDeath?.Invoke(_kidneyDamage);
-        //player will still respawn even after kidney dies
-        GameManager.Instance.DespawnPlayer();
+        OnDamageKidney?.Invoke(_kidneyDamage);
 
         #region DebugLogs
 
