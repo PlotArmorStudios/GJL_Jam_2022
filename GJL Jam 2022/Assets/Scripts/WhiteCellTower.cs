@@ -5,7 +5,7 @@ using UnityEngine;
 public class WhiteCellTower : MonoBehaviour
 {
     /* Code written by Andrew Letailleur, @ 15 March, 2022
- * Code edited by Andrew Letailleur, @ 16 March, 2022 */
+ * Code edited by Andrew Letailleur, @ 17 March, 2022 */
 
     #region Summary & Credits
 
@@ -40,9 +40,8 @@ public class WhiteCellTower : MonoBehaviour
 
         //bullet/projectile variables
     public float BulletsPerSecond = 1.0f;//for "one bullet per second", tempo wise
-    public float BulletVelocity = 15f;//tinker/taylor, until it is set properly
     private float _bps_timer;//timer to set, dependant on the public "Bullets Per Second" value
-
+    public float BulletVelocity = 15f;//not-so deprecated, as projectile prefab has it's internal velocity setup.
 
     //all set up, private references wise. May need adjustments, if attached to a different prefab.
     private GameObject _turretSpark;//to maybe rapidly enable/disable, upon spawn.
@@ -86,8 +85,12 @@ public class WhiteCellTower : MonoBehaviour
         { //Consider making it "2.5D" Friendly, to bar 'rotating' turret glitch from target?
             Debug.Log("Adjusting Rotation check...");
             Vector3 _sameAim = _curTarget.position;//debug 'fix' code, under being mindful to avoid a turret visual bug.
-//            _sameAim.y = gameObject.transform.position.y;//to keep the 'aim' of the singular turret on the same viewpoint.
-            gameObject.transform.LookAt(_sameAim, transform.forward); //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
+            //begin hack edits, 
+            _sameAim.y = gameObject.transform.position.y;//to keep the 'aim' of the singular turret on the same viewpoint.
+
+            gameObject.transform.LookAt(_sameAim); //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
+
+
         }//added lines take into account, the 'turret glitch' if the entire model rotates 'upwards/downwards', visual wise.
 
 
@@ -142,16 +145,26 @@ public class WhiteCellTower : MonoBehaviour
 
     //fire a projectile, from the "White Cell tower", defense bullet wise.
     private void FireCell() {
+
+        TurretInvoke();
+        Invoke("TurretInvoke", BulletsPerSecond/10);
+
+        //how to aim = "Raycast to Boss, to alter/change rotation, yo" :)
+
         //no need to adjust rotation, as that's all~ set up in the "_firePoint" transform
         GameObject go = Instantiate(Bullet,
             _firePoint.transform.position,
             _firePoint.transform.rotation);
-        Rigidbody rb = go.GetComponent<Rigidbody>();
-        //depending on scale, times it by a factor of 1/10/100?
-//        rb.AddForce(transform.forward * BulletVelocity); //projectile script does it in-object
-        //rb.AddTorque, if wanting cell to 'spin' at random?
+            //use in-script velocity, over adding velocity directly, here
+        go.GetComponent<Projectile>().Shoot(_firePoint.transform.forward,
+            (BulletVelocity*1000));
+//        Rigidbody rb = go.GetComponent<Rigidbody>();
+//        rb.AddForce(transform.forward * (BulletVelocity*10)); //projectile script does it in-object
+            //alternate velocity, before mindfulness kicked in
 //        Debug.LogWarning("Object is spawned at: " + go.transform.position + ", Time Spawned = " + Time.fixedTime);
     }
-
+    private void TurretInvoke() {
+        _turretSpark.SetActive(!_turretSpark.activeSelf);
+    }
 
 }
