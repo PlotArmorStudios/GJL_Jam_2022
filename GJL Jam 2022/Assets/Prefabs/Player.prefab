@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jellyShotAimer: {fileID: 68137127985434597}
-  _jellyAmmoManager: {fileID: 0}
+  _jellyAmmoManager: {fileID: 9209282285157803888}
 --- !u!1 &1792861278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,7 +1935,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39cea198fdf89645a3cce7b0cbc2e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageShotUI: []
+  _damageShotUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _maxAmmo: 4
 --- !u!1 &7168358988728542844
 GameObject:
