@@ -55,7 +55,7 @@ public class StickyMinion : MonoBehaviour
         _triggerZone = GetComponent<CapsuleCollider>();
         _collider = GetComponent<SphereCollider>();
         _rigidbody = GetComponent<Rigidbody>();
-        PlayerHealth.OnDamageKidney += Die;
+        PlayerHealth.OnPlayerDeath += Die;
     }
 
     private void OnEnable() 

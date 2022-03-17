@@ -37,7 +37,7 @@ public class MinionSpawner : MonoBehaviour
     {
         _stickyMinionPool =  GetComponent<StickyMinionPool>();
         InitaliseSpawnPoints();
-        PlayerHealth.OnDamageKidney += StopSpawning;
+        PlayerHealth.OnPlayerDeath += StopSpawning;
     }
 
     private void InitaliseSpawnPoints()

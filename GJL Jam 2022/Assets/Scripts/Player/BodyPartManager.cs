@@ -9,7 +9,6 @@ using UnityEngine;
 public class BodyPartManager : MonoBehaviour
 {
     private Transform[] _bodyParts;
-    [SerializeField] GameObject sphere;
 
     private void Awake() 
     {
@@ -18,11 +17,10 @@ public class BodyPartManager : MonoBehaviour
         for (int i = 0; i < colliders.Length; i++)
         {
             _bodyParts[i] = colliders[i].gameObject.transform;
-            _bodyParts[i].tag = "Body Part";
+            _bodyParts[i].tag = "BodyPart";
             _bodyParts[i].gameObject.layer = LayerMask.NameToLayer("BodyParts");
             Vector3 worldPos = colliders[i].transform.TransformPoint(colliders[i].center);
-            GameObject myObject = Instantiate(sphere, worldPos, Quaternion.identity);
-            myObject.transform.parent = _bodyParts[i].transform;
+            Debug.Log("Body part: " + colliders[i].gameObject.name);
         }
     }
 
