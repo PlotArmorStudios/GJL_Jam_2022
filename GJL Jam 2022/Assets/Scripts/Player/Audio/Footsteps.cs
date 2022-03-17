@@ -9,11 +9,13 @@ public class Footsteps : MonoBehaviour
     
     private void LeftStep()
     {
-        _audioSource.PlayOneShot(_leftFootClip);
+        AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
+       // _audioSource.PlayOneShot(_leftFootClip);
     }
 
     private void RightStep()
     {
-        _audioSource.PlayOneShot(_rightFootClip);
+        AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
+        // _audioSource.PlayOneShot(_rightFootClip);
     }
 }
