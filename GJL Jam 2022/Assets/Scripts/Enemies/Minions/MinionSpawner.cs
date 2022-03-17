@@ -1,3 +1,7 @@
+/*
+Copyright JACPro 2022 - https://jacpro.github.io
+GJL Game Parade Spring 2022 - https://itch.io/jam/game-parade-spring-2022
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -89,10 +93,7 @@ public class MinionSpawner : MonoBehaviour
     {
         
         int level = Random.Range(_currMinLevel, _currMaxLevel + 1);
-        Debug.Log("Spawning minion - Level " + level);
         float multiplier = (float)level / _maxLevel;
-        Debug.Log("Multiplier: " + multiplier);
-        Debug.Log("Size: " + (_minSize + _maxSize * multiplier));
         MinionStats stats = new MinionStats(
             level,
             _minDamage + (_maxDamage - _minDamage) * multiplier,

@@ -151,15 +151,18 @@ MonoBehaviour:
   _timeBetweenAttacks: 1
   _timeBeforePlayerDamage: 0
   _numAttacks: 3
-  _onSpawn:
+  OnSpawn:
     m_PersistentCalls:
       m_Calls: []
-  _onStartChase:
+  OnStartChase:
     m_PersistentCalls:
       m_Calls: []
-  _onStickToPlayer:
+  OnStickToPlayer:
     m_PersistentCalls:
       m_Calls: []
-  _onDie:
+  OnHitPlayer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDie:
     m_PersistentCalls:
       m_Calls: []

@@ -1211,16 +1211,8 @@ PrefabInstance:
       propertyPath: _cam
       value: 
       objectReference: {fileID: 963194228}
-    - target: {fileID: 7168358987884174057, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
-      propertyPath: m_StepOffset
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 7168358987884174058, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7168358987884174058, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7168358987884174059, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
@@ -1524,15 +1516,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08053389
+      value: 0.080533914
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029720303
+      value: -9.138146e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000024012912
+      value: 7.3832766e-11
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399398880985, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_FollowOffset.y

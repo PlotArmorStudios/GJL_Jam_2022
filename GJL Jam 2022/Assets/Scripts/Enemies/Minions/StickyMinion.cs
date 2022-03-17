@@ -1,3 +1,7 @@
+/*
+Copyright JACPro 2022 - https://jacpro.github.io
+GJL Game Parade Spring 2022 - https://itch.io/jam/game-parade-spring-2022
+*/
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +11,7 @@ using UnityEngine.Events;
 
 public enum MinionState { Spawning, ChasePlayer, StuckToPlayer, Dead }
 
-[RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth))]
+[RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth), typeof(Rigidbody))]
 public class StickyMinion : MonoBehaviour
 {   
     [Header("Movement Attributes")]
@@ -23,24 +27,34 @@ public class StickyMinion : MonoBehaviour
     public UnityEvent OnSpawn;
     public UnityEvent OnStartChase;
     public UnityEvent OnStickToPlayer;
+    public UnityEvent OnHitPlayer;
     public UnityEvent OnDie;
 
+    //General Minion Attributes
     public MinionStats Stats { get; set; }
     private MinionState _state;
-
-    private Transform _player;
     private NavMeshAgent _navMeshAgent;
+    private Rigidbody _rigidBody;
     private EnemyHealth _health;
     private Collider[] _colliders;
+    private Transform _parent;
     
+    //Player Variables
+    private Transform _player;
+    private BodyPartManager _playerBodyParts;
+    private int _bodyPartsLayerMask = 1 << 8;
     
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player").transform;
+        _playerBodyParts = _player.GetComponent<BodyPartManager>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _rigidBody = GetComponent<Rigidbody>();
         _health = GetComponent<EnemyHealth>();
         _health.OnDie += Die;
         _colliders = GetComponents<Collider>();
+        PlayerHealth.OnDamageKidney += UnstickFromPlayer;
+        _parent = transform.parent;
     }
 
     private void OnEnable() 
@@ -48,6 +62,7 @@ public class StickyMinion : MonoBehaviour
         ChangeState(MinionState.Spawning);
         _health.ResetHealth();
         _navMeshAgent.enabled = false;
+        _rigidBody.isKinematic = true;
         SetCollidersActive(true);
     }
 
@@ -55,7 +70,6 @@ public class StickyMinion : MonoBehaviour
     {
         if (other.tag != "Player" || _state != MinionState.ChasePlayer) return;
         
-        Debug.Log("GOT EEM");
         ChangeState(MinionState.StuckToPlayer);
     }
 
@@ -72,13 +86,13 @@ public class StickyMinion : MonoBehaviour
         OnStartChase?.Invoke();
 
         _navMeshAgent.enabled = true;
+        _rigidBody.isKinematic = true;
+
         while (_state == MinionState.ChasePlayer)
         {
-            Debug.Log("Following player");
             _navMeshAgent.destination = _player.position;
             yield return new WaitForSeconds(0.1f);
         }
-        _navMeshAgent.enabled = false;
     }
     
     private IEnumerator DealDamageOverTime()
@@ -88,30 +102,44 @@ public class StickyMinion : MonoBehaviour
         for (int i = 0; i < _numAttacks; i++)
         {
             _player.GetComponent<Health>().TakeDamage(Stats._damage);
+            OnHitPlayer.Invoke();
             yield return new WaitForSeconds(_timeBetweenAttacks);
         }
 
         ChangeState(MinionState.Dead);
     }
 
-    private IEnumerator StickToPlayer()
+    private void StickToPlayer()
     {
         OnStickToPlayer?.Invoke();
 
+        _navMeshAgent.enabled = false;
+        
+        Transform bodyPart = _playerBodyParts.GetRandomBodyPart();
+        
+        
+        Vector3 targetPosition = bodyPart.TransformPoint(bodyPart.GetComponent<BoxCollider>().center);
+        RaycastHit hit;
+        Physics.Raycast(transform.position, targetPosition - transform.position, out hit, 30, _bodyPartsLayerMask);
+        Debug.DrawLine(transform.position, targetPosition, Color.blue, 2);
+        transform.localPosition = hit.point + (transform.localPosition - targetPosition).normalized * (GetComponent<MeshRenderer>().bounds.size.x / 2);
+        Debug.Log(GetComponent<SphereCollider>().name + " collider has a size of " + ((transform.localPosition - targetPosition).normalized * (GetComponent<MeshRenderer>().bounds.size.x / 2)));
+        transform.SetParent(hit.collider.gameObject.transform);;
         SetCollidersActive(false);
-        Vector3 offset = transform.position - _player.position;
-        while (_state == MinionState.StuckToPlayer)
-        {
-            transform.position = _player.position + offset;
-            yield return null;
-        }
+    }
+
+    public void UnstickFromPlayer(float unused)
+    {
+        _rigidBody.isKinematic = false;
+        transform.SetParent(_parent);
     }
 
     private IEnumerator TriggerDeath()
     {
         OnDie?.Invoke();
 
-        yield return new WaitForSeconds(1f);
+        UnstickFromPlayer(0f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 
@@ -126,7 +154,6 @@ public class StickyMinion : MonoBehaviour
     private void ChangeState(MinionState state)
     {
         _state = state;
-        Debug.Log("Switched state to " + state);
         switch(state) 
         {
             case MinionState.Spawning:
@@ -136,8 +163,8 @@ public class StickyMinion : MonoBehaviour
                 StartCoroutine(FollowPlayer());
                 break;
             case MinionState.StuckToPlayer:
+                StickToPlayer();
                 StartCoroutine(DealDamageOverTime());
-                StartCoroutine(StickToPlayer());
                 break;
             case MinionState.Dead:
                 StartCoroutine(TriggerDeath());
