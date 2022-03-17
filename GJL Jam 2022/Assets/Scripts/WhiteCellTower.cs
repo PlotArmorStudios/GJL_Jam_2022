@@ -24,6 +24,8 @@ public class WhiteCellTower : MonoBehaviour
      * https://docs.unity3d.com/ScriptReference/GameObject.CreatePrimitive.html
      * GetChild, for transform lists. Game Object 'firing aim' should approx. Be in the last/2nd?
      * https://docs.unity3d.com/ScriptReference/Transform.GetChild.html
+     * Quaternion.Slerp, 'smoother rotation' try edition
+     * https://forum.unity.com/threads/lookat-slerp.63353/
      * =====
      * Add Credits to key sources in this comment here, as/when needed*/
 
@@ -82,18 +84,29 @@ public class WhiteCellTower : MonoBehaviour
             //... Leave for 'firing at enemy', to call. Otherwise, keep aim at 'previous target'.
         //If previous target still active/alive, rotate to that previous 'target', aim wise
         if (_curTarget != null) //IE: IF there is a Targeted Enemy, adjust scope/aim.
-        { //Consider making it "2.5D" Friendly, to bar 'rotating' turret glitch from target?
-            Debug.Log("Adjusting Rotation check...");
-            Vector3 _sameAim = _curTarget.position;//debug 'fix' code, under being mindful to avoid a turret visual bug.
-            //begin hack edits, 
-            _sameAim.y = gameObject.transform.position.y;//to keep the 'aim' of the singular turret on the same viewpoint.
+        {///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
+            //Debug.Log("Adjusting Rotation check...");
+                
+                //first, rotate the tower
+            Vector3 _sameAim = _curTarget.position;
+            _sameAim.y = gameObject.transform.position.y;//bar object tilting upwards/downwards, glitch
+            //gameObject.transform.LookAt(_sameAim);//old version, LookAt wise
+            Quaternion _slerpAim = Quaternion.LookRotation(
+                _sameAim - gameObject.transform.position
+            );//new version, "organic/Slerp" wise. May not be 'as' accurate though
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation, _slerpAim, Time.deltaTime
+            );//end object transform, yo
 
-            gameObject.transform.LookAt(_sameAim); //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
+                //next, "sharp aim" the barrel, to the 'precise' position of target?
+            _firePoint.transform.LookAt(_curTarget);//haaack 'tinker'
 
+
+
+
+            //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
 
         }//added lines take into account, the 'turret glitch' if the entire model rotates 'upwards/downwards', visual wise.
-
-
 
         //step B: After X seconds? (Timer wise?), fire bullet. And do an enemy count/check, from those with the "Enemy" Tag/string.
         if (_bps_timer <= 0.0f) 
@@ -147,7 +160,7 @@ public class WhiteCellTower : MonoBehaviour
     private void FireCell() {
 
         TurretInvoke();
-        Invoke("TurretInvoke", BulletsPerSecond/10);
+        
 
         //how to aim = "Raycast to Boss, to alter/change rotation, yo" :)
 
