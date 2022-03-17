@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6300112711987731305
 Transform:
@@ -92,17 +92,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_Name
       value: Pipe_2m (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
@@ -162,17 +158,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 47aa9e0bbd41e7942b3a033f7286703c, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 47aa9e0bbd41e7942b3a033f7286703c, type: 3}
       propertyPath: m_Name
       value: Pipe_elbow (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 47aa9e0bbd41e7942b3a033f7286703c, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47aa9e0bbd41e7942b3a033f7286703c, type: 3}
@@ -232,17 +224,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_Name
       value: Pipe_2m (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
@@ -302,17 +290,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: cd83fcca21f1c0f43ad39fa315869e39, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd83fcca21f1c0f43ad39fa315869e39, type: 3}
       propertyPath: m_Name
       value: Tank_plug (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd83fcca21f1c0f43ad39fa315869e39, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd83fcca21f1c0f43ad39fa315869e39, type: 3}
@@ -372,17 +356,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_Name
       value: Pipe_2m (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
@@ -442,17 +422,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
       propertyPath: m_Name
       value: Pipe_exhaust
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
@@ -512,17 +488,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 105
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
       propertyPath: m_Name
       value: Pipe_exhaust (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
@@ -582,17 +554,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_Name
       value: Pipe_2m (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
@@ -652,17 +620,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_Name
       value: Pipe_2m (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
@@ -722,17 +686,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_Name
       value: Pipe_2m (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90bf061373fe8b43aca27161af991ec, type: 3}
@@ -792,17 +752,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 195
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
-      propertyPath: m_ReceiveGI
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
       propertyPath: m_Name
       value: Pipe_exhaust (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8f3aaeeb29dd13478c6c17ffed7c337, type: 3}
