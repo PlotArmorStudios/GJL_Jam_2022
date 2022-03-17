@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,8 @@ public abstract class Health : MonoBehaviour
     //base Health variables, for referencing.
     [SerializeField] private int _maxHealth = 100; //public reference, for easy User-Interface editing
     [SerializeField] private Image _healthBar;
+    [SerializeField] private TMP_Text _healthText;
+    
     protected float CurrentHealth { get; set; }
 
     //different types, depending on if it's a "temp" or "stationary" actor/thing
@@ -48,10 +51,16 @@ public abstract class Health : MonoBehaviour
         CurrentHealth -= damage;
 
         StartCoroutine(DepleteHPBar());
+
         Debug.Log(gameObject.name + " took damage.");
 
-        if (CurrentHealth <= 0)
-            Die();
+        if (CurrentHealth <= 0) Die();
+    }
+
+    [ContextMenu("Take Damage Test")]
+    private void TakeDamageTestMethod()
+    {
+        TakeDamage(50);
     }
 
     private IEnumerator DepleteHPBar()
@@ -60,14 +69,11 @@ public abstract class Health : MonoBehaviour
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
         {
             _healthBar.fillAmount -= .05f;
+            _healthText.text = CurrentHealth.ToString() + " / " + _maxHealth.ToString();
             
-            Debug.Log("Hp bar draining");
-            Debug.Log("Fill amount: " + _healthBar.fillAmount);
-            Debug.Log("Hp %: " + CurrentHealth / _maxHealth);
             yield return null;
         }
     }
-
 
     protected abstract void Die();
 }
