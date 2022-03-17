@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Kidney water
+  m_Shader: {fileID: -6465566751694194690, guid: 4f28e034a56b6584691043f67fbe0180, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2DLOD_1e0a25d239424cafae9875abcddc10cd_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 981634fae624d6b489f3b239a14b5106, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_febb06ee88e640b393dc149d5bf78438_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 981634fae624d6b489f3b239a14b5106, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_184b358a6f4b499abba4b211aa9cbf36: 0.1
+    - Vector1_194fa6db8cff4fa2b4186649cd3801ca: 0.39
+    - Vector1_480f340ecdf84ec59f901f7b3a49562c: 1
+    - Vector1_a5b976aa022547b2ba16828bd0524f73: 0.9
+    - Vector1_b43b0b330bf744298f09dd6ebf9437a6: 0.82
+    - Vector1_b557542f072548c49809b319d403745e: 0.7
+    - Vector1_c25de8f3d4fb46c48cfc5dc820580ec4: 0.19
+    - Vector1_e582778c5ed744318bf3b541eb088f99: 0.11
+    m_Colors:
+    - Color_23ddcc59fc5e4e3e8cab604210ce4005: {r: 0.77099997, g: 0.7047421, b: 0.24093744, a: 1}
+    - Color_a3857d6d621f4afb98e532ae05861edd: {r: 0.488, g: 0.44606248, b: 0.15249997, a: 0}
+    - Color_b48633d12608412481311a6f2475d2a3: {r: 0.943, g: 0.90091866, b: 0.606349, a: 0}
+  m_BuildTextureStacks: []
