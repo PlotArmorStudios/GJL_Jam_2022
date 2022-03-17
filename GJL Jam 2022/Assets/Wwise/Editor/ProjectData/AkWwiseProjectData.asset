@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585542249452725414
-    List: []
+    m_lastTime: -8585540922879688097
+    List:
+    - name: SFX
+      guid: 48271637fabe364d948869c1beed08de
+      id: 393239870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1dac198034777646bf2fb55c08a2a7cb
+      - ElementName: SFX
+        ObjectType: 7
+        guid: 48271637fabe364d948869c1beed08de
+      Path: SoundBanks\Default Work Unit\SFX
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585542249452190309
-    List: []
+    m_lastTime: -8585540922879808121
+    List:
+    - name: Play_Footsteps
+      guid: 8e12d4cc1793684184bfb8bb256a8b63
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: 8e12d4cc1793684184bfb8bb256a8b63
+      Path: Events\Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.418002
+      minDuration: 0.372398
+    - name: Play_Freeze_Shot
+      guid: f2bd6e3fbe4e124bb0f1895fc232203c
+      id: 2820289418
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Freeze_Shot
+        ObjectType: 3
+        guid: f2bd6e3fbe4e124bb0f1895fc232203c
+      Path: Events\Default Work Unit\Play_Freeze_Shot
+      maxAttenuation: 0
+      maxDuration: 1.854061
+      minDuration: 1.65178
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +187,7 @@ MonoBehaviour:
     m_lastTime: -8585542249451930253
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a0000000b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
