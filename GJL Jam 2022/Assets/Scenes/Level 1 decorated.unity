@@ -19789,6 +19789,10 @@ PrefabInstance:
       propertyPath: _cam
       value: 
       objectReference: {fileID: 489184034}
+    - target: {fileID: 1803617635934183106, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+      propertyPath: _jellyAmmoManager
+      value: 
+      objectReference: {fileID: 773869281}
     - target: {fileID: 5726877155651187991, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
       propertyPath: _healthBar
       value: 
@@ -19869,8 +19873,47 @@ PrefabInstance:
       propertyPath: _damageShotUI.Array.data[3]
       value: 
       objectReference: {fileID: 178379088}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7971951445767487415, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+    - {fileID: 4525508167645269251, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+--- !u!1 &773869280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7168358987884174058, guid: 29224b00d702c834c8d9189b205a1adb, type: 3}
+  m_PrefabInstance: {fileID: 773869279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &773869281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773869280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39cea198fdf89645a3cce7b0cbc2e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageShotUI: []
+  _maxAmmo: 4
+--- !u!114 &773869282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773869280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d899cf85138d73a44bc5042785185c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _healthBar: {fileID: 0}
+  _healthText: {fileID: 0}
+  HealthType: 0
+  _kidneyDamage: 30
+  _secondHPBar: {fileID: 0}
 --- !u!4 &779112135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2075526264466309255, guid: 0ec61acb59787124590617599ea87e05, type: 3}
@@ -55594,15 +55637,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6953467
+      value: 0.69534665
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07747234
+      value: 0.07747236
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7100929
+      value: 0.71009284
       objectReference: {fileID: 0}
     - target: {fileID: 8992215399069250840, guid: f3f7f35ae621321459f3605f3acfa88b, type: 3}
       propertyPath: m_LocalRotation.z
