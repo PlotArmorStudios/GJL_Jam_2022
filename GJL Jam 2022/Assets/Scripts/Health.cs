@@ -29,6 +29,8 @@ public abstract class Health : MonoBehaviour
     [SerializeField] protected Image _healthBar;
     [SerializeField] protected TMP_Text _healthText;
     
+    public bool IsAlive { get; set; }
+    
     protected float CurrentHealth { get; set; }
     protected float _changingHealth;
 
@@ -37,15 +39,17 @@ public abstract class Health : MonoBehaviour
     {
         Stationary,
         Timer
-    };
+    }
 
     public Type HealthType;
 
-    public void Start()
+    public void OnEnable()
     {
         //simple set health to max value on initiation/setup of attached game object.
         CurrentHealth = _maxHealth; //can assign an int value to a float value
+        _healthBar.fillAmount = CurrentHealth / _maxHealth;
         _healthText.text = CurrentHealth + " / " + _maxHealth.ToString();
+        IsAlive = true;
     }
 
     public virtual void TakeDamage(float damage)
@@ -57,8 +61,13 @@ public abstract class Health : MonoBehaviour
 
         Debug.Log(gameObject.name + " took damage.");
 
-        if (CurrentHealth <= 0) Die();
+        if (CurrentHealth <= 0 && IsAlive)
+        {
+            IsAlive = false;
+            Die();
+        }
     }
+
 
     [ContextMenu("Take Damage Test")]
     private void TakeDamageTestMethod()
@@ -81,5 +90,6 @@ public abstract class Health : MonoBehaviour
         }
     }
 
+    [ContextMenu("Die")]
     protected abstract void Die();
 }
