@@ -8,11 +8,13 @@ public class KidneyHealth : Health
     {
         base.OnEnable();
         PlayerHealth.OnPlayerDeath += TakeDamage;
+        Boss.OnBossDamage += TakeDamage;
     }
 
     private void OnDisable()
     {
         PlayerHealth.OnPlayerDeath += TakeDamage;
+        Boss.OnBossDamage -= TakeDamage;
     }
 
     protected override void Die()
