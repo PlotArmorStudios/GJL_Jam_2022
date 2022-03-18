@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class CardStack : MonoBehaviour
+public class ComicSlider : MonoBehaviour
 {
     [Tooltip("What gamepad/keyboard button action ID should trigger the next card?")]
     public string advanceButton = "Jump";
@@ -28,23 +28,41 @@ public class CardStack : MonoBehaviour
     [Tooltip("What should happen when we're left with an empty stack?")]
     public UnityEvent OnFinishedStack;
 
-    Image[] _images;
-    Vector2 _centerPosition;
-    float _currentCard;
-    bool _hasFinished;
+    [SerializeField] private int[] _numberOfContinues;
+
+    private Image[] _images;
+    private Vector2 _centerPosition;
+    private float _currentCard;
+    private bool _hasFinished;
+    private DialogueManager _dialogueManager;
+
+
+    private void OnEnable()
+    {
+        DialogueManager.OnSetTransition += NextSlide;
+    }
+    private void OnDisable()
+    {
+        DialogueManager.OnSetTransition -= NextSlide;
+    }
 
     // Move to next card
     public bool TryAdvance()
     {
         if (cardToShow >= _images.Length)
             return false;
-
         cardToShow++;
         return true;
     }
 
+    public void NextSlide()
+    {
+            TryAdvance();
+    }
+
     void Start()
     {
+        _dialogueManager = FindObjectOfType<DialogueManager>();
         _images = GetComponentsInChildren<Image>();
         Array.Reverse(_images);
 
@@ -58,10 +76,10 @@ public class CardStack : MonoBehaviour
     // Check input, advance/animate if needed.
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TryAdvance();
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     TryAdvance();
+        // }
 
         if (Mathf.Approximately(cardToShow, _currentCard))
         {
@@ -96,7 +114,7 @@ public class CardStack : MonoBehaviour
             else color.a = 0;
 
             image.color = color;
-            
+
             var trans = image.rectTransform;
             trans.localRotation = Quaternion.Euler(0, 0, rotationIncrement * t);
 
