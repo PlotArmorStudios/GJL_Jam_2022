@@ -11,7 +11,6 @@ public abstract class Projectile : MonoBehaviour
     private StickyMinion[] _enemiesInScene;
     private Transform _closestEnemy;
 
-    public bool _enemyContact;
     private Rigidbody _rigidbody;
     private bool _target;
 

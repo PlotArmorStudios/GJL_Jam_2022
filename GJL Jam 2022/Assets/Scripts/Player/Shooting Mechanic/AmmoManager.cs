@@ -9,30 +9,35 @@ public class AmmoManager : MonoBehaviour
 {
     [SerializeField] protected List<RectTransform> _ammoUI;
     [SerializeField] protected int _maxAmmo = 4;
-    
-    protected int _currentDamageAmmo;
-    
-    public int CurrentDamageAmmo => _currentDamageAmmo;
+
+    public int CurrentAmmo { get; set; }
+
+
+    private void OnEnable()
+    {
+        AddToAmmo.OnMinionFreeze += AddAmmo;
+    }
 
     protected virtual void Start()
     {
-        _currentDamageAmmo = _maxAmmo;
+        CurrentAmmo = _maxAmmo;
         RefreshUI();
     }
 
     public virtual void SubtractAmmo()
     {
-        _currentDamageAmmo--;
+        CurrentAmmo--;
         RefreshUI();
     }
 
 
-    public void AddAmmo()
+    public virtual void AddAmmo()
     {
-        _currentDamageAmmo++;
+        if (CurrentAmmo < _maxAmmo)
+            CurrentAmmo++;
         RefreshUI();
     }
-    
+
     protected void RefreshUI()
     {
         foreach (var ammoUI in _ammoUI)
@@ -40,9 +45,14 @@ public class AmmoManager : MonoBehaviour
             ammoUI.gameObject.SetActive(false);
         }
 
-        for (int i = 0; i < _currentDamageAmmo; i++)
+        for (int i = 0; i < CurrentAmmo; i++)
         {
             _ammoUI[i].gameObject.SetActive(true);
         }
+    }
+
+    private void OnDisable()
+    {
+        AddToAmmo.OnMinionFreeze -= AddAmmo;
     }
 }
