@@ -550,6 +550,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8493723171021554256, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: _sceneToLoad
+      value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723171021554256, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
       propertyPath: _dialogueTypeTime
       value: 0.015
       objectReference: {fileID: 0}
