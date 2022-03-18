@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1bbfe230631f7f4ba7365c17759d47dd
     GuidInternal: 
-    m_lastTime: -8585540589297754360
+    m_lastTime: -8585540660895353224
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a4bfc51f3264a84aa8233654a5a8be71
     GuidInternal: 
-    m_lastTime: -8585540589298604516
+    m_lastTime: -8585540660895718289
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585539700628632994
+    m_lastTime: -8585539671255473152
     List:
     - name: SFX
       guid: 48271637fabe364d948869c1beed08de
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585539700629363484
+    m_lastTime: -8585539671255393160
     List:
     - name: Play_Footsteps
       guid: 8e12d4cc1793684184bfb8bb256a8b63
@@ -130,6 +130,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.854061
       minDuration: 1.65178
+    - name: Play_White_Cell_Tower_Destoyed
+      guid: af968004386c4b45ab95e7932875e682
+      id: 3631933282
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_White_Cell_Tower_Destoyed
+        ObjectType: 3
+        guid: af968004386c4b45ab95e7932875e682
+      Path: Events\Default Work Unit\Play_White_Cell_Tower_Destoyed
+      maxAttenuation: 0
+      maxDuration: 2.118926
+      minDuration: 1.887748
+    - name: Play_White_Cell_Tower_Shoot
+      guid: fc6d00db8a2d5f4687bb8af8a989f648
+      id: 3696688966
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_White_Cell_Tower_Shoot
+        ObjectType: 3
+        guid: fc6d00db8a2d5f4687bb8af8a989f648
+      Path: Events\Default Work Unit\Play_White_Cell_Tower_Shoot
+      maxAttenuation: 60
+      maxDuration: 0.75
+      minDuration: 0.75
     - name: Play_White_Cell_Tower_Spawn
       guid: 11358dad1b88404c8ebeef3a38520671
       id: 2369417814
@@ -159,7 +193,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e429f1fb20556409b0ecbd50382da2e
     GuidInternal: 
-    m_lastTime: -8585540589299014658
+    m_lastTime: -8585540660895903315
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -173,7 +207,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7cc3790fcf0cc448a2a1fd8d48232267
     GuidInternal: 
-    m_lastTime: -8585540589297784362
+    m_lastTime: -8585540660895363223
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -187,7 +221,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9f70caac1a47444dad5fb47fa68d6a97
     GuidInternal: 
-    m_lastTime: -8585540589297774367
+    m_lastTime: -8585540660895358223
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -201,10 +235,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7c6519635a90b24397c482bc7a26d98b
     GuidInternal: 
-    m_lastTime: -8585540589297764364
+    m_lastTime: -8585540660895358223
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
