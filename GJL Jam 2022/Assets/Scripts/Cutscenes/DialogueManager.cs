@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
     public static event Action OnSetTransition;
-    
+
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private TMP_Text _dialogueText;
     [SerializeField] private Animator _animator;
@@ -19,7 +20,9 @@ public class DialogueManager : MonoBehaviour
     private Queue<int> _transitionNumbers;
     private int _currentTransitionNumber;
     private bool _conversationInProgress;
-    public bool Transition { get; set; }
+
+    [Tooltip("The scene that loads when this dialogue is finished.")]
+    [SerializeField] private string _sceneToLoad;
 
     private void Start()
     {
@@ -53,7 +56,7 @@ public class DialogueManager : MonoBehaviour
         {
             _transitionNumbers.Enqueue(transitionNumber);
         }
-        
+
         DisplayNextName();
         DisplayNextSentence();
         SetTransitionNumber();
@@ -65,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
+
         _currentTransitionNumber = _transitionNumbers.Dequeue();
     }
 
@@ -72,7 +76,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!_conversationInProgress) return;
         _currentTransitionNumber--;
-        
+
         if (_currentTransitionNumber > 0) return;
         SetTransitionNumber();
         OnSetTransition?.Invoke();
@@ -85,7 +89,7 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        
+
         string name = _names.Dequeue();
         _nameText.text = name;
     }
@@ -118,6 +122,6 @@ public class DialogueManager : MonoBehaviour
     {
         _conversationInProgress = false;
         _animator.SetBool("IsOpen", false);
-        Debug.Log("End of conversation");
+        SceneManager.LoadScene(_sceneToLoad);
     }
 }
