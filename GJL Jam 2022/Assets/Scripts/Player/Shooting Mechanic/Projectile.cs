@@ -38,15 +38,16 @@ public abstract class Projectile : MonoBehaviour
 
     private void TargetEnemy()
     {
-        transform.position =
-            Vector3.MoveTowards(transform.position, _closestEnemy.position, _speed * Time.deltaTime);
+        if (_closestEnemy)
+            transform.position =
+                Vector3.MoveTowards(transform.position, _closestEnemy.position, _speed * Time.deltaTime);
     }
 
     public void Shoot(Vector3 direction, float force)
     {
         _rigidbody.velocity = direction.normalized * force * Time.deltaTime;
     }
-    
+
     public Transform GetClosestEnemy()
     {
         _enemiesInScene = FindObjectsOfType<StickyMinion>();
