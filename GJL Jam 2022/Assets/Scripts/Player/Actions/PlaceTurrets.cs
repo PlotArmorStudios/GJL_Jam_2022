@@ -9,11 +9,14 @@ public class PlaceTurrets : MonoBehaviour
     [SerializeField] private float _towerPlacementDistance;
     [SerializeField] private GameObject _whiteCellTower;
 
+    [SerializeField] private TurretAmmoManager _turretAmmoManager;
+
     private void PlaceTower()
     {
         Vector3 towerPlacementVector = transform.position + transform.forward * _towerPlacementDistance;
         var towerRotation = gameObject.transform.parent.transform.rotation;
         Instantiate(_whiteCellTower, towerPlacementVector, towerRotation * Quaternion.Euler(0, 180, 0));
+        _turretAmmoManager.SubtractAmmo();
     }
 
     private void OnDrawGizmos()

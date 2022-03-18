@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BodyPart
+  - Enemy
   layers:
   - Default
   - TransparentFX

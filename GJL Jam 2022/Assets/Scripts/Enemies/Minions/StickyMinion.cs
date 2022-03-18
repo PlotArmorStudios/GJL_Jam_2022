@@ -2,6 +2,8 @@
 Copyright JACPro 2022 - https://jacpro.github.io
 GJL Game Parade Spring 2022 - https://itch.io/jam/game-parade-spring-2022
 */
+
+//#define DebugStateMachine
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,19 +11,31 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public enum MinionState { Spawning, ChasePlayer, Sticking, StuckToPlayer, Dead }
+public enum MinionState
+{
+    Spawning,
+    ChasePlayer,
+    Sticking,
+    StuckToPlayer,
+    Dead
+}
 
 [RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth))]
 public class StickyMinion : MonoBehaviour
-{   
+{
     [Header("Movement Attributes")]
-    [SerializeField, Tooltip("How long in seconds the minion waits after spawning before chasing the player")] private float _timeBeforeMove = 0.5f;
+    [SerializeField, Tooltip("How long in seconds the minion waits after spawning before chasing the player")]
+    private float _timeBeforeMove = 0.5f;
 
-    [Header("Damage Attributes")]
-    [SerializeField] private float _timeBetweenAttacks = 1f;
-    [SerializeField, Tooltip("Time in seconds before player starts taking damage when enemy is stuck")] private float _timeBeforePlayerDamage;
-    [SerializeField, Tooltip("How many times a stuck enemy will damage the player before it dies")] private int _numAttacks = 3;
-    
+    [Header("Damage Attributes")] [SerializeField]
+    private float _timeBetweenAttacks = 1f;
+
+    [SerializeField, Tooltip("Time in seconds before player starts taking damage when enemy is stuck")]
+    private float _timeBeforePlayerDamage;
+
+    [SerializeField, Tooltip("How many times a stuck enemy will damage the player before it dies")]
+    private int _numAttacks = 3;
+
     //General Attributes
     public MinionStats Stats { get; set; }
     private MinionState _state;
@@ -31,14 +45,13 @@ public class StickyMinion : MonoBehaviour
     private SphereCollider _collider;
     private Rigidbody _rigidbody;
     private Transform _parent;
-    
+
     //Player Variables
     private Transform _player;
     private BodyPartManager _playerBodyParts;
     private int _bodyPartsLayerMask = 1 << 8;
-    
-    [Header("Events")]
-    public UnityEvent OnSpawn;
+
+    [Header("Events")] public UnityEvent OnSpawn;
     public UnityEvent OnStartChase;
     public UnityEvent OnJumpAtPlayer;
     public UnityEvent OnStickToPlayer;
@@ -58,7 +71,7 @@ public class StickyMinion : MonoBehaviour
         PlayerHealth.OnPlayerDeath += Die;
     }
 
-    private void OnEnable() 
+    private void OnEnable()
     {
         ChangeState(MinionState.Spawning);
         _health.ResetHealth();
@@ -71,12 +84,12 @@ public class StickyMinion : MonoBehaviour
         _navMeshAgent.speed = Stats._speed;
     }
 
-    private void Start() 
+    private void Start()
     {
         _navMeshAgent.speed = Stats._speed;
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && _state == MinionState.ChasePlayer)
             ChangeState(MinionState.Sticking);
@@ -89,7 +102,7 @@ public class StickyMinion : MonoBehaviour
         yield return new WaitForSeconds(_timeBeforeMove);
         ChangeState(MinionState.ChasePlayer);
     }
-    
+
     private IEnumerator FollowPlayer()
     {
         OnStartChase?.Invoke();
@@ -102,7 +115,7 @@ public class StickyMinion : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-    
+
     private IEnumerator DealDamageOverTime()
     {
         yield return new WaitForSeconds(_timeBeforePlayerDamage);
@@ -111,7 +124,9 @@ public class StickyMinion : MonoBehaviour
         {
             _player.GetComponent<Health>().TakeDamage(Stats._damage);
             OnHitPlayer.Invoke();
+#if DebugStateMachine
             Debug.Log("hit player");
+#endif
             yield return new WaitForSeconds(_timeBetweenAttacks);
         }
 
@@ -125,7 +140,7 @@ public class StickyMinion : MonoBehaviour
         _navMeshAgent.enabled = false;
         _collider.enabled = false;
         _triggerZone.enabled = false;
-        
+
         transform.SetParent(_player);
 
         Transform bodyPart = _playerBodyParts.GetRandomBodyPart();
@@ -134,19 +149,23 @@ public class StickyMinion : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(startPosition, bodyPartRayTarget - startPosition, out hit, 30, _bodyPartsLayerMask);
         Transform targetPoint = new GameObject().transform;
-        targetPoint.position = hit.point + (transform.position - hit.point).normalized * (GetComponent<MeshRenderer>().bounds.size.x / 2);
+        targetPoint.position = hit.point + (transform.position - hit.point).normalized *
+            (GetComponent<MeshRenderer>().bounds.size.x / 2);
         targetPoint.SetParent(bodyPart);
-        
+
 
         float distanceToPlayer = Vector3.Distance(startPosition, targetPoint.position);
         Vector3 velocity = Vector3.zero;
         while (distanceToPlayer > 0.1f)
         {
+#if DebugStateMachine
             Debug.Log("Jumping");
+#endif
             transform.position = Vector3.SmoothDamp(transform.position, targetPoint.position, ref velocity, 0.1f);
             distanceToPlayer = Vector3.Distance(transform.position, targetPoint.position);
             yield return null;
         }
+
         transform.SetParent(hit.collider.gameObject.transform);
         ChangeState(MinionState.StuckToPlayer);
         OnStickToPlayer?.Invoke();
@@ -175,26 +194,36 @@ public class StickyMinion : MonoBehaviour
     {
         if (gameObject.activeSelf == false) return;
         _state = state;
-        switch(state) 
+        switch (state)
         {
             case MinionState.Spawning:
+#if DebugStateMachine
                 Debug.Log("Spawning");
+#endif
                 StartCoroutine(Spawn());
                 break;
             case MinionState.ChasePlayer:
+#if DebugStateMachine
                 Debug.Log("Chasing");
+#endif
                 StartCoroutine(FollowPlayer());
                 break;
             case MinionState.Sticking:
+#if DebugStateMachine
                 Debug.Log("Sticking");
+#endif
                 StartCoroutine(StickToPlayer());
                 break;
             case MinionState.StuckToPlayer:
+#if DebugStateMachine
                 Debug.Log("Stuck");
+#endif
                 StartCoroutine(DealDamageOverTime());
                 break;
             case MinionState.Dead:
+#if DebugStateMachine
                 Debug.Log("Dead");
+#endif
                 StartCoroutine(TriggerDeath());
                 break;
         }

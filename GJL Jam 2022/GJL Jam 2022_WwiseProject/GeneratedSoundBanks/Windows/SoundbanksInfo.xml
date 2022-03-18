@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Language="SFX" Hash="2447893352">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.372398" DurationMax="0.418002">
+					<IncludedMemoryFiles>
+						<File Id="316552023" Language="SFX">
+							<ShortName>FS 4.wav</ShortName>
+							<Path>SFX\FS 4_10C4C929.wem</Path>
+						</File>
+						<File Id="352761285" Language="SFX">
+							<ShortName>FS 3.wav</ShortName>
+							<Path>SFX\FS 3_10C4C929.wem</Path>
+						</File>
+						<File Id="656278657" Language="SFX">
+							<ShortName>FS 1.wav</ShortName>
+							<Path>SFX\FS 1_10C4C929.wem</Path>
+						</File>
+						<File Id="678228720" Language="SFX">
+							<ShortName>FS 5.wav</ShortName>
+							<Path>SFX\FS 5_10C4C929.wem</Path>
+						</File>
+						<File Id="952253448" Language="SFX">
+							<ShortName>FS 2.wav</ShortName>
+							<Path>SFX\FS 2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2820289418" Name="Play_Freeze_Shot" ObjectPath="\Events\Default Work Unit\Play_Freeze_Shot" DurationType="OneShot" DurationMin="1.65178" DurationMax="1.854061">
+					<IncludedMemoryFiles>
+						<File Id="324084362" Language="SFX">
+							<ShortName>Freeze Shot 2.wav</ShortName>
+							<Path>SFX\Freeze Shot 2_10C4C929.wem</Path>
+						</File>
+						<File Id="624557869" Language="SFX">
+							<ShortName>Freeze Shot 4.wav</ShortName>
+							<Path>SFX\Freeze Shot 4_10C4C929.wem</Path>
+						</File>
+						<File Id="696907537" Language="SFX">
+							<ShortName>Freeze Shot 3.wav</ShortName>
+							<Path>SFX\Freeze Shot 3_10C4C929.wem</Path>
+						</File>
+						<File Id="952971703" Language="SFX">
+							<ShortName>Freeze Shot 1.wav</ShortName>
+							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

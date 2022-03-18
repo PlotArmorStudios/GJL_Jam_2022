@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class KidneyHealth : Health
 {
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         PlayerHealth.OnPlayerDeath += TakeDamage;
     }
 
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerDeath -= TakeDamage;
+        PlayerHealth.OnPlayerDeath += TakeDamage;
     }
 
     protected override void Die()

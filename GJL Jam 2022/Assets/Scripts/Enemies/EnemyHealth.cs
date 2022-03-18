@@ -10,6 +10,7 @@ using UnityEngine;
 public class EnemyHealth : Health
 {   
     public event Action OnDie;
+    
     public void ResetHealth()
     {
         CurrentHealth = _maxHealth;
