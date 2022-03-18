@@ -17,7 +17,10 @@ public class PlaceTurretInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (_turretAmmoManager.CurrentAmmo > 0)
+            {
                 _animator.SetTrigger("Place Tower");
+                AkSoundEngine.PostEvent("Play_White_Cell_Tower_Spawn", gameObject);
+            }
         }
     }
 }
