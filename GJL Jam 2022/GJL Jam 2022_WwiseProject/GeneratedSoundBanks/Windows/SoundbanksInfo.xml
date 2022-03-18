@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2447893352">
+		<SoundBank Id="393239870" Language="SFX" Hash="3819680221">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -57,6 +57,22 @@
 						<File Id="952971703" Language="SFX">
 							<ShortName>Freeze Shot 1.wav</ShortName>
 							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2369417814" Name="Play_White_Cell_Tower_Spawn" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Spawn" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
+					<IncludedMemoryFiles>
+						<File Id="106655348" Language="SFX">
+							<ShortName>White Cell Tower Spawn 2.wav</ShortName>
+							<Path>SFX\White Cell Tower Spawn 2_10C4C929.wem</Path>
+						</File>
+						<File Id="990054460" Language="SFX">
+							<ShortName>White Cell Tower Spawn 1.wav</ShortName>
+							<Path>SFX\White Cell Tower Spawn 1_10C4C929.wem</Path>
+						</File>
+						<File Id="1070491165" Language="SFX">
+							<ShortName>White Cell Tower Spawn 3.wav</ShortName>
+							<Path>SFX\White Cell Tower Spawn 3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

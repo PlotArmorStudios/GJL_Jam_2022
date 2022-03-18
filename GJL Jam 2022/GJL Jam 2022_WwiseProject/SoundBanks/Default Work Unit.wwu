@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Footsteps" ID="{CCD4128E-9317-4168-84BF-B8BB256A8B63}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Freeze_Shot" ID="{3F6EBDF2-4EBE-4B12-B0F1-895FC232203C}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_White_Cell_Tower_Spawn" ID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

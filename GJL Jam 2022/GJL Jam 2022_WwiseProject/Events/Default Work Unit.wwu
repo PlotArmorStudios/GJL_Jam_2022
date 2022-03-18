@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_White_Cell_Tower_Spawn" ID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}">
+					<ChildrenList>
+						<Action Name="" ID="{F4679AA7-6BC7-4917-94F7-C4E6AB88644C}" ShortID="572710776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="White Cell Tower Spawn" ID="{534D9F65-1306-409B-8EFC-36B7C5F862E7}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
