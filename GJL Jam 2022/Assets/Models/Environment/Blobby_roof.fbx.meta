@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: flesh
-    second: {fileID: 2100000, guid: 9106c94dead1c64449a07287bfb7abe7, type: 2}
+    second: {fileID: 2100000, guid: 5d277692f3708e84ab2aa73367088746, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
