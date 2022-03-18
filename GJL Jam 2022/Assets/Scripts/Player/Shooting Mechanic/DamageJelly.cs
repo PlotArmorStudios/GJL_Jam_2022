@@ -11,7 +11,7 @@ public class DamageJelly : Projectile
 
         if (!minion) return;
 
-        Destroy(minion.gameObject);
+        minion.gameObject.SetActive(false);
         Destroy(gameObject);
     }
 }
