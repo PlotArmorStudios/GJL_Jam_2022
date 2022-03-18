@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class KidneyHealth : Health
 {
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         PlayerHealth.OnPlayerDeath += TakeDamage;
     }
 

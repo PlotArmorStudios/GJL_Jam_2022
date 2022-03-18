@@ -1,13 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class JellyShotSpawner : MonoBehaviour
 {
     [SerializeField] private JellyShotAimer _jellyShotAimer;
-    [SerializeField] private JellyAmmoManager _jellyAmmoManager;
+    [FormerlySerializedAs("_jellyAmmoManager")] [SerializeField] private AmmoManager ammoManager;
     
     private void OnEnable()
     {
         _jellyShotAimer.InstantiateProjectile(transform);
-        _jellyAmmoManager.SubtractAmmo();
+        ammoManager.SubtractAmmo();
     }
 }

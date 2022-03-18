@@ -25,37 +25,53 @@ using UnityEngine.UI;
 public abstract class Health : MonoBehaviour
 {
     //base Health variables, for referencing.
-    [SerializeField] private int _maxHealth = 100; //public reference, for easy User-Interface editing
-    [SerializeField] private Image _healthBar;
-    [SerializeField] private TMP_Text _healthText;
+    [SerializeField] protected int _maxHealth = 100; //public reference, for easy User-Interface editing
+    [SerializeField] protected Image _healthBar;
+    [SerializeField] protected TMP_Text _healthText;
+    
+    public bool IsAlive { get; set; }
     
     protected float CurrentHealth { get; set; }
+    protected float _changingHealth;
 
     //different types, depending on if it's a "temp" or "stationary" actor/thing
     public enum Type
     {
         Stationary,
         Timer
-    };
+    }
 
     public Type HealthType;
 
-    public void Start()
+    protected virtual void OnEnable()
     {
         //simple set health to max value on initiation/setup of attached game object.
         CurrentHealth = _maxHealth; //can assign an int value to a float value
+        
+        Debug.Log(gameObject.name + "Max hp is: " + _maxHealth);
+        Debug.Log(gameObject.name + "Current hp is: " + CurrentHealth);
+ 
+        _healthBar.fillAmount = CurrentHealth / _maxHealth;
+        _healthText.text = CurrentHealth + " / " + _maxHealth.ToString();
+        IsAlive = true;
     }
 
     public virtual void TakeDamage(float damage)
     {
+        _changingHealth = CurrentHealth;
         CurrentHealth -= damage;
 
         StartCoroutine(DepleteHPBar());
 
         Debug.Log(gameObject.name + " took damage.");
 
-        if (CurrentHealth <= 0) Die();
+        if (CurrentHealth <= 0 && IsAlive)
+        {
+            IsAlive = false;
+            Die();
+        }
     }
+
 
     [ContextMenu("Take Damage Test")]
     private void TakeDamageTestMethod()
@@ -63,17 +79,21 @@ public abstract class Health : MonoBehaviour
         TakeDamage(50);
     }
 
-    private IEnumerator DepleteHPBar()
+    protected virtual IEnumerator DepleteHPBar()
     {
         //yield return _healthBar.fillAmount != CurrentHealth / _maxHealth;
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
         {
             _healthBar.fillAmount -= .05f;
-            _healthText.text = CurrentHealth.ToString() + " / " + _maxHealth.ToString();
+
+            _changingHealth = _healthBar.fillAmount * _maxHealth;
+            
+            _healthText.text = _changingHealth.ToString("0") + " / " + _maxHealth.ToString();
             
             yield return null;
         }
     }
 
+    [ContextMenu("Die")]
     protected abstract void Die();
 }

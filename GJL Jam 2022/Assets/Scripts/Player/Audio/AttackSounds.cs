@@ -9,6 +9,7 @@ public class AttackSounds : MonoBehaviour
 
     private void PlayAttackSound()
     {
-        _audioSouce.PlayOneShot(_attackSound);
+        AkSoundEngine.PostEvent("Play_Freeze_Shot", gameObject);
+        //_audioSouce.PlayOneShot(_attackSound);
     }
 }
