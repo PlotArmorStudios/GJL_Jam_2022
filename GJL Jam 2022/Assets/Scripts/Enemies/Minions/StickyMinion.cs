@@ -241,4 +241,9 @@ public class StickyMinion : MonoBehaviour
         if (_state == MinionState.Sticking || _state == MinionState.StuckToPlayer)
             ChangeState(MinionState.Dead);
     }
+
+    public void Freeze()
+    {
+        Debug.Log("Freeze Minion");
+    }
 }
