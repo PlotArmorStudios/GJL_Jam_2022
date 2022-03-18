@@ -6,7 +6,7 @@ public class Dialogue
 {
     public string[] Names;
     
-    [TextArea(3, 10)] public string[] Sentences;
+    [TextArea(3, 15)] public string[] Sentences;
 
     public int[] NumberOfContinues;
 }

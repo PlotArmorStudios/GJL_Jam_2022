@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5811012993887577049}
   - component: {fileID: 5811012993887577047}
+  - component: {fileID: 1753727275}
   m_Layer: 0
   m_Name: Place Holder Boss
   m_TagString: Untagged
@@ -47,3 +48,18 @@ MonoBehaviour:
   _healthBar: {fileID: 0}
   _healthText: {fileID: 0}
   HealthType: 0
+  _sceneToLoad: Ending Cutscene
+--- !u!114 &1753727275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811012993887577046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e21ece1457b983428efce87786bb827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackPower: 1
+  _attackDelay: 2
