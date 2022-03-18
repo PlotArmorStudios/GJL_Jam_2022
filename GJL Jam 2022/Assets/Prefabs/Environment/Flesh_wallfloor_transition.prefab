@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6865681604850785898}
   - component: {fileID: 8692855764185803424}
   - component: {fileID: 6863068947476645739}
+  - component: {fileID: 3735216374551902909}
   m_Layer: 0
   m_Name: Flesh_wallfloor_transition
   m_TagString: Untagged
@@ -580,3 +581,17 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: 212370497460711607, guid: 29fe796a8977c4d488c80995be236401, type: 3}
   m_Mode: 0
+--- !u!64 &3735216374551902909
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179800153080974197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 212370497460711607, guid: 29fe796a8977c4d488c80995be236401, type: 3}
