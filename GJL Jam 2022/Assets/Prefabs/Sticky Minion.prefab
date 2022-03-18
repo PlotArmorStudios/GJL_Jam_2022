@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _healthBar: {fileID: 0}
+  _healthText: {fileID: 0}
   HealthType: 0
 --- !u!114 &1975116807412659122
 MonoBehaviour:
