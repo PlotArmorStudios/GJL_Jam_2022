@@ -58,6 +58,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Damage_Projectile" ID="{70166382-20A4-42AF-931E-94718A7D333F}">
+					<ChildrenList>
+						<Action Name="" ID="{EC9326C8-08A8-4CFB-AC64-5A5A672E2675}" ShortID="741699705">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Projectile" ID="{E88F9A9D-8603-4EE2-A782-8CCF04DDE6E0}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Death" ID="{305AB850-C620-4066-94BD-A52A6562EE7C}">
+					<ChildrenList>
+						<Action Name="" ID="{AF03CFAE-C53A-4E69-A7BD-EF3A076D239F}" ShortID="201135674">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Death" ID="{A6C154D8-F675-41C6-A774-D449C1871540}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience" ID="{83D50C25-BA82-4BFA-9A97-EAFAE60989B1}">
+					<ChildrenList>
+						<Action Name="" ID="{FC8DD61D-0F6A-4D9E-9150-BBC95AB7093D}" ShortID="227690941">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{9EBB160F-2919-494B-9D66-F3641D8D67A8}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
