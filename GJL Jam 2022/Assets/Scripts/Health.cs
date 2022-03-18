@@ -90,5 +90,6 @@ public abstract class Health : MonoBehaviour
         }
     }
 
+    [ContextMenu("Die")]
     protected abstract void Die();
 }
