@@ -8,7 +8,7 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _targetingDelay = .5f;
 
-    private StickyMinion[] _enemiesInScene;
+    protected StickyMinion[] _enemiesInScene;
     private Transform _closestEnemy;
 
     private Rigidbody _rigidbody;
@@ -48,7 +48,7 @@ public abstract class Projectile : MonoBehaviour
         _rigidbody.velocity = direction.normalized * force * Time.deltaTime;
     }
 
-    public Transform GetClosestEnemy()
+    public virtual Transform GetClosestEnemy()
     {
         _enemiesInScene = FindObjectsOfType<StickyMinion>();
         float closestDisteance = Mathf.Infinity;
