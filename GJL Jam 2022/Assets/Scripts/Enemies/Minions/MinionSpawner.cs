@@ -14,8 +14,7 @@ public class MinionSpawner : MonoBehaviour
 {
     [Header("Spawner Attributes")]
     [SerializeField, Tooltip("How much lower than current max level enemies can be")] private int _randomLevelVariation = 5; 
-    [SerializeField] float _minTimeBetweenSpawns = 1f, _maxTimeBetweenSpawns = 5f;
-    float _currTimeBetweenSpawns;
+    [SerializeField] private Transform _spawnPoint;
 
     [Header("Minion attribute bounds")]
     [SerializeField] private int _maxLevel = 10;
@@ -25,10 +24,7 @@ public class MinionSpawner : MonoBehaviour
     [SerializeField] private float _minDamage = 0.5f, _maxDamage = 10f;
     [SerializeField] private float _minSpeed = 2f, _maxSpeed = 10f;
     [SerializeField] private int _minStartingHealth = 10, _maxStartingHealth = 100;
-    private StickyMinionPool _stickyMinionPool;
-    SpawnerState _state = SpawnerState.Spawning;
-    private Transform[] _spawnPoints;
-
+    private StickyMinionPool _stickyMinionPool;    
 
     public UnityEvent OnStartSpawning;
     public UnityEvent OnPauseSpawning;
@@ -36,36 +32,12 @@ public class MinionSpawner : MonoBehaviour
     private void Awake() 
     {
         _stickyMinionPool =  GetComponent<StickyMinionPool>();
-        InitaliseSpawnPoints();
-        PlayerHealth.OnPlayerDeath += StopSpawning;
-    }
-
-    private void InitaliseSpawnPoints()
-    {
-        _spawnPoints = GetComponentsInChildren<Transform>();
-        Transform[] spawns = new Transform[_spawnPoints.Length - 1];
-        int count = 0;
-        foreach (Transform spawn in _spawnPoints)
-        {
-            if (spawn.gameObject != gameObject)
-            {
-                spawns[count] = spawn;
-                count++;
-            }
-        }
-        _spawnPoints = spawns;
     }
 
     private void OnEnable() 
     {
         _currMaxLevel = 4;
         _currMinLevel = 0;
-        _currTimeBetweenSpawns = _minTimeBetweenSpawns;
-    }
-
-    private void Start() 
-    {
-        ChangeState(SpawnerState.Spawning);
     }
 
     public void IncreaseMaxLevel()
@@ -74,44 +46,6 @@ public class MinionSpawner : MonoBehaviour
         if (_currMaxLevel >= _randomLevelVariation)
         {
             _currMinLevel++;
-        }
-    }
-
-    public void StartSpawning(float timeBeforeStartSpawning)
-    {
-        StartCoroutine(SpawnEnemies(_currTimeBetweenSpawns, timeBeforeStartSpawning));
-    }
-
-    private void StopSpawning(float unused = 0f)
-    {
-        Debug.Log("Player respawned");
-        StopAllCoroutines();
-        StartSpawning(10f);
-    }
-
-    private IEnumerator SpawnEnemies(float timeBetweenSpawns, float timeBeforeStart)
-    {
-        yield return new WaitForSeconds(timeBeforeStart);
-        while (_state == SpawnerState.Spawning)
-        {
-            SpawnStickyMinion();
-            yield return new WaitForSeconds(timeBetweenSpawns);
-        }
-    }
-
-    public void ChangeState(SpawnerState state)
-    {
-        _state = state;
-
-        switch (_state)
-        {
-            case SpawnerState.Spawning:
-                StartSpawning(0f);
-                OnStartSpawning?.Invoke();
-                break;
-            case SpawnerState.Waiting:
-                OnPauseSpawning?.Invoke();
-                break;
         }
     }
 
@@ -128,7 +62,7 @@ public class MinionSpawner : MonoBehaviour
         );
         int maxHealth = (int)(_minStartingHealth + _maxStartingHealth * multiplier);
         GameObject minion = _stickyMinionPool.GetObject(stats, maxHealth);
-        minion.transform.position = _spawnPoints[Random.Range(0, _spawnPoints.Length)].position;
+        minion.transform.position = _spawnPoint.position;
         minion.SetActive(true);
     }
 }
