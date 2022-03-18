@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
 	2369417814	Play_White_Cell_Tower_Spawn			\Default Work Unit\Play_White_Cell_Tower_Spawn	
 	2820289418	Play_Freeze_Shot			\Default Work Unit\Play_Freeze_Shot	
 	3631933282	Play_White_Cell_Tower_Destoyed			\Default Work Unit\Play_White_Cell_Tower_Destoyed	
@@ -6,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	79968391	Ambience 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Ambience 2_A9F6F3F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 2		960064
 	106655348	White Cell Tower Spawn 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Spawn 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Spawn\White Cell Tower Spawn 2		192064
 	316552023	FS 4	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 4		37940
 	324084362	Freeze Shot 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Freeze Shot\Freeze Shot 2		168064
@@ -17,7 +19,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	678228720	FS 5	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 5		37940
 	688423534	White Cell Tower Shoot 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Shoot 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Shoot\White Cell Tower Shoot 3		72064
 	696907537	Freeze Shot 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Freeze Shot\Freeze Shot 3		168064
+	740818002	Ambience 1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Ambience 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 1		1920064
 	937808209	White Cell Tower Shoot 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Shoot 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Shoot\White Cell Tower Shoot 2		72064
+	945233997	Ambience 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Ambience 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 3		768064
 	952253448	FS 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 2		37940
 	952971703	Freeze Shot 1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Freeze Shot\Freeze Shot 1		168064
 	990054460	White Cell Tower Spawn 1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Spawn 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Spawn\White Cell Tower Spawn 1		192064
