@@ -36,6 +36,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_White_Cell_Tower_Destoyed" ID="{048096AF-6C38-454B-AB95-E7932875E682}">
+					<ChildrenList>
+						<Action Name="" ID="{ADA602A7-381F-4558-BC0E-ECBCB85D7E16}" ShortID="265728149">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="White Cell Tower Destoyed" ID="{7995ABE4-92C7-46DA-B33B-803E01370779}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_White_Cell_Tower_Shoot" ID="{DB006DFC-2D8A-465F-87BB-8AF8A989F648}">
+					<ChildrenList>
+						<Action Name="" ID="{04111685-08D5-452D-A332-AA66229F2321}" ShortID="997502630">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="White Cell Tower Shoot" ID="{C49436FF-5DC4-4789-9524-DF700CA1F95A}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
