@@ -180,4 +180,8 @@ public class WhiteCellTower : MonoBehaviour
         _turretSpark.SetActive(!_turretSpark.activeSelf);
     }
 
+    public void DestroyTower()
+    {
+        
+    }
 }
