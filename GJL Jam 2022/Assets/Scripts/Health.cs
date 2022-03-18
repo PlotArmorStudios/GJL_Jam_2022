@@ -43,10 +43,14 @@ public abstract class Health : MonoBehaviour
 
     public Type HealthType;
 
-    public void OnEnable()
+    protected virtual void OnEnable()
     {
         //simple set health to max value on initiation/setup of attached game object.
         CurrentHealth = _maxHealth; //can assign an int value to a float value
+        
+        Debug.Log(gameObject.name + "Max hp is: " + _maxHealth);
+        Debug.Log(gameObject.name + "Current hp is: " + CurrentHealth);
+ 
         _healthBar.fillAmount = CurrentHealth / _maxHealth;
         _healthText.text = CurrentHealth + " / " + _maxHealth.ToString();
         IsAlive = true;
