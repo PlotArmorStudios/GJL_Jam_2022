@@ -14,13 +14,13 @@ public class AmmoManager : MonoBehaviour
     
     public int CurrentDamageAmmo => _currentDamageAmmo;
 
-    private void Start()
+    protected virtual void Start()
     {
         _currentDamageAmmo = _maxAmmo;
         RefreshUI();
     }
 
-    public void SubtractAmmo()
+    public virtual void SubtractAmmo()
     {
         _currentDamageAmmo--;
         RefreshUI();
@@ -33,7 +33,7 @@ public class AmmoManager : MonoBehaviour
         RefreshUI();
     }
     
-    private void RefreshUI()
+    protected void RefreshUI()
     {
         foreach (var ammoUI in _ammoUI)
         {

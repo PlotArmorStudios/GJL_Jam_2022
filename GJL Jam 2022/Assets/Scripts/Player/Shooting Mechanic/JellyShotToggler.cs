@@ -19,6 +19,7 @@ public class JellyShotToggler : MonoBehaviour
     private Transform _currentSpawnPoint;
     private GameObject _currentJelly;
     private JellyAmmoManager _ammoManager;
+    public JellyToShoot JellyToShoot => _jellyToShoot;
     public GameObject CurrentJelly => _currentJelly;
 
     private void Start()

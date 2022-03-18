@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 public class JellyShotSpawner : MonoBehaviour
 {
     [SerializeField] private JellyShotAimer _jellyShotAimer;
-    [FormerlySerializedAs("_jellyAmmoManager")] [SerializeField] private AmmoManager ammoManager;
+    [SerializeField] private AmmoManager ammoManager;
     
     private void OnEnable()
     {
