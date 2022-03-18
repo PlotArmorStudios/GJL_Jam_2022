@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3819680221">
+		<SoundBank Id="393239870" Language="SFX" Hash="4104688418">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -57,6 +57,14 @@
 						<File Id="952971703" Language="SFX">
 							<ShortName>Freeze Shot 1.wav</ShortName>
 							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3631933282" Name="Play_White_Cell_Tower_Destoyed" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Destoyed" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
+					<IncludedMemoryFiles>
+						<File Id="665559782" Language="SFX">
+							<ShortName>White Cell tower Destroyed.wav</ShortName>
+							<Path>SFX\White Cell tower Destroyed_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
