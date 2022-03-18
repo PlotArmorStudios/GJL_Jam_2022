@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585539752347310111
+    m_lastTime: -8585539747582088642
     List:
     - name: SFX
       guid: 48271637fabe364d948869c1beed08de
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585539752347565157
+    m_lastTime: -8585539747582453699
     List:
     - name: Play_Footsteps
       guid: 8e12d4cc1793684184bfb8bb256a8b63
