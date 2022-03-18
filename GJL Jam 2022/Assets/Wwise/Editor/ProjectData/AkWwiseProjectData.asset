@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585539601697640677
+    m_lastTime: -8585539597325028302
     List:
     - name: SFX
       guid: 48271637fabe364d948869c1beed08de
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585539601697550662
+    m_lastTime: -8585539597326658588
     List:
     - name: Play_Ambience
       guid: 250cd58382bafa4b9a97eafae60989b1
@@ -289,7 +289,7 @@ MonoBehaviour:
     m_lastTime: -8585540660895358223
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
