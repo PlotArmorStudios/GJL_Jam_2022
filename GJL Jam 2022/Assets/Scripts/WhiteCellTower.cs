@@ -160,7 +160,8 @@ public class WhiteCellTower : MonoBehaviour
     private void FireCell() {
 
         TurretInvoke();
-        
+        AkSoundEngine.PostEvent("Play_White_Cell_Tower_Shoot", gameObject);
+
 
         //how to aim = "Raycast to Boss, to alter/change rotation, yo" :)
 
@@ -180,4 +181,8 @@ public class WhiteCellTower : MonoBehaviour
         _turretSpark.SetActive(!_turretSpark.activeSelf);
     }
 
+    public void DestroyTower()
+    {
+        AkSoundEngine.PostEvent("Play_White_Cell_Tower_Destoyed", gameObject);
+    }
 }

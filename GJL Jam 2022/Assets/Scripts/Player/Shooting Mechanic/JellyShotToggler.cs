@@ -15,26 +15,35 @@ public class JellyShotToggler : MonoBehaviour
     [SerializeField] private JellyToShoot _jellyToShoot = JellyToShoot.FreezingJelly;
     [SerializeField] private GameObject _damageJelly;
     [SerializeField] private GameObject _freezingJelly;
+    [SerializeField] private float _fireTimeDelay = .5f;
 
     private Transform _currentSpawnPoint;
     private GameObject _currentJelly;
-    private JellyAmmoManager _ammoManager;
+    private DamageJellyAmmoManager _ammoManager;
+    private float _currentFireTime;
+    public JellyToShoot JellyToShoot => _jellyToShoot;
     public GameObject CurrentJelly => _currentJelly;
 
     private void Start()
     {
-        _ammoManager = GetComponent<JellyAmmoManager>();
+        _ammoManager = GetComponent<DamageJellyAmmoManager>();
         ToggleJellyToShoot();
     }
 
     void Update()
     {
+        _currentFireTime += Time.deltaTime;
+
         if (Input.GetButton("Fire1"))
         {
-            if (_jellyToShoot == JellyToShoot.DamageJelly && _ammoManager.CurrentDamageAmmo > 0)
+            if (_currentFireTime < _fireTimeDelay) return;
+            
+            if (_jellyToShoot == JellyToShoot.DamageJelly && _ammoManager.CurrentAmmo > 0)
                 _animator.SetBool("Shooting", true);
             else if (_jellyToShoot != JellyToShoot.DamageJelly)
                 _animator.SetBool("Shooting", true);
+            
+            _currentFireTime = 0;
         }
         else
             _animator.SetBool("Shooting", false);

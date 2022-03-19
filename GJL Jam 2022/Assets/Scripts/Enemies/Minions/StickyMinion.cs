@@ -60,6 +60,7 @@ public class StickyMinion : MonoBehaviour
     public UnityEvent OnStickToPlayer;
     public UnityEvent OnHitPlayer;
     public UnityEvent OnDie;
+    private AddToAmmo _addToAmmo;
 
     private void Awake()
     {
@@ -71,6 +72,7 @@ public class StickyMinion : MonoBehaviour
         _triggerZone = GetComponent<CapsuleCollider>();
         _collider = GetComponent<SphereCollider>();
         _rigidbody = GetComponent<Rigidbody>();
+        _addToAmmo = GetComponent<AddToAmmo>();
         PlayerHealth.OnPlayerDeath += Die;
     }
 
@@ -292,5 +294,21 @@ public class StickyMinion : MonoBehaviour
         transform.SetParent(_parent);
         if (_state == MinionState.Sticking || _state == MinionState.StuckToPlayer)
             ChangeState(MinionState.Dead);
+    }
+
+    public void Freeze()
+    {
+        _addToAmmo.OnFreezeMinion();
+        Debug.Log("Freeze Minion");
+    }
+
+    public void Kill()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        PlayerHealth.OnPlayerDeath -= Die;
     }
 }

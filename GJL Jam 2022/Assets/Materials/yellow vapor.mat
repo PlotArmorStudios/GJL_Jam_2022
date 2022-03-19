@@ -132,7 +132,7 @@ Material:
     m_Colors:
     - Color_4c63ed5243204866a237868152cc3ae9: {r: 0.8867924, g: 0.49564403, b: 0.14640439, a: 1}
     - Color_5e622ef2219f442391cd12b0d730c447: {r: 0.8490566, g: 0.47777602, b: 0.1802243, a: 0}
-    - _BaseColor: {r: 0.8773585, g: 0.48030603, b: 0.23589355, a: 0.32156864}
+    - _BaseColor: {r: 0.8773585, g: 0.48030603, b: 0.23589355, a: 0.13725491}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

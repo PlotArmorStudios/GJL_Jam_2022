@@ -4922,6 +4922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ceaa5b330e8e05e4f9118b155750cb83, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ceaa5b330e8e05e4f9118b155750cb83, type: 3}
       propertyPath: m_Name
       value: pipe_plug
@@ -4996,6 +5000,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 03b4cbfcac2957f4882a98810d8b4ca0, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 03b4cbfcac2957f4882a98810d8b4ca0, type: 3}
       propertyPath: m_Name
       value: pool
@@ -5007,3 +5015,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03b4cbfcac2957f4882a98810d8b4ca0, type: 3}
   m_PrefabInstance: {fileID: 7397972519244161437}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7865118124748854265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 03b4cbfcac2957f4882a98810d8b4ca0, type: 3}
+  m_PrefabInstance: {fileID: 7397972519244161437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7501672254461792150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865118124748854265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.744483, y: 3.9999998, z: 5.620048}
+  m_Center: {x: 0, y: 0, z: 0}
