@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="904846932">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="4015522579">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -78,6 +78,46 @@
 						<File Id="952971703" Language="SFX">
 							<ShortName>Freeze Shot 1.wav</ShortName>
 							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2785067377" Name="Play_UI_gamestart_or_reset" ObjectPath="\Events\Default Work Unit\Play_UI_gamestart_or_reset" GUID="{74943387-3604-4BA1-902D-C9646DE39355}" DurationType="OneShot" DurationMin="0.286667" DurationMax="0.286667">
+					<IncludedMemoryFiles>
+						<File Id="453914791" Language="SFX">
+							<ShortName>UI_Start-Reset.wav</ShortName>
+							<Path>SFX\UI_Start-Reset_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2938792578" Name="Play_UI_Navigate_1" ObjectPath="\Events\Default Work Unit\Play_UI_Navigate_1" GUID="{061CFDF9-9E4B-4867-9325-0E39CCA6748B}" DurationType="OneShot" DurationMin="0.125" DurationMax="0.125">
+					<IncludedMemoryFiles>
+						<File Id="491559289" Language="SFX">
+							<ShortName>UI_Navigate_1.wav</ShortName>
+							<Path>SFX\UI_Navigate_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2938792577" Name="Play_UI_Navigate_2" ObjectPath="\Events\Default Work Unit\Play_UI_Navigate_2" GUID="{D2A93499-82D4-4B7B-A10C-402E5E5951EC}" DurationType="OneShot" DurationMin="0.168958" DurationMax="0.168958">
+					<IncludedMemoryFiles>
+						<File Id="150050008" Language="SFX">
+							<ShortName>UI_Navigate_2.wav</ShortName>
+							<Path>SFX\UI_Navigate_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2938792576" Name="Play_UI_Navigate_3" ObjectPath="\Events\Default Work Unit\Play_UI_Navigate_3" GUID="{16A3814B-873A-4B20-8B60-991665702ACA}" DurationType="OneShot" DurationMin="0.159417" DurationMax="0.159417">
+					<IncludedMemoryFiles>
+						<File Id="467379157" Language="SFX">
+							<ShortName>UI_Navigate_3.wav</ShortName>
+							<Path>SFX\UI_Navigate_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2938792583" Name="Play_UI_Navigate_4" ObjectPath="\Events\Default Work Unit\Play_UI_Navigate_4" GUID="{1071EB09-03A9-4684-9F8D-F9991422BFFA}" DurationType="OneShot" DurationMin="0.153187" DurationMax="0.153187">
+					<IncludedMemoryFiles>
+						<File Id="887868602" Language="SFX">
+							<ShortName>UI_Navigate_4.wav</ShortName>
+							<Path>SFX\UI_Navigate_4_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
