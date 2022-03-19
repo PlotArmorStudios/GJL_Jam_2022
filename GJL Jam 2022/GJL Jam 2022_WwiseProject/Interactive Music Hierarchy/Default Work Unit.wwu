@@ -795,7 +795,7 @@
 																			<PropertyList>
 																				<Property Name="BeginTrimOffset" Type="Real64" Value="118260.869565217"/>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="120869.5625"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="68.4150513112884"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																				<Property Name="PlayAt" Type="Real64" Value="-118260.869565217"/>
 																			</PropertyList>
