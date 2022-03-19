@@ -83,7 +83,7 @@ public class StickyMinion : MonoBehaviour
         _navMeshAgent.enabled = false;
         _triggerZone.enabled = true;
         _collider.enabled = true;
-        _rigidbody.isKinematic = true;
+        _rigidbody.isKinematic = false;
         gameObject.layer = 0;
         _parent = transform.parent;
         _navMeshAgent.speed = Stats._speed;
@@ -124,6 +124,7 @@ public class StickyMinion : MonoBehaviour
         else if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && _state == MinionState.Spawning)
         {
             _rigidbody.isKinematic = true;
+            Debug.Log("Yo it's theg ground");
             ChangeState(MinionState.ChasePlayer);
         }
     }
@@ -164,6 +165,8 @@ public class StickyMinion : MonoBehaviour
         while (_state == MinionState.ChasePlayer)
         {
             _navMeshAgent.destination = _player.position;
+            Debug.Log("Set navmesh destination to " + _navMeshAgent.destination);
+            Debug.Log("Current position: " + transform.position);
             yield return new WaitForSeconds(0.1f);
         }
     }
