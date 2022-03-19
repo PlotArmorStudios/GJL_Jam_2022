@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
     [SerializeField] private float _playerRespawnTime;
     
+    private PlayerControl _player;
     public static GameManager Instance;
 
     private void Awake()
     {
         Instance = this;
+        _player = FindObjectOfType<PlayerControl>();
     }
 
     public void LoseGame()
