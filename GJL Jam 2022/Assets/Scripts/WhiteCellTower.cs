@@ -33,8 +33,7 @@ public class WhiteCellTower : MonoBehaviour
     #endregion
 
     //Future/Temp notes
-    ///Go from 'stationary' short term, to 'long term' timer based health, in testing.
-
+    ///Figuire out how to 'spawn aim' away from player, on Awake/Start of this object, yo
 
     //publlic variables, to be declared on top. Easy editing wise
     //lifespan timer variables
@@ -55,6 +54,34 @@ public class WhiteCellTower : MonoBehaviour
 
     //Public for now. Need to grab/serialize as an easy reference later, GameObject projectile wise. Until then, it's public
     public GameObject Bullet;//equals a "tiny sphere", to fire/fling at enemy. "Cell" wise...
+
+    // Awake is called when object is enabled?/started, before the first frame?
+    /*Deprecating, as another script calls on setting up the transform on spawn. Consider referencing when it comes to 
+    private void Awake()
+    {
+        //Step A: Get the 'target pos' to look away from
+        Vector3 _playerPos;
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            _playerPos = GameObject.
+                FindGameObjectWithTag("Player").
+                transform.position;
+        }
+        else// if (Camera.main != null)//hud alt, in case player ain't there
+        {
+            _playerPos = Camera.main.gameObject.
+                transform.position;
+        }//endif, as if there's no main camera, there's no game, yo
+
+            //Step B: Reference the positions
+            Vector3 _vecAway = gameObject.transform.position + _playerPos;
+            _vecAway.y = gameObject.transform.position.y;//to bar visual glitches
+                //Last Step: Reference and set the rotations
+            Quaternion _lookAway = Quaternion.LookRotation(_vecAway);
+            gameObject.transform.rotation = _lookAway;//should just work
+
+        Debug.LogError("Testing, to check it's looking AWAY from player here");
+    }*/ ///End deprecated Awake script
 
     // Start is called before the first frame update
     void Start()
