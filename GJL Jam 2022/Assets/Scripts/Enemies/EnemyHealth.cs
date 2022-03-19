@@ -11,6 +11,11 @@ public class EnemyHealth : Health
 {   
     public event Action OnDie;
     
+    protected override void OnEnable() 
+    {
+        IsAlive = true;    
+    }
+
     public void ResetHealth()
     {
         CurrentHealth = _maxHealth;
