@@ -13,7 +13,6 @@ public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float turnSmoothTime = 0.1f;
-    [SerializeField] private Transform _cam;
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] private float _gravity = 10f;
 
@@ -23,6 +22,7 @@ public class PlayerControl : MonoBehaviour
 
     private Run _run;
     private GroundDetect _groundDetect;
+    private Camera _cam;
 
     private float _horizontal;
     private float _vertical;
@@ -39,6 +39,7 @@ public class PlayerControl : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         _run = GetComponent<Run>();
         _groundDetect = GetComponent<GroundDetect>();
+        _cam = FindObjectOfType<Camera>();
     }
 
     private void Update()
@@ -101,7 +102,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Move()
     {
-        float targetAngle = Mathf.Atan2(Movement.x, Movement.z) * Mathf.Rad2Deg + _cam.eulerAngles.y;
+        float targetAngle = Mathf.Atan2(Movement.x, Movement.z) * Mathf.Rad2Deg + _cam.transform.eulerAngles.y;
         float angle =
             Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
