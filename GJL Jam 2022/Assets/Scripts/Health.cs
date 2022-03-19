@@ -67,6 +67,7 @@ public abstract class Health : MonoBehaviour
 
         if (CurrentHealth <= 0 && IsAlive)
         {
+            Debug.Log("Current health depleted");
             IsAlive = false;
             Die();
         }
