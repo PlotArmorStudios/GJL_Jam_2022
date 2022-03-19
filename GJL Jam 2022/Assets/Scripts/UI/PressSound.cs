@@ -6,6 +6,6 @@ public class PressSound : MonoBehaviour
 {
     public void Press()
     {
-        //Sound event goes here
+        AkSoundEngine.PostEvent("Play_UI_gamestart_or_reset", gameObject);
     }
 }
