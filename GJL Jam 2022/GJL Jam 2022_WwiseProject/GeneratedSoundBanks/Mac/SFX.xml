@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3478535260">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="904846932">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -109,7 +109,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2369417814" Name="Play_White_Cell_Tower_Spawn" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Spawn" GUID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
+				<Event Id="2369417814" Name="Play_White_Cell_Tower_Spawn" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Spawn" GUID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}" DurationType="OneShot" DurationMin="2.387748" DurationMax="2.618926">
 					<IncludedMemoryFiles>
 						<File Id="106655348" Language="SFX">
 							<ShortName>White Cell Tower Spawn 2.wav</ShortName>

@@ -371,6 +371,11 @@
 								<RandomSequenceContainer Name="White Cell Tower Spawn" ID="{534D9F65-1306-409B-8EFC-36B7C5F862E7}" ShortID="86839258">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ModifierList>
 												<ModifierInfo>
