@@ -25,12 +25,14 @@ public class DialogueManager : MonoBehaviour
     [Tooltip("The scene that loads when this dialogue is finished.")]
     [SerializeField] private string _sceneToLoad;
 
+    private SceneLoader _sceneLoader;
+
     private void Start()
     {
         _sentences = new Queue<string>();
         _names = new Queue<string>();
         _transitionNumbers = new Queue<int>();
-        
+        _sceneLoader = GetComponent<SceneLoader>();
         _dialogueTrigger = FindObjectOfType<DialogueTrigger>();
         _dialogueTrigger.TriggerDialogue();
     }
@@ -126,6 +128,6 @@ public class DialogueManager : MonoBehaviour
     {
         _conversationInProgress = false;
         _animator.SetBool("IsOpen", false);
-        SceneManager.LoadScene(_sceneToLoad);
+        _sceneLoader.LoadScene();
     }
 }

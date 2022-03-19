@@ -6,13 +6,29 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] private string _sceneToLoad;
     [SerializeField] private Image _fadeScreen;
     [SerializeField] private bool _transitionToggle;
     [SerializeField] private float _transitionSpeed = 1f;
-    
+
+    public void LoadScene()
+    {
+        if (_transitionToggle)
+            StartCoroutine(PlayTransition(_sceneToLoad));
+        else
+            SceneManager.LoadScene(_sceneToLoad);
+    }
     public void LoadScene(string scene)
     {
         if (_transitionToggle)
+            StartCoroutine(PlayTransition(scene));
+        else
+            SceneManager.LoadScene(scene);
+    }
+
+    public void LoadScene(string scene, bool transitionToggle)
+    {
+        if (transitionToggle)
             StartCoroutine(PlayTransition(scene));
         else
             SceneManager.LoadScene(scene);
