@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3589973787">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3728661972">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -20,7 +20,7 @@
 					<IncludedMemoryFiles>
 						<File Id="79968391" Language="SFX">
 							<ShortName>Ambience 2.wav</ShortName>
-							<Path>SFX\Ambience 2_A9F6F3F0.wem</Path>
+							<Path>SFX\Ambience 2_BBB18E0F.wem</Path>
 						</File>
 						<File Id="740818002" Language="SFX">
 							<ShortName>Ambience 1.wav</ShortName>
@@ -84,7 +84,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3696688966" Name="Play_White_Cell_Tower_Shoot" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Shoot" GUID="{DB006DFC-2D8A-465F-87BB-8AF8A989F648}" MaxAttenuation="60." DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
+				<Event Id="3696688966" Name="Play_White_Cell_Tower_Shoot" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Shoot" GUID="{DB006DFC-2D8A-465F-87BB-8AF8A989F648}" MaxAttenuation="40." DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
 					<IncludedMemoryFiles>
 						<File Id="573538586" Language="SFX">
 							<ShortName>White Cell Tower Shoot 1.wav</ShortName>
