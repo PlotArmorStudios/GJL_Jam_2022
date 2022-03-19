@@ -6,8 +6,8 @@ public class UIToggler : MonoBehaviour
 {
     [SerializeField] private GameObject _objectToToggle;
 
-    public void ToggleObject()
+    public void ToggleObject(bool toggle)
     {
-        _objectToToggle.SetActive(false);
+        _objectToToggle.SetActive(toggle);
     }
 }
