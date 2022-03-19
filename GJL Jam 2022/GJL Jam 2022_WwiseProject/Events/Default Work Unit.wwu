@@ -96,7 +96,7 @@
 						<Action Name="" ID="{CBC809EA-10C7-4AF4-8E6E-CAB14CF397B6}" ShortID="111449228">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Gameplay Music" ID="{5958C3FC-4462-4C4F-818A-6CEEC8D7A2A0}" WorkUnitID="{D0C64E0D-2AA3-485A-BADF-E72D2E2E1065}"/>
+									<ObjectRef Name="Gameplay Music" ID="{5958C3FC-4462-4C4F-818A-6CEEC8D7A2A0}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -107,7 +107,7 @@
 						<Action Name="" ID="{989CD1BD-4615-4843-8C28-A37D132C0B9F}" ShortID="844908875">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Menu Music" ID="{B3773535-32E3-4FE1-B057-37CD253AD52F}" WorkUnitID="{D0C64E0D-2AA3-485A-BADF-E72D2E2E1065}"/>
+									<ObjectRef Name="Menu Music" ID="{B3773535-32E3-4FE1-B057-37CD253AD52F}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -118,7 +118,18 @@
 						<Action Name="" ID="{E85BF692-2FD7-41A9-AAB9-826197557D31}" ShortID="409036063">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" WorkUnitID="{D0C64E0D-2AA3-485A-BADF-E72D2E2E1065}"/>
+									<ObjectRef Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{D7670F47-5016-4350-A837-7D6CBEA1AC28}">
+					<ChildrenList>
+						<Action Name="" ID="{A4A115CD-295B-4B4A-8584-6677D2015FD0}" ShortID="217056143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{0EEC3279-9077-4BA6-804B-5652B9390A08}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -1,6 +1,774 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Music" ID="{0EEC3279-9077-4BA6-804B-5652B9390A08}" ShortID="1054208734">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" ShortID="470246587">
+							<PropertyList>
+								<Property Name="Tempo" Type="Real64" Value="110"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Samani_CS_Cutscene_3_18" ID="{50F4C6F3-6269-4254-8A14-F84AEC5A8F65}" ShortID="1040644200">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="52363.6281179138"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="110"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Samani_CS_Cutscene_3_18" ID="{3143892B-391A-4F8B-9B09-8EBAFEED66DB}" ShortID="957956429">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Samani_CS_Cutscene_3_18" ID="{54695E93-4ECD-401E-BDC4-47DA3CFEDD20}">
+													<Language>SFX</Language>
+													<AudioFile>Samani_CS_Cutscene_3_18.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="579437306"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{89ACA9AE-DB67-4F81-AC23-F73044DB47ED}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{68AE47A6-B4B9-4CF4-BDEC-BA4E8DA5DE0C}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Samani_CS_Cutscene_3_18" ID="{10271674-FB6B-4CE0-9D8F-00CB4C06CBC3}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52363.6281179138"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Samani_CS_Cutscene_3_18" ID="{54695E93-4ECD-401E-BDC4-47DA3CFEDD20}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{107250C0-3DC1-4D37-8D02-36C46A27CCC9}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{07C2D506-D2EC-4EAB-B048-D6EA09B6B3F2}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="52363.6281179138"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{7C9C63BF-67B5-4409-B868-28F671F742F0}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{84501AE3-012F-4F2F-A73F-7C1CA4AEEF25}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{CC4FD93A-1252-43CA-96FF-82E85A862E2D}" ShortID="282252418">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{BC3E4795-B69D-4BD1-89BA-C02FFCBB009B}" ShortID="827516866">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Samani_CS_Cutscene_3_18" ID="{50F4C6F3-6269-4254-8A14-F84AEC5A8F65}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Gameplay Music" ID="{5958C3FC-4462-4C4F-818A-6CEEC8D7A2A0}" ShortID="906841662">
+							<PropertyList>
+								<Property Name="Tempo" Type="Real64" Value="138"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Samani_CS_GameplayPre_3_18" ID="{3D48A260-3D52-4472-A624-C905C8EA5023}" ShortID="504644607">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="121739.130434783"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="138"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Samani_CS_Gameplay_Main" ID="{AB8BB066-9A92-4256-A3C1-9F5778CB3008}" ShortID="405742450">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Samani_CS_GameplayPre_3_18" ID="{B9ED72BE-BA13-4E7E-9E6C-32AD90AF5CF4}">
+													<Language>SFX</Language>
+													<AudioFile>Samani_CS_GameplayPre_3_18.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="627556170"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{5AC81724-5742-41B3-9C02-585A65F30468}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{DCA3FC83-D835-4366-B0D3-C4303894B344}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Samani_CS_GameplayPre_3_18" ID="{F2CA6107-591B-4F1E-8F88-D1931991D6B9}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="118260.869565217"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Samani_CS_GameplayPre_3_18" ID="{B9ED72BE-BA13-4E7E-9E6C-32AD90AF5CF4}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{26BE54D2-95B7-4F11-A1D5-E3DC39B58D34}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>118.26087</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{7C4F96AF-47BC-4277-8936-CA5A12EF880E}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>118.26087</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{ED970FEF-1447-45F9-827A-7659A2B03A28}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>118.26087</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{28654CFC-1201-4AC6-A16D-57561FB04B27}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{7D7C24B3-6DE1-4970-A51C-1DC2A7B93D72}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="118260.869565217"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{3ED9110D-E69C-4167-AEE1-0AD68868DD23}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{4FB7DA0A-06C4-48CC-A902-484D27653AEC}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{2CC23C2E-1647-4ABF-96CC-A3AD4107285A}" ShortID="551756396">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{C24F6950-4BF4-4D37-8F48-3C0F3C3BB5B1}" ShortID="974246742">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Samani_CS_GameplayPre_3_18" ID="{3D48A260-3D52-4472-A624-C905C8EA5023}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Menu Music" ID="{B3773535-32E3-4FE1-B057-37CD253AD52F}" ShortID="405498429">
+							<PropertyList>
+								<Property Name="Tempo" Type="Real64" Value="110"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Samani_CS_Menu_Pre_3_18" ID="{618CFBF9-9C74-4254-A227-A3CD9AEE4EA7}" ShortID="486258596">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="63130.4375"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="115"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Samani_CS_Menu_Main" ID="{EDBB5F48-33F3-448E-ADB7-44C1D5CCFADD}" ShortID="53581777">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Samani_CS_Menu_Pre_3_18" ID="{0B03B9E9-030E-404E-B268-4EFE5FCEEA68}">
+													<Language>SFX</Language>
+													<AudioFile>Samani_CS_Menu_Pre_3_18.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="540538168"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{0C870E8C-6E43-4971-8B14-DAB4484C6CEF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{08BC8497-9468-4135-8695-33A52D1DB00B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Samani_CS_Menu_Pre_3_18" ID="{170AE803-B6E8-43F7-9CDD-13D1F34F1027}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="58434.7826086956"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Samani_CS_Menu_Pre_3_18" ID="{0B03B9E9-030E-404E-B268-4EFE5FCEEA68}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{03680C34-A0B0-4442-BA15-1E2A8A30BB21}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>58.43478</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{E9826FAD-46E1-47B9-A8AC-87581702D207}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>58.43478</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{0AF05664-0314-4C0D-853E-75AF8D3AEBF7}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>58.43478</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Samani_CS_Menu_Tail" ID="{61A2FE06-3BC8-4AAF-BB50-1ACC2E1D9685}" ShortID="434702613">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Samani_CS_Menu_Pre_3_18" ID="{BEC546C4-02A3-4619-AF19-57990A9154FA}">
+													<Language>SFX</Language>
+													<AudioFile>Samani_CS_Menu_Pre_3_18.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="540538168"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{9AA5D2DC-8211-4445-826C-3A9666A467D0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{3015DEFC-C987-48DF-967C-35EBE601EB45}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Samani_CS_Menu_Pre_3_18" ID="{60F51480-7F32-41FE-A33F-E28F139F409E}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="58434.7826086957"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="63130.4375"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="-58434.7826086957"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Samani_CS_Menu_Pre_3_18" ID="{BEC546C4-02A3-4619-AF19-57990A9154FA}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{7A1F2111-34F5-4752-A00F-C4E24AFE1D47}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>58.43478</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>63.1304375</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{E6219980-CCBB-4F88-8EBF-899B083872A3}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>58.43478</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>63.1304375</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{F9BDDD4E-EEB3-4F66-9962-F83484241B39}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>58.43478</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>63.1304375</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{304D3622-A3FF-4677-849D-EC3A88645453}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{9CF7EED9-4A19-4246-A446-6CE24FB64096}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="58434.7826086956"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9F1513D1-402C-407F-9AE0-EC167FC0BA00}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{2A17FA08-A556-458B-810B-E7E4ABBEC71E}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{B584AC46-84DC-4002-82AF-DEB1BB65A8AB}" ShortID="693943660">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{D4DADBAF-8F8A-4106-B005-878C47258AD0}" ShortID="38316910">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Samani_CS_Menu_Pre_3_18" ID="{618CFBF9-9C74-4254-A227-A3CD9AEE4EA7}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{52B82EB9-AB87-4811-BF0F-AA59D4303C3E}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{0F245F2E-52B1-4E8B-A421-9751B5D87308}">
+									<PropertyList>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{E6B8FB58-DA30-42A5-9A38-0FEA7BA0F15F}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Menu Music" ID="{B3773535-32E3-4FE1-B057-37CD253AD52F}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{D08DC929-90C7-4204-BF39-6663506F5369}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{C9C8B228-B499-45BC-9096-29668299E64B}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Gameplay Music" ID="{5958C3FC-4462-4C4F-818A-6CEEC8D7A2A0}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{D956FCE0-49F6-4793-A8FC-2273940DE376}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{FF0DD25A-CC00-4ED0-A78D-07B0BE5A998E}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Gameplay Music" ID="{5958C3FC-4462-4C4F-818A-6CEEC8D7A2A0}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{F0B54D95-6950-4787-8B55-D891D2C1C30B}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<ArgumentList>
+						<ArgumentRef Name="Music_Status" ID="{E1A43367-6A63-48E1-9C98-6837218E1D41}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="CutsceneMusic" ID="{D869889E-837B-4E70-9FF6-3E3A1BBA5184}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Cutscene Music" ID="{971A0278-F304-4F4E-A52C-B84B23E1ED3A}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="GameplayMusic" ID="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Gameplay Music" ID="{5958C3FC-4462-4C4F-818A-6CEEC8D7A2A0}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="MenuMusic" ID="{6B1DB3DD-A505-4742-AD62-57F73E278F65}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Menu Music" ID="{B3773535-32E3-4FE1-B057-37CD253AD52F}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

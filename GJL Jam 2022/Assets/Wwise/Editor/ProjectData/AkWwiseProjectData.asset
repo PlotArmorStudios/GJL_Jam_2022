@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1bbfe230631f7f4ba7365c17759d47dd
     GuidInternal: 
-    m_lastTime: -8585539461149748632
+    m_lastTime: -8585538973423750887
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a4bfc51f3264a84aa8233654a5a8be71
     GuidInternal: 
-    m_lastTime: -8585539461153969608
+    m_lastTime: -8585538973430507079
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585538953816896325
+    m_lastTime: -8585538830055347295
     List:
+    - name: Music
+      guid: 3b56b2850188ad4fa1df1aa8839e31ef
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 1dac198034777646bf2fb55c08a2a7cb
+      - ElementName: Music
+        ObjectType: 7
+        guid: 3b56b2850188ad4fa1df1aa8839e31ef
+      Path: SoundBanks\Default Work Unit\Music
     - name: SFX
       guid: 48271637fabe364d948869c1beed08de
       id: 393239870
@@ -94,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585538932060953705
+    m_lastTime: -8585538830062383526
     List:
     - name: Play_Ambience
       guid: 250cd58382bafa4b9a97eafae60989b1
@@ -164,6 +178,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.854061
       minDuration: 1.65178
+    - name: Play_Music
+      guid: 470f67d716505043a8377d6cbea1ac28
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 470f67d716505043a8377d6cbea1ac28
+      Path: Events\Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Music_Cutscene
       guid: f9aa42eb408dcf4a8504a0631ec39d88
       id: 4005969178
@@ -295,7 +326,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e429f1fb20556409b0ecbd50382da2e
     GuidInternal: 
-    m_lastTime: -8585539461155790004
+    m_lastTime: -8585538973432277381
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -309,7 +340,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7cc3790fcf0cc448a2a1fd8d48232267
     GuidInternal: 
-    m_lastTime: -8585539461149808654
+    m_lastTime: -8585538973423850918
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -323,8 +354,74 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9f70caac1a47444dad5fb47fa68d6a97
     GuidInternal: 
-    m_lastTime: -8585539461149788633
-    List: []
+    m_lastTime: -8585538851308802386
+    List:
+    - name: Music_Status
+      guid: 6733a4e1636ae1489c986837218e1d41
+      id: 1422226475
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9f70caac1a47444dad5fb47fa68d6a97
+      - ElementName: Music_Status
+        ObjectType: 11
+        guid: 6733a4e1636ae1489c986837218e1d41
+      Path: Switches\Default Work Unit\Music_Status
+      values:
+      - name: CutsceneMusic
+        guid: 9e8869d87b83704e9ff63e3a1bba5184
+        id: 3264177434
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9f70caac1a47444dad5fb47fa68d6a97
+        - ElementName: Music_Status
+          ObjectType: 11
+          guid: 6733a4e1636ae1489c986837218e1d41
+        - ElementName: CutsceneMusic
+          ObjectType: 10
+          guid: 9e8869d87b83704e9ff63e3a1bba5184
+      - name: GameplayMusic
+        guid: 1ec5fcb6dc4d2d4c82010c5cab2d7c4d
+        id: 2275179450
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9f70caac1a47444dad5fb47fa68d6a97
+        - ElementName: Music_Status
+          ObjectType: 11
+          guid: 6733a4e1636ae1489c986837218e1d41
+        - ElementName: GameplayMusic
+          ObjectType: 10
+          guid: 1ec5fcb6dc4d2d4c82010c5cab2d7c4d
+      - name: MenuMusic
+        guid: ddb31d6b05a54247ad6257f73e278f65
+        id: 679636833
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9f70caac1a47444dad5fb47fa68d6a97
+        - ElementName: Music_Status
+          ObjectType: 11
+          guid: 6733a4e1636ae1489c986837218e1d41
+        - ElementName: MenuMusic
+          ObjectType: 10
+          guid: ddb31d6b05a54247ad6257f73e278f65
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -337,10 +434,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7c6519635a90b24397c482bc7a26d98b
     GuidInternal: 
-    m_lastTime: -8585539461149768662
+    m_lastTime: -8585538973423785900
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000130000001500000016000000190000001a0000001b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="2090369587">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" GUID="{D7670F47-5016-4350-A837-7D6CBEA1AC28}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="540538168" Language="SFX">
+							<ShortName>Samani_CS_Menu_Pre_3_18.wav</ShortName>
+							<Path>SFX\Samani_CS_Menu_Pre_3_18_D79FB2B7.wem</Path>
+						</File>
+						<File Id="579437306" Language="SFX">
+							<ShortName>Samani_CS_Cutscene_3_18.wav</ShortName>
+							<Path>SFX\Samani_CS_Cutscene_3_18_D79FB2B7.wem</Path>
+						</File>
+						<File Id="627556170" Language="SFX">
+							<ShortName>Samani_CS_GameplayPre_3_18.wav</ShortName>
+							<Path>SFX\Samani_CS_GameplayPre_3_18_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D869889E-837B-4E70-9FF6-3E3A1BBA5184}">
+							<Media>
+								<File Id="579437306"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}">
+							<Media>
+								<File Id="627556170"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6B1DB3DD-A505-4742-AD62-57F73E278F65}">
+							<Media>
+								<File Id="540538168"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="1422226475" Name="Music_Status" ObjectPath="\Switches\Default Work Unit\Music_Status" GUID="{E1A43367-6A63-48E1-9C98-6837218E1D41}">
+					<Switches>
+						<Switch Id="3264177434" Name="CutsceneMusic" ObjectPath="\Switches\Default Work Unit\Music_Status\CutsceneMusic" GUID="{D869889E-837B-4E70-9FF6-3E3A1BBA5184}"/>
+						<Switch Id="679636833" Name="MenuMusic" ObjectPath="\Switches\Default Work Unit\Music_Status\MenuMusic" GUID="{6B1DB3DD-A505-4742-AD62-57F73E278F65}"/>
+						<Switch Id="2275179450" Name="GameplayMusic" ObjectPath="\Switches\Default Work Unit\Music_Status\GameplayMusic" GUID="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
