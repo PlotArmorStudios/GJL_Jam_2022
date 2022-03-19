@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class BossHealth : Health
 {
-    [Tooltip("Scene to load on death.")]
-    [SerializeField] private string _sceneToLoad;
-
     protected override void Die()
     {
-        SceneManager.LoadScene(_sceneToLoad);
+        Debug.Log("Boss died");
+        GameManager.Instance.WinGame();
     }
 }

@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float _playerRespawnTime;
-    
+    [SerializeField] private string _winScene, _loseScene;
+
     public static GameManager Instance;
     private PlayerControl _player;
     private SceneLoader _sceneLoader;
+
+    public static event Action OnGameEnd;
 
     private void Awake()
     {
@@ -19,9 +22,16 @@ public class GameManager : MonoBehaviour
         _sceneLoader = GetComponent<SceneLoader>();
     }
 
+    public void WinGame()
+    {
+        OnGameEnd?.Invoke();
+        _sceneLoader.LoadScene(_winScene, true);
+    }
+
     public void LoseGame()
     {
-        _sceneLoader.LoadScene();
+        OnGameEnd?.Invoke();
+        _sceneLoader.LoadScene(_loseScene, false);
     }
 
     public void DespawnPlayer()

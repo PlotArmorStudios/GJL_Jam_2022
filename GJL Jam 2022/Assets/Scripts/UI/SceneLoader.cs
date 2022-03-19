@@ -26,6 +26,14 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene(scene);
     }
 
+    public void LoadScene(string scene, bool transitionToggle)
+    {
+        if (transitionToggle)
+            StartCoroutine(PlayTransition(scene));
+        else
+            SceneManager.LoadScene(scene);
+    }
+
     private IEnumerator PlayTransition(string scene)
     {
         float alpha = 0;
