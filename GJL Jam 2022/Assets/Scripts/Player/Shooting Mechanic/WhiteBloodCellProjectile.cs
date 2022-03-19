@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class WhiteBloodCellProjectile : Projectile
 {
+    [SerializeField] private float _damage;
+    
     private Boss _bossInscene;
-
+    
     public override Transform GetClosestEnemy()
     {
         _bossInscene = FindObjectOfType<Boss>();
@@ -15,7 +17,10 @@ public class WhiteBloodCellProjectile : Projectile
     protected override void OnCollisionEnter(Collision other)
     {
         var boss = other.gameObject.GetComponent<Boss>();
+        
         if (!boss) return;
-        //Do damage to boss
+        boss.GetComponent<Health>().TakeDamage(_damage);
+        
+        boss.GetComponent<Animator>().SetTrigger("Take Damage");
     }
 }
