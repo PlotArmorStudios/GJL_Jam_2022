@@ -1006,6 +1006,46 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
+								<Sound Name="Low Health" ID="{E4289404-3CF4-4956-A7F7-F121522D2511}" ShortID="996716784">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{558AF4ED-EA02-43F1-8148-7956EF9EA151}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Low_Health_Hearbeat" ID="{977B172F-8934-447B-BCF5-5C77AD0B611B}">
+											<Language>SFX</Language>
+											<AudioFile>Low_Health_Hearbeat.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="280563068"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Low_Health_Hearbeat" ID="{977B172F-8934-447B-BCF5-5C77AD0B611B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
