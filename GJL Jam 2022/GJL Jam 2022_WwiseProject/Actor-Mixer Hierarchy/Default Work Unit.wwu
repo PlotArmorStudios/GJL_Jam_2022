@@ -216,138 +216,6 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Freeze Shot" ID="{A59AC89E-AC20-4F8B-B2E8-15256F0C88E7}" ShortID="854353472">
-							<PropertyList>
-								<Property Name="Lowpass" Type="int16">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{5A4EC121-016D-4343-A66E-80C27FA42378}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="30"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{CFA73C1F-8425-4C16-8279-639AD09438C4}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="100"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Freeze Shot 1" ID="{9924F5B3-A942-4771-94E7-3D34B75C0E60}" ShortID="123897313">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Freeze Shot 1" ID="{4B2191DF-7FEF-4701-A260-ECE0A5436012}">
-											<Language>SFX</Language>
-											<AudioFile>Freeze Shot 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="952971703"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Freeze Shot 1" ID="{4B2191DF-7FEF-4701-A260-ECE0A5436012}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Freeze Shot 2" ID="{B7EF6C46-94DF-4B31-ABB3-358A61957642}" ShortID="951278067">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Freeze Shot 2" ID="{24AA56DD-0A54-42CE-AD63-A9464CB6A5D8}">
-											<Language>SFX</Language>
-											<AudioFile>Freeze Shot 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="324084362"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Freeze Shot 2" ID="{24AA56DD-0A54-42CE-AD63-A9464CB6A5D8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Freeze Shot 3" ID="{53BEFB5C-92B9-4FD5-95C5-90F9EDBE752D}" ShortID="943616788">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Freeze Shot 3" ID="{3565141E-D0B7-46FD-8E5C-5D004B31715E}">
-											<Language>SFX</Language>
-											<AudioFile>Freeze Shot 3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="696907537"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Freeze Shot 3" ID="{3565141E-D0B7-46FD-8E5C-5D004B31715E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Freeze Shot 4" ID="{95D4370F-D09D-442D-8EBF-C94800AB6F0F}" ShortID="717627001">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Freeze Shot 4" ID="{3A8B4559-BB16-491F-A885-1961B4A5EEB0}">
-											<Language>SFX</Language>
-											<AudioFile>Freeze Shot 4.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="624557869"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Freeze Shot 4" ID="{3A8B4559-BB16-491F-A885-1961B4A5EEB0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<ObjectLists/>
-						</RandomSequenceContainer>
 						<ActorMixer Name="White Cell Tower" ID="{D0B6F55D-AFDD-441C-8D41-C68954594B9B}" ShortID="393096736">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -361,16 +229,35 @@
 								<RandomSequenceContainer Name="White Cell Tower Shoot" ID="{C49436FF-5DC4-4789-9524-DF700CA1F95A}" ShortID="902920505">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>25</Value>
 											</ValueList>
 										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="OverridePriority" Type="bool" Value="True"/>
+										<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+										<Property Name="PriorityDistanceOffset" Type="int16">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -859,6 +746,138 @@
 										<ActiveSource Name="Player_Death" ID="{D29D5B17-75B9-41A3-88A7-307B700162CF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="Freeze Shot" ID="{A59AC89E-AC20-4F8B-B2E8-15256F0C88E7}" ShortID="854353472">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5A4EC121-016D-4343-A66E-80C27FA42378}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CFA73C1F-8425-4C16-8279-639AD09438C4}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Freeze Shot 1" ID="{9924F5B3-A942-4771-94E7-3D34B75C0E60}" ShortID="123897313">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Freeze Shot 1" ID="{4B2191DF-7FEF-4701-A260-ECE0A5436012}">
+													<Language>SFX</Language>
+													<AudioFile>Freeze Shot 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="952971703"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Freeze Shot 1" ID="{4B2191DF-7FEF-4701-A260-ECE0A5436012}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Freeze Shot 2" ID="{B7EF6C46-94DF-4B31-ABB3-358A61957642}" ShortID="951278067">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Freeze Shot 2" ID="{24AA56DD-0A54-42CE-AD63-A9464CB6A5D8}">
+													<Language>SFX</Language>
+													<AudioFile>Freeze Shot 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="324084362"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Freeze Shot 2" ID="{24AA56DD-0A54-42CE-AD63-A9464CB6A5D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Freeze Shot 3" ID="{53BEFB5C-92B9-4FD5-95C5-90F9EDBE752D}" ShortID="943616788">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Freeze Shot 3" ID="{3565141E-D0B7-46FD-8E5C-5D004B31715E}">
+													<Language>SFX</Language>
+													<AudioFile>Freeze Shot 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="696907537"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Freeze Shot 3" ID="{3565141E-D0B7-46FD-8E5C-5D004B31715E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Freeze Shot 4" ID="{95D4370F-D09D-442D-8EBF-C94800AB6F0F}" ShortID="717627001">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Freeze Shot 4" ID="{3A8B4559-BB16-491F-A885-1961B4A5EEB0}">
+													<Language>SFX</Language>
+													<AudioFile>Freeze Shot 4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="624557869"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Freeze Shot 4" ID="{3A8B4559-BB16-491F-A885-1961B4A5EEB0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
@@ -982,6 +1001,147 @@
 											<ObjectLists/>
 											<ActiveSourceList>
 												<ActiveSource Name="Ambience 3" ID="{80EC0C0A-1AC7-4858-A3BB-2B1A9817CE3A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+						<ActorMixer Name="UI" ID="{C76DFEC4-9050-4D55-9977-437E0B1CC1D2}" ShortID="118737640">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="gamestart or reset" ID="{F9AE7246-5401-4A88-8959-1D4D39FE0A27}" ShortID="582249636">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Start-Reset" ID="{628CA393-61D2-4A38-8724-083FA237005A}">
+											<Language>SFX</Language>
+											<AudioFile>UI_Start-Reset.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="453914791"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Start-Reset" ID="{628CA393-61D2-4A38-8724-083FA237005A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="UI_Navigate" ID="{B5B8F43B-E5CC-4EBD-A655-C24529B2D886}" ShortID="545515653">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI_Navigate_1" ID="{CD1979D4-890D-4A88-BC68-A02E063B342C}" ShortID="70445404">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Navigate_1" ID="{A1853B1A-67C2-41CA-9E74-4975B4CB1CC7}">
+													<Language>SFX</Language>
+													<AudioFile>UI_Navigate_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="491559289"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Navigate_1" ID="{A1853B1A-67C2-41CA-9E74-4975B4CB1CC7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI_Navigate_2" ID="{F8A72642-C567-4DB5-8562-A96528A40C05}" ShortID="1030046430">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Navigate_2" ID="{DE841E6D-22FE-4317-ADB9-FFA30DF46B2B}">
+													<Language>SFX</Language>
+													<AudioFile>UI_Navigate_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="150050008"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Navigate_2" ID="{DE841E6D-22FE-4317-ADB9-FFA30DF46B2B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI_Navigate_3" ID="{225F1A28-4679-4795-B8B7-19BC909535EE}" ShortID="1031159621">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Navigate_3" ID="{D7B596CB-55CA-46F3-A5B1-A6C21A9EE251}">
+													<Language>SFX</Language>
+													<AudioFile>UI_Navigate_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="467379157"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Navigate_3" ID="{D7B596CB-55CA-46F3-A5B1-A6C21A9EE251}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI_Navigate_4" ID="{FF65E82C-6332-4713-AF56-E42D2FB8FD8A}" ShortID="525439233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Navigate_4" ID="{6DE3CAFC-9475-47FA-9E5F-49FE2626CDC6}">
+													<Language>SFX</Language>
+													<AudioFile>UI_Navigate_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="887868602"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Navigate_4" ID="{6DE3CAFC-9475-47FA-9E5F-49FE2626CDC6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
