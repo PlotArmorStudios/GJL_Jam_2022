@@ -23,7 +23,7 @@ public class AttackSounds : MonoBehaviour
         {
             //Play Damage shot
             Debug.Log("Play Damage Shot");
-            AkSoundEngine.PostEvent("Play_Freeze_Shot", gameObject);
+            AkSoundEngine.PostEvent("Play_Damage_Projectile", gameObject);
         }
     }
 }
