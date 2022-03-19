@@ -4,31 +4,17 @@ using UnityEngine;
 
 public class KidneyHealth : Health
 {
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        PlayerHealth.OnDamageKidney += TakeDamage;
+        base.OnEnable();
+        PlayerHealth.OnPlayerDeath += TakeDamage;
+        Boss.OnBossDamage += TakeDamage;
     }
 
     private void OnDisable()
     {
-        PlayerHealth.OnDamageKidney += TakeDamage;
-    }
-
-    public override void TakeDamage(float damage)
-    {
-        base.TakeDamage(damage);
-
-        #region DebugLogs
-
-#if DebugKidneyHP
-
-        Debug.Log("Kidney took damage from player");
-#endif
-
-        #endregion
-
-        //player will still respawn even after kidney dies
-        GameManager.Instance.DespawnPlayer();
+        PlayerHealth.OnPlayerDeath += TakeDamage;
+        Boss.OnBossDamage -= TakeDamage;
     }
 
     protected override void Die()

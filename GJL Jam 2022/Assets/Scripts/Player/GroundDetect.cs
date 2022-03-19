@@ -21,7 +21,7 @@ public class GroundDetect : MonoBehaviour
 
     public bool ToggleGroundedState()
     {
-        Debug.Log("Grounded is: " + Physics.Raycast(_feet.position, Vector3.down, _detectDistance, _groundDetectLayerMask));
+        //Debug.Log("Grounded is: " + Physics.Raycast(_feet.position, Vector3.down, _detectDistance, _groundDetectLayerMask));
         return Physics.Raycast(_feet.position, Vector3.down, _detectDistance, _groundDetectLayerMask);
     }
 

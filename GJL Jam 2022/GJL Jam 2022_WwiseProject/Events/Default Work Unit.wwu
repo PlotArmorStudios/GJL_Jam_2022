@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Footsteps" ID="{CCD4128E-9317-4168-84BF-B8BB256A8B63}">
+					<ChildrenList>
+						<Action Name="" ID="{0B5685E4-01DE-4372-BFB1-192688B69FEB}" ShortID="891325145">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{680151B0-8808-4BB4-8B83-36D3005DF37C}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Freeze_Shot" ID="{3F6EBDF2-4EBE-4B12-B0F1-895FC232203C}">
+					<ChildrenList>
+						<Action Name="" ID="{0572C69F-9644-4E1A-B390-56B81B65E6DF}" ShortID="14846646">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Freeze Shot" ID="{A59AC89E-AC20-4F8B-B2E8-15256F0C88E7}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_White_Cell_Tower_Spawn" ID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}">
+					<ChildrenList>
+						<Action Name="" ID="{F4679AA7-6BC7-4917-94F7-C4E6AB88644C}" ShortID="572710776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="White Cell Tower Spawn" ID="{534D9F65-1306-409B-8EFC-36B7C5F862E7}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_White_Cell_Tower_Destoyed" ID="{048096AF-6C38-454B-AB95-E7932875E682}">
+					<ChildrenList>
+						<Action Name="" ID="{ADA602A7-381F-4558-BC0E-ECBCB85D7E16}" ShortID="265728149">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="White Cell Tower Destoyed" ID="{7995ABE4-92C7-46DA-B33B-803E01370779}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_White_Cell_Tower_Shoot" ID="{DB006DFC-2D8A-465F-87BB-8AF8A989F648}">
+					<ChildrenList>
+						<Action Name="" ID="{04111685-08D5-452D-A332-AA66229F2321}" ShortID="997502630">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="White Cell Tower Shoot" ID="{C49436FF-5DC4-4789-9524-DF700CA1F95A}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Damage_Projectile" ID="{70166382-20A4-42AF-931E-94718A7D333F}">
+					<ChildrenList>
+						<Action Name="" ID="{EC9326C8-08A8-4CFB-AC64-5A5A672E2675}" ShortID="741699705">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Projectile" ID="{E88F9A9D-8603-4EE2-A782-8CCF04DDE6E0}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Death" ID="{305AB850-C620-4066-94BD-A52A6562EE7C}">
+					<ChildrenList>
+						<Action Name="" ID="{AF03CFAE-C53A-4E69-A7BD-EF3A076D239F}" ShortID="201135674">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Death" ID="{A6C154D8-F675-41C6-A774-D449C1871540}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience" ID="{83D50C25-BA82-4BFA-9A97-EAFAE60989B1}">
+					<ChildrenList>
+						<Action Name="" ID="{FC8DD61D-0F6A-4D9E-9150-BBC95AB7093D}" ShortID="227690941">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{9EBB160F-2919-494B-9D66-F3641D8D67A8}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
