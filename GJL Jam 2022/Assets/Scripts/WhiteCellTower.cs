@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;//for manual hack on "hey, child of child"
 
 public class WhiteCellTower : MonoBehaviour
 {
     /* Code written by Andrew Letailleur, @ 15 March, 2022
- * Code edited by Andrew Letailleur, @ 17 March, 2022 */
+ * Code edited by Andrew Letailleur, @ 19 March, 2022 */
 
     #region Summary & Credits
 
@@ -38,7 +39,8 @@ public class WhiteCellTower : MonoBehaviour
     //publlic variables, to be declared on top. Easy editing wise
     //lifespan timer variables
     public float LifespanTimer = 5.0f;//seconds of life. Consider triple/quadupling that timer, if required?
-        //Only enable "_timer" if not doing a 'delayed' Destroy, optimization wise.
+    private float _timer, _setMaxTimer;//enable, as 'GUI' needs to show before disabling/destroying itself, timer wise.
+    private Image _timerGUI;//last minute addition, to update/calc 'fill' from compared
 
         //bullet/projectile variables
     public float BulletsPerSecond = 1.0f;//for "one bullet per second", tempo wise
@@ -58,76 +60,88 @@ public class WhiteCellTower : MonoBehaviour
     void Start()
     {
             //first, initiate/setup timers
-        //Destroy(gameObject, LifespanTimer); //destroy on start/enable/spawn, //DONOT enable until testing is done
+
         _bps_timer = 1.0f;//to represent 'a' second
-        //_timer = MaxTimer; //only enable this if NOT, Destroy this after a public delay/etc.
-            //manually set to key indexes of White Cell tower.
+        _timer = LifespanTimer; _setMaxTimer = LifespanTimer;//only enable this if NOT, Destroy this after a public delay/etc.
+        //Destroy(gameObject, LifespanTimer); //destroy on start/enable/spawn, //DONOT enable until testing is done
+        
+        //manually set to key indexes of White Cell tower.
         _turretSpark = gameObject.transform.GetChild(2).gameObject;
         _firePoint = gameObject.transform.GetChild(3).gameObject.transform;
+        _timerGUI = gameObject.transform.GetChild(4).GetChild(1).GetComponent<Image>();//UI addition
+        //Debug.LogWarning("Image CHECK. Image is " + _timerGUI.name);
+        
+//        BulletVelocity = Bullet.GetComponent<Projectile>(); //get Force value? Not required, as it's automatically set within bullet prefab
 
-//        BulletVelocity = Bullet.GetComponent<Projectile>();//get Force value?
-
-        //TDL, figure out how to auto-assign bullets/etc, without requiring a Resources folder?
+        ///TDL, figure out how to auto-assign bullets/etc, without requiring a Resources folder?
         //_bullet = null;//Will require Resources folder, to auto-assign/load; //Resources.Load<GameObject>("Assets/Prefabs/WhiteCell Projectile.prefab");
             ///ref: https://docs.unity3d.com/ScriptReference/Resources.html
 
         //firepoint transform is automatically set to key rotation, so it shouldn't be an issue.
             //Said manual is set to 2, under "turret_fire" gameobject, transform wise.
-
-    }
+    }//end start
 
 
     // Update is called once per frame
     private void Update()
     {
-        //step A: Scan/assign target, to nearest enemy.
-            //... Leave for 'firing at enemy', to call. Otherwise, keep aim at 'previous target'.
-        //If previous target still active/alive, rotate to that previous 'target', aim wise
-        if (_curTarget != null) //IE: IF there is a Targeted Enemy, adjust scope/aim.
-        {///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
-            //Debug.Log("Adjusting Rotation check...");
+        //step A: Adjust aim, to nearest enemy found. Over a 'fluid' amount of time wise
+        if (_curTarget != null)///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
+        {//Debug.Log("Adjusting Rotation check...");
                 
                 //first, rotate the tower
             Vector3 _sameAim = _curTarget.position;
-            _sameAim.y = gameObject.transform.position.y;//bar object tilting upwards/downwards, glitch
+            //bar object tilting upwards/downwards, glitch
+            _sameAim.y = gameObject.transform.position.y;
             //gameObject.transform.LookAt(_sameAim);//old version, LookAt wise
             Quaternion _slerpAim = Quaternion.LookRotation(
                 _sameAim - gameObject.transform.position
-            );//new version, "organic/Slerp" wise. May not be 'as' accurate though
+            );//new version, "organic/Slerp" wise. May not be 'as' accurate though by itself
             transform.rotation = Quaternion.Slerp(
                 transform.rotation, _slerpAim, Time.deltaTime
-            );//end object transform, yo
+            );//end object transform, turret edition
 
                 //next, "sharp aim" the barrel, to the 'precise' position of target?
             _firePoint.transform.LookAt(_curTarget);//haaack 'tinker'
+            //end aim adjustment, 'zone in' wise.
 
-
-
-
-            //would be LookAt(_curTarget), IF the 'barrel/head' can rotate without issue
-
-        }//added lines take into account, the 'turret glitch' if the entire model rotates 'upwards/downwards', visual wise.
+            ///PS: Object aimed at would have been "_curTarget", IF the 'barrel/head' can rotate without issue
+        }//end "if there's a target" if
 
         //step B: After X seconds? (Timer wise?), fire bullet. And do an enemy count/check, from those with the "Enemy" Tag/string.
         if (_bps_timer <= 0.0f) 
-        {//only call TargetEnemy when required. NOT constantly, to 'save' on RAM/memory usage?
+        {///only call TargetEnemy when required upon firing. NOT constantly, to 'save' on RAM/memory usage?
             TargetEnemy();// foreach inefficient. Could be called at occasionally?
-            if (Bullet != null) {
+            if (Bullet != null)
+            {
                 FireCell();
-            } else {
-                Debug.LogWarning("ERROR: No bullet loaded, it's empty.");
-            }//endif
-            _bps_timer = 1.0f; 
-        }//...after, a delay?
-        else { _bps_timer -= (Time.deltaTime * BulletsPerSecond); }//deduct by firing rate, yo
+            } 
+            else { Debug.LogWarning("ERROR: No bullet loaded, it's empty."); }//endif, last line's a check message
+            _bps_timer = 1.0f; //reset timer to "a" second, approximately
+        } else {//deduct _bps_timer, by real time/frames.
+            _bps_timer -= (Time.deltaTime * BulletsPerSecond);//BPS, "accelerates" the ticks, on how fast/often the turret fires.
+        }//end if. Under deduct by firing rate, yo
 
         //Step C: Countdown/deprecate this Game Object, if enabled here past bullet fire code
-            //not needed, under the lens of it was started at object start.
-            //that said, IF mindful on pause menu. Consider implementing reference here, to make spawn length 'pause safe'.
+            Countdown();//to affect timer, and despawn when time is out
+
+
+
         /*        _timer -= Time.deltaTime //timercode. Only enable if there's no timed Destroy at Start.
         //        if (_timer <= 0.0f) Destroy(gameObject);//alternate delete, if 
         *////endif
+    }//end start
+    //counts down for UI reasons, on top of 'timed/destroy' after a set amount of time, wise
+    private void Countdown() {
+        //that said, IF mindful on pause menu. Consider implementing reference here, to make spawn length 'pause safe'.
+        if (_timer > 0.0f)
+        {
+            _timer -= Time.deltaTime;//to deduct by Time, by frames iteration. Seconds wise.
+            _timerGUI.fillAmount = (_timer / _setMaxTimer);//dividing by max, always results in 0/1 in 'fill', division wise.
+        }
+        else { Destroy(gameObject); }//remove from scene.
     }
+
 
     //counts the amount of enemies with the "Enemy" tag (not boss), iteratively setting aim to the nearest enemy to the turret.
     private void TargetEnemy()
