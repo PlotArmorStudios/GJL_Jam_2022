@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="Music" ID="{0EEC3279-9077-4BA6-804B-5652B9390A08}" ShortID="1054208734">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>

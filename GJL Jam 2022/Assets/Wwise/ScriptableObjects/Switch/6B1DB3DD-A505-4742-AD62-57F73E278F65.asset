@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: MenuMusic
   id: 679636833
   guid: 6B1DB3DD-A505-4742-AD62-57F73E278F65
-  WwiseSwitchGroupReference: {fileID: 0}
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 3936f16591ae4ca4c82785531539c0e8, type: 2}

@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: CutsceneMusic
   id: 3264177434
   guid: D869889E-837B-4E70-9FF6-3E3A1BBA5184
-  WwiseSwitchGroupReference: {fileID: 0}
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 3936f16591ae4ca4c82785531539c0e8, type: 2}
