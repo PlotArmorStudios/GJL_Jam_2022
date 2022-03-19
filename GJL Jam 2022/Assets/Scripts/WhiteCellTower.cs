@@ -50,39 +50,11 @@ public class WhiteCellTower : MonoBehaviour
     private GameObject _turretSpark;//to maybe rapidly enable/disable, upon spawn.
     private Transform _firePoint;//where to fire pellet from, instead of "center mass".
     //current target/AOE, depending on 'distance' to nearest enemy/boss per 'tick' check?
-    private Transform _curTarget;//this should shift after a check, before firing at position wise.
+        //private Transform _curTarget;//this should shift after a check, before firing at position wise.
 
     //Public for now. Need to grab/serialize as an easy reference later, GameObject projectile wise. Until then, it's public
     public GameObject Bullet;//equals a "tiny sphere", to fire/fling at enemy. "Cell" wise...
-
-    // Awake is called when object is enabled?/started, before the first frame?
-    /*Deprecating, as another script calls on setting up the transform on spawn. Consider referencing when it comes to 
-    private void Awake()
-    {
-        //Step A: Get the 'target pos' to look away from
-        Vector3 _playerPos;
-        if (GameObject.FindGameObjectWithTag("Player") != null)
-        {
-            _playerPos = GameObject.
-                FindGameObjectWithTag("Player").
-                transform.position;
-        }
-        else// if (Camera.main != null)//hud alt, in case player ain't there
-        {
-            _playerPos = Camera.main.gameObject.
-                transform.position;
-        }//endif, as if there's no main camera, there's no game, yo
-
-            //Step B: Reference the positions
-            Vector3 _vecAway = gameObject.transform.position + _playerPos;
-            _vecAway.y = gameObject.transform.position.y;//to bar visual glitches
-                //Last Step: Reference and set the rotations
-            Quaternion _lookAway = Quaternion.LookRotation(_vecAway);
-            gameObject.transform.rotation = _lookAway;//should just work
-
-        Debug.LogError("Testing, to check it's looking AWAY from player here");
-    }*/ ///End deprecated Awake script
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -113,37 +85,17 @@ public class WhiteCellTower : MonoBehaviour
     private void Update()
     {
         //step A: Adjust aim, to nearest enemy found. Over a 'fluid' amount of time wise
-        if (_curTarget != null)///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
-        {//Debug.Log("Adjusting Rotation check...");
-                
-                //first, rotate the tower
-            Vector3 _sameAim = _curTarget.position;
-            //bar object tilting upwards/downwards, glitch
-            _sameAim.y = gameObject.transform.position.y;
-            //gameObject.transform.LookAt(_sameAim);//old version, LookAt wise
-            Quaternion _slerpAim = Quaternion.LookRotation(
-                _sameAim - gameObject.transform.position
-            );//new version, "organic/Slerp" wise. May not be 'as' accurate though by itself
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation, _slerpAim, Time.deltaTime
-            );//end object transform, turret edition
-
-                //next, "sharp aim" the barrel, to the 'precise' position of target?
-            _firePoint.transform.LookAt(_curTarget);//haaack 'tinker'
-            //end aim adjustment, 'zone in' wise.
-
-            ///PS: Object aimed at would have been "_curTarget", IF the 'barrel/head' can rotate without issue
-        }//end "if there's a target" if
+            ///DEPRECATED, due to the lens of "Player should aim turrets", instead of aim itself
 
         //step B: After X seconds? (Timer wise?), fire bullet. And do an enemy count/check, from those with the "Enemy" Tag/string.
         if (_bps_timer <= 0.0f) 
         {///only call TargetEnemy when required upon firing. NOT constantly, to 'save' on RAM/memory usage?
-            TargetEnemy();// foreach inefficient. Could be called at occasionally?
+            //TargetEnemy();// foreach inefficient. Could be called at occasionally?
             if (Bullet != null)
             {
                 FireCell();
-            } 
-            else { Debug.LogWarning("ERROR: No bullet loaded, it's empty."); }//endif, last line's a check message
+            }//else { Debug.LogWarning("ERROR: No bullet loaded, it's empty."); }
+            //endif, last line's a check message
             _bps_timer = 1.0f; //reset timer to "a" second, approximately
         } else {//deduct _bps_timer, by real time/frames.
             _bps_timer -= (Time.deltaTime * BulletsPerSecond);//BPS, "accelerates" the ticks, on how fast/often the turret fires.
@@ -151,13 +103,8 @@ public class WhiteCellTower : MonoBehaviour
 
         //Step C: Countdown/deprecate this Game Object, if enabled here past bullet fire code
             Countdown();//to affect timer, and despawn when time is out
+    }//end Start
 
-
-
-        /*        _timer -= Time.deltaTime //timercode. Only enable if there's no timed Destroy at Start.
-        //        if (_timer <= 0.0f) Destroy(gameObject);//alternate delete, if 
-        *////endif
-    }//end start
     //counts down for UI reasons, on top of 'timed/destroy' after a set amount of time, wise
     private void Countdown() {
         //that said, IF mindful on pause menu. Consider implementing reference here, to make spawn length 'pause safe'.
@@ -169,33 +116,64 @@ public class WhiteCellTower : MonoBehaviour
         else { Destroy(gameObject); }//remove from scene.
     }
 
-
+#region DeprecatedRotationCode
+    ///DEPRECATED,  but still there under the lens of "sample aim bot logic"
     //counts the amount of enemies with the "Enemy" tag (not boss), iteratively setting aim to the nearest enemy to the turret.
-    private void TargetEnemy()
-    {//ref: https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html
-        _curTarget = null;//clear the target, before assigning a new object ref
-        GameObject[] _foes = GameObject.FindGameObjectsWithTag("Enemy");
-        Debug.Log("Amount of Enemies found: " + _foes.Length);
+    /*    private void TargetEnemy()
+        {//ref: https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html
+            _curTarget = null;//clear the target, before assigning a new object ref
+            GameObject[] _foes = GameObject.FindGameObjectsWithTag("Enemy");
+            Debug.Log("Amount of Enemies found: " + _foes.Length);
 
-        foreach (GameObject _foe in _foes)
-        {
-            if (_curTarget == null)
-            { _curTarget = _foe.transform; }
-            else
-            {//compare by (a-b).magnitute, transform.position wise
-                float aDist = Vector3.Distance(
-                    gameObject.transform.position,
-                    _curTarget.transform.position);
-                float bDist = Vector3.Distance(
-                    gameObject.transform.position,
-                    _foe.transform.position);
-                if (bDist < aDist)
+            foreach (GameObject _foe in _foes)
+            {
+                if (_curTarget == null)
                 { _curTarget = _foe.transform; }
-                //compare distance between _foe.transform, and curTarget.transform
-                //... to the White Cell tower. Ref; https://iqcode.com/code/typescript/how-to-compare-distance-between-2-objects-unity
-            }//endif
-        }//end foreach loop
-    }//end TargetEnemy
+                else
+                {//compare by (a-b).magnitute, transform.position wise
+                    float aDist = Vector3.Distance(
+                        gameObject.transform.position,
+                        _curTarget.transform.position);
+                    float bDist = Vector3.Distance(
+                        gameObject.transform.position,
+                        _foe.transform.position);
+                    if (bDist < aDist)
+                    { _curTarget = _foe.transform; }
+                    //compare distance between _foe.transform, and curTarget.transform
+                    //... to the White Cell tower. Ref; https://iqcode.com/code/typescript/how-to-compare-distance-between-2-objects-unity
+                }//endif
+            }//end foreach loop
+        }//end TargetEnemy
+
+    */
+
+    /*  Later excerpt/s, under the lens of 'adjust rotation over time'
+             if (_curTarget != null)///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
+            {//Debug.Log("Adjusting Rotation check...");
+
+                    //first, rotate the tower
+                Vector3 _sameAim = _curTarget.position;
+                //bar object tilting upwards/downwards, glitch
+                _sameAim.y = gameObject.transform.position.y;
+                //gameObject.transform.LookAt(_sameAim);//old version, LookAt wise
+                Quaternion _slerpAim = Quaternion.LookRotation(
+                    _sameAim - gameObject.transform.position
+                );//new version, "organic/Slerp" wise. May not be 'as' accurate though by itself
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation, _slerpAim, Time.deltaTime
+                );//end object transform, turret edition
+
+                    //next, "sharp aim" the barrel, to the 'precise' position of target?
+                _firePoint.transform.LookAt(_curTarget);//haaack 'tinker'
+                //end aim adjustment, 'zone in' wise.
+
+                ///PS: Object aimed at would have been "_curTarget", IF the 'barrel/head' can rotate without issue
+            }//end "if there's a target" if
+
+
+     */
+
+#endregion
 
     //fire a projectile, from the "White Cell tower", defense bullet wise.
     private void FireCell() {
