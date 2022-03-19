@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
+	777209537	Play_Damage_Projectile			\Default Work Unit\Play_Damage_Projectile	
 	2369417814	Play_White_Cell_Tower_Spawn			\Default Work Unit\Play_White_Cell_Tower_Spawn	
 	2820289418	Play_Freeze_Shot			\Default Work Unit\Play_Freeze_Shot	
 	3631933282	Play_White_Cell_Tower_Destoyed			\Default Work Unit\Play_White_Cell_Tower_Destoyed	
@@ -9,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	79968391	Ambience 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Ambience 2_BBB18E0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 2		960064
 	106655348	White Cell Tower Spawn 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\White Cell Tower Spawn 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Spawn\White Cell Tower Spawn 2		192064
+	306471567	Damage Projectile	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Damage Projectile_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Damage Projectile		384064
 	316552023	FS 4	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\FS 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 4		37940
 	324084362	Freeze Shot 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Freeze Shot 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Freeze Shot\Freeze Shot 2		168064
 	352761285	FS 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\FS 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 3		37940
