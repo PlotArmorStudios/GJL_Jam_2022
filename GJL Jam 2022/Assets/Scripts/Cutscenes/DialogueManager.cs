@@ -20,7 +20,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<int> _transitionNumbers;
     private int _currentTransitionNumber;
     private bool _conversationInProgress;
-
+    private DialogueTrigger _dialogueTrigger;
+    
     [Tooltip("The scene that loads when this dialogue is finished.")]
     [SerializeField] private string _sceneToLoad;
 
@@ -29,6 +30,9 @@ public class DialogueManager : MonoBehaviour
         _sentences = new Queue<string>();
         _names = new Queue<string>();
         _transitionNumbers = new Queue<int>();
+        
+        _dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+        _dialogueTrigger.TriggerDialogue();
     }
 
     public void StartDialogue(Dialogue dialogue)
