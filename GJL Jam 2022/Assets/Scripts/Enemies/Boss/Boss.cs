@@ -22,6 +22,13 @@ public class Boss : MonoBehaviour
 
     public UnityEvent OnMinionThrown;
 
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponentInChildren<Animator>(true);
+    }
+
     /* Called by Animation event */
     [ContextMenu("Throw Minion")]
     public void ThrowMinion()
