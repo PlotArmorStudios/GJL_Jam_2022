@@ -14,7 +14,6 @@ public class MinionSpawner : MonoBehaviour
 {
     [Header("Spawner Attributes")]
     [SerializeField, Tooltip("How much lower than current max level enemies can be")] private int _randomLevelVariation = 5; 
-    [SerializeField] private Transform _spawnPoint;
 
     [Header("Minion attribute bounds")]
     [SerializeField] private int _maxLevel = 10;
@@ -49,7 +48,7 @@ public class MinionSpawner : MonoBehaviour
         }
     }
 
-    public void SpawnStickyMinion()
+    public GameObject SpawnStickyMinion(Transform spawnPoint)
     {
         
         int level = Random.Range(_currMinLevel, _currMaxLevel + 1);
@@ -62,7 +61,8 @@ public class MinionSpawner : MonoBehaviour
         );
         int maxHealth = (int)(_minStartingHealth + _maxStartingHealth * multiplier);
         GameObject minion = _stickyMinionPool.GetObject(stats, maxHealth);
-        minion.transform.position = _spawnPoint.position;
+        minion.transform.position = spawnPoint.position;
         minion.SetActive(true);
+        return minion;
     }
 }
