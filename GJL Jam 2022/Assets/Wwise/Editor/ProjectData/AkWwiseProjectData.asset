@@ -230,8 +230,8 @@ MonoBehaviour:
         guid: 11358dad1b88404c8ebeef3a38520671
       Path: Events\Default Work Unit\Play_White_Cell_Tower_Spawn
       maxAttenuation: 0
-      maxDuration: 2.118926
-      minDuration: 1.887748
+      maxDuration: 2.618926
+      minDuration: 2.387748
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
