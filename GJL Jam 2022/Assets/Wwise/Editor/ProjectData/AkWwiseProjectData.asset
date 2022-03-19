@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585538973423920928
+    m_lastTime: -8585538953816896325
     List:
     - name: SFX
       guid: 48271637fabe364d948869c1beed08de
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585538971685660648
+    m_lastTime: -8585538932060953705
     List:
     - name: Play_Ambience
       guid: 250cd58382bafa4b9a97eafae60989b1
@@ -164,6 +164,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.854061
       minDuration: 1.65178
+    - name: Play_Music_Cutscene
+      guid: f9aa42eb408dcf4a8504a0631ec39d88
+      id: 4005969178
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Music_Cutscene
+        ObjectType: 3
+        guid: f9aa42eb408dcf4a8504a0631ec39d88
+      Path: Events\Default Work Unit\Play_Music_Cutscene
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music_Gameplay
+      guid: 834366036c83194190e8ace01cdf7834
+      id: 1182046178
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Music_Gameplay
+        ObjectType: 3
+        guid: 834366036c83194190e8ace01cdf7834
+      Path: Events\Default Work Unit\Play_Music_Gameplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music_Menu
+      guid: 6cfab9c4ccae574280f25172932d6f7e
+      id: 1699343283
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Music_Menu
+        ObjectType: 3
+        guid: 6cfab9c4ccae574280f25172932d6f7e
+      Path: Events\Default Work Unit\Play_Music_Menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Player_Death
       guid: 50b85a3020c6664094bda52a6562ee7c
       id: 1835085974
@@ -230,8 +281,8 @@ MonoBehaviour:
         guid: 11358dad1b88404c8ebeef3a38520671
       Path: Events\Default Work Unit\Play_White_Cell_Tower_Spawn
       maxAttenuation: 0
-      maxDuration: 2.118926
-      minDuration: 1.887748
+      maxDuration: 2.618926
+      minDuration: 2.387748
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
