@@ -18,7 +18,7 @@ public class Boss : MonoBehaviour
     [Header("Minion Spawning Attributes")]
     [SerializeField] private Transform _minionSpawnPoint;
     [SerializeField] private MinionSpawner _minionSpawner;
-    [SerializeField, Tooltip("The height above spawn at which the thrown minion which reach its peak")] private float _throwHeight = 20f;
+    [SerializeField, Tooltip("The height above spawn at which the thrown minion which reach its peak")] private float _throwHeight = 15f;
 
     public UnityEvent OnMinionThrown;
 

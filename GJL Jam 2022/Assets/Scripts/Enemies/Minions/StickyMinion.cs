@@ -52,7 +52,7 @@ public class StickyMinion : MonoBehaviour
     private Transform _player;
     private BodyPartManager _playerBodyParts;
     private int _bodyPartsLayerMask = 1 << 8;
-    private bool _inRangeOfPlayer = false;
+    private bool _inRangeOfPlayer;
 
     [Header("Events")] public UnityEvent OnSpawn;
     public UnityEvent OnStartChase;
@@ -114,6 +114,11 @@ public class StickyMinion : MonoBehaviour
         if (other.gameObject.tag == "Player" && _state == MinionState.Spawning)
         {
             _rigidbody.isKinematic = true;
+            _navMeshAgent.enabled = false;
+            _collider.enabled = false;
+            _triggerZone.enabled = false;
+            transform.SetParent(_player);
+            
             ChangeState(MinionState.StuckToPlayer);
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && _state == MinionState.Spawning)
