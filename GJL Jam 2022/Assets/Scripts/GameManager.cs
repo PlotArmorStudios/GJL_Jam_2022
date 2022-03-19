@@ -2,23 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float _playerRespawnTime;
     
-    private PlayerControl _player;
     public static GameManager Instance;
+    private PlayerControl _player;
+    private SceneLoader _sceneLoader;
 
     private void Awake()
     {
         Instance = this;
         _player = FindObjectOfType<PlayerControl>();
+        _sceneLoader = GetComponent<SceneLoader>();
     }
 
     public void LoseGame()
     {
-        Debug.Log("Lost Game.");
+        _sceneLoader.LoadScene();
     }
 
     public void DespawnPlayer()
