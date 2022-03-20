@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &796822808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6963001357355498897, guid: 15813dbac30ddf349a6b1f582c230e14, type: 3}
+  m_PrefabInstance: {fileID: 6963001356707724122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &796822810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796822808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06569bb19df3aa34a8592811f532723c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &801729120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,35 +759,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6963001357427526635, guid: 15813dbac30ddf349a6b1f582c230e14, type: 3}
   m_PrefabInstance: {fileID: 6963001356707724122}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6963001356707724124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6963001356707724123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73d766c98dfa8446b724121305dd0cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a0d8fd1406939e04598d7b792d82e5a7, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &6963001356707724125
 MonoBehaviour:
   m_ObjectHideFlags: 0
