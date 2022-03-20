@@ -223,6 +223,43 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Low_Health" ID="{F4052EB7-2B96-4891-97D3-A11088F5E632}">
+					<ChildrenList>
+						<Action Name="" ID="{29409DA1-BFD9-4878-9A7B-0C546668715B}" ShortID="956491904">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Low Health" ID="{E4289404-3CF4-4956-A7F7-F121522D2511}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Health_Decrease" ID="{2D4E1EBE-E019-4E31-9FB1-6D058CFE7AEE}">
+					<ChildrenList>
+						<Action Name="" ID="{7DC79D49-8AD9-4BA1-8F88-5632603161BA}" ShortID="952729780">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Health" ID="{27C2DD9F-123E-44DF-9AA4-0266301A9B03}" WorkUnitID="{1F9F420E-05B2-4056-9B0E-CBD50382DA2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Boss_Minion_Throw" ID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}">
+					<ChildrenList>
+						<Action Name="" ID="{DF72809C-AD33-4B5A-882A-F7D5CA1CE8EA}" ShortID="165148309">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boss_Minion_Throw" ID="{62A65451-4266-4630-BB81-CFC286A28AC7}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

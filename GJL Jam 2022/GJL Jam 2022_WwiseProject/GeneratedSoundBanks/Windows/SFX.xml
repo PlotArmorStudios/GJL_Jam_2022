@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="1004948805">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="162649730">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -26,6 +26,26 @@
 						<File Id="945233997" Language="SFX">
 							<ShortName>Ambience 3.wav</ShortName>
 							<Path>SFX\Ambience 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="438343987" Name="Play_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Play_Boss_Minion_Throw" GUID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}" MaxAttenuation="100." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="176956802" Language="SFX">
+							<ShortName>Boss_Minion_Throw_03.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_03_10C4C929.wem</Path>
+						</File>
+						<File Id="249568830" Language="SFX">
+							<ShortName>Boss_Minion_Throw_01.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_01_10C4C929.wem</Path>
+						</File>
+						<File Id="866826885" Language="SFX">
+							<ShortName>Boss_Minion_Throw_04.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_04_10C4C929.wem</Path>
+						</File>
+						<File Id="989782220" Language="SFX">
+							<ShortName>Boss_Minion_Throw_02.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -98,6 +118,14 @@
 						<File Id="952971703" Language="SFX">
 							<ShortName>Freeze Shot 1.wav</ShortName>
 							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="833469641" Name="Play_Low_Health" ObjectPath="\Events\Default Work Unit\Play_Low_Health" GUID="{F4052EB7-2B96-4891-97D3-A11088F5E632}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="280563068" Language="SFX">
+							<ShortName>Low_Health_Hearbeat.wav</ShortName>
+							<Path>SFX\Low_Health_Hearbeat_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -188,6 +216,9 @@
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" GUID="{D09BD065-2551-4497-A254-9D46AF896B5E}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2062661402" Name="Stop_Minion_Movement" ObjectPath="\Events\Default Work Unit\Stop_Minion_Movement" GUID="{7E8624A4-F00D-439D-9D8C-503C997BCA50}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="Health" ObjectPath="\Game Parameters\Default Work Unit\Health" GUID="{27C2DD9F-123E-44DF-9AA4-0266301A9B03}"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
