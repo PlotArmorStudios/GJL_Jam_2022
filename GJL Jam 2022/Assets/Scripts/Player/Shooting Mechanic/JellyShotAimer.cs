@@ -31,6 +31,7 @@ public class JellyShotAimer : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             _destination = hit.point;
+            Debug.DrawLine(transform.position, _destination, Color.yellow, 10f);
         }
 
         _direction = _destination - transform.position;

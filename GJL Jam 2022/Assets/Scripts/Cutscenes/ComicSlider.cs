@@ -110,10 +110,9 @@ public class ComicSlider : MonoBehaviour
 
             var color = image.color;
 
-            //if (t == 0) color.a = Mathf.Clamp01(t + 1f);
-            //else color.a = 0;
-            
-            color.a = Mathf.Clamp01(t + 1f);
+            if (t == 0) color.a = Mathf.Clamp01(t + 1f);
+            else color.a = 0;
+
             image.color = color;
 
             var trans = image.rectTransform;

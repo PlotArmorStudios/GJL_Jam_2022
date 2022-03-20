@@ -72,21 +72,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Jump()
     {
-        if (_groundDetect.ToggleGroundedState())
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                _verticalVelocity = _jumpForce;
-
-                if (Movement.magnitude > 0.1f)
-                    MoveDirection = new Vector3(MoveDirection.x, _verticalVelocity, MoveDirection.z);
-                else
-                    MoveDirection = new Vector3(0, _verticalVelocity, 0);
-
-                _characterController.Move(MoveDirection.normalized * _speed * Time.deltaTime);
-            }
-        }
-        else
+        if (!_groundDetect.ToggleGroundedState())
         {
             _falltime += Time.deltaTime;
             _verticalVelocity -= _gravity * _falltime * _falltime;
