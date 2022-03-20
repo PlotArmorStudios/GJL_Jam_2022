@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vapor
+  m_Name: Red vapor
   m_Shader: {fileID: -6465566751694194690, guid: 81135cd06baa3374d9d4ba9427cde931, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
@@ -115,8 +115,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_4c63ed5243204866a237868152cc3ae9: {r: 0.11058204, g: 0.29431367, b: 0.6698113, a: 1}
-    - Color_5e622ef2219f442391cd12b0d730c447: {r: 0.17568327, g: 0.47299343, b: 0.9865292, a: 0}
+    - Color_4c63ed5243204866a237868152cc3ae9: {r: 0.7075472, g: 0.08916058, b: 0.06341223, a: 1}
+    - Color_5e622ef2219f442391cd12b0d730c447: {r: 0.44509804, g: 0.05882353, b: 0.02745098, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.38431373}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.30286577, g: 0.63273406, b: 0.7735849, a: 1}
