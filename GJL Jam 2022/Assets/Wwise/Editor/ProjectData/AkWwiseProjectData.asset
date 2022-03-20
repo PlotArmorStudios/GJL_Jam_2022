@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585537961248318218
+    m_lastTime: -8585537920956317928
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585537961248213208
+    m_lastTime: -8585537920968255796
     List:
     - name: Health_Decrease
       guid: be1e4e2d19e0314e9fb16d058cfe7aee
@@ -159,8 +159,8 @@ MonoBehaviour:
         guid: 5b875deca0a6c043b8c791e399982e4d
       Path: Events\Default Work Unit\Play_Boss_Minion_Throw
       maxAttenuation: 100
-      maxDuration: 1.191896
-      minDuration: 0.707906
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Boss_Receive_Damage
       guid: f16834ea63571c43a85004e570e5bdf0
       id: 367978905
@@ -496,7 +496,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e429f1fb20556409b0ecbd50382da2e
     GuidInternal: 
-    m_lastTime: -8585537980402955271
+    m_lastTime: -8585537920968235773
     List:
     - name: Health
       guid: 9fddc2273e12df449aa40266301a9b03
