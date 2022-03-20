@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3988581836190727527}
   - component: {fileID: 3988581836190727521}
   - component: {fileID: 2323720443980471925}
+  - component: {fileID: -1772790507944857551}
   m_Layer: 0
   m_Name: WwiseGlobal
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,3 +107,15 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &-1772790507944857551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3988581836190727526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c09e78076154e654eb58abe8c4e0b452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

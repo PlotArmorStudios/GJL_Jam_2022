@@ -135,6 +135,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Music" ID="{96F32463-FC6D-48B1-A7BE-3A450CE03F45}">
+					<ChildrenList>
+						<Action Name="" ID="{9375D3B8-503F-4FDC-BA6B-A7125942E219}" ShortID="959606891">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{0EEC3279-9077-4BA6-804B-5652B9390A08}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

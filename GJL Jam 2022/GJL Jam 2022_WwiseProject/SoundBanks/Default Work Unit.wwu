@@ -19,6 +19,7 @@
 				<SoundBank Name="Music" ID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Music" ID="{D7670F47-5016-4350-A837-7D6CBEA1AC28}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Music" ID="{96F32463-FC6D-48B1-A7BE-3A450CE03F45}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
