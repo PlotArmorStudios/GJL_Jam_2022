@@ -643,6 +643,90 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8493723169448840677, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169448840677, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169448840677, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169454452832, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169454452832, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169454452832, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169565300530, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169565300530, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169565300530, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169673090132, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169673090132, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723169673090132, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170538685910, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170538685910, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170538685910, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170569333433, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170569333433, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170569333433, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170868312325, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170868312325, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723170868312325, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8493723170917685466, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -730,6 +814,18 @@ PrefabInstance:
     - target: {fileID: 8493723170917685470, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
       propertyPath: m_Name
       value: Comic Panels
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723171232520713, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723171232520713, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8493723171232520713, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5077dcd612727fb428ae28f970f304fe, type: 3}
