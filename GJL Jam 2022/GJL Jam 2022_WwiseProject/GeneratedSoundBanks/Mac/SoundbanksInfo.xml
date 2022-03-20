@@ -135,7 +135,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="1045472171">
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="2870060586">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -173,6 +173,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" GUID="{96F32463-FC6D-48B1-A7BE-3A450CE03F45}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="1422226475" Name="Music_Status" ObjectPath="\Switches\Default Work Unit\Music_Status" GUID="{E1A43367-6A63-48E1-9C98-6837218E1D41}">
