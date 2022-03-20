@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01884cf86a0fbfe41ab177aed9bad374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _randomLevelVariation: 5
+  _randomLevelVariation: 2
   _maxLevel: 10
   _minSize: 0.2
   _maxSize: 0.7

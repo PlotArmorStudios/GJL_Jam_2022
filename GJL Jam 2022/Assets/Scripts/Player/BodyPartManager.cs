@@ -20,7 +20,6 @@ public class BodyPartManager : MonoBehaviour
             _bodyParts[i].tag = "BodyPart";
             _bodyParts[i].gameObject.layer = LayerMask.NameToLayer("BodyParts");
             Vector3 worldPos = colliders[i].transform.TransformPoint(colliders[i].center);
-            Debug.Log("Body part: " + colliders[i].gameObject.name);
         }
     }
 
