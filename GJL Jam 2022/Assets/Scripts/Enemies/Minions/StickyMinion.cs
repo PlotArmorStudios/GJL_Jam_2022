@@ -83,7 +83,6 @@ public class StickyMinion : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _crystalAnimator = _crystalModel.GetComponentInChildren<Animator>();
         PlayerHealth.OnPlayerDeath += Die;
-        
     }
 
     private void OnEnable()
@@ -194,8 +193,6 @@ public class StickyMinion : MonoBehaviour
         OnStartChase?.Invoke();
 
         _navMeshAgent.enabled = true;
-
-         
 
         while (_state == MinionState.ChasePlayer)
         {

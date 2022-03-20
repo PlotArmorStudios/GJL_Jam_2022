@@ -165,64 +165,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_UI_gamestart_or_reset" ID="{F640A3CE-A4F1-46DD-968A-D070891EEE5C}">
-					<ChildrenList>
-						<Action Name="" ID="{FC5BFE3E-6AC4-49B6-A94F-84EBF704B218}" ShortID="288521125">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="gamestart or reset" ID="{F9AE7246-5401-4A88-8959-1D4D39FE0A27}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Minion_Movement" ID="{A34F73A1-71C3-419F-90CC-67ED931087D3}">
-					<ChildrenList>
-						<Action Name="" ID="{8DF32D96-4D69-4A01-ADCE-E99E86AE2271}" ShortID="136624228">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Minion Movement" ID="{AF31CF0B-6CCE-471B-B4FE-0207BDA66BBD}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_UI_Turret_Ready" ID="{37461038-6975-428A-8FFA-8634EABA7B76}">
-					<ChildrenList>
-						<Action Name="" ID="{7403B377-0DD4-48C1-A973-22D5D9CFDAC8}" ShortID="823495916">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="UI_Turret_Ready" ID="{5B6DDF61-D6ED-428A-95BC-89C1DFC2E844}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Minion_Movement" ID="{7E8624A4-F00D-439D-9D8C-503C997BCA50}">
-					<ChildrenList>
-						<Action Name="" ID="{C0928B8B-A927-4E0B-B5EE-61E50DAC0C3F}" ShortID="380259531">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Minion Movement" ID="{AF31CF0B-6CCE-471B-B4FE-0207BDA66BBD}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Boss_Receive_Damage" ID="{EA3468F1-5763-431C-A850-04E570E5BDF0}">
-					<ChildrenList>
-						<Action Name="" ID="{0CA86B6E-0F85-450B-8102-5286096735E1}" ShortID="845817764">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Boss_Receive_Damage" ID="{E435B2E5-86B1-43D5-818E-87AF923D83E4}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
