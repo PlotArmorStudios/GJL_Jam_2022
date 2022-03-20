@@ -158,7 +158,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 5b875deca0a6c043b8c791e399982e4d
       Path: Events\Default Work Unit\Play_Boss_Minion_Throw
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.191896
       minDuration: 0.707906
     - name: Play_Boss_Receive_Damage
@@ -621,7 +621,7 @@ MonoBehaviour:
     m_lastTime: -8585538973423785900
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
