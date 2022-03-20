@@ -287,8 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxFlashTime: 5
   _playerMeshRenderer: {fileID: 2738981241783047688}
-  _meshMaterial: {fileID: 2100000, guid: dc06c9ad7385d5047ae695440bea8d6f, type: 2}
-  _transparentMaterial: {fileID: 2100000, guid: ac758af4036350044b61736c7b1063aa, type: 2}
+  _meshMaterial: {fileID: 2100000, guid: 53921a52ac869934f8cb0160cae7f33b, type: 2}
+  _transparentMaterial: {fileID: 2100000, guid: 86e79abe1a7bf4e49b3af6499a556271, type: 2}
   _amplitude: 1.2
   _frequency: 20
 --- !u!114 &193731471795580345
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jellyShotToggler: {fileID: 193731471795580345}
-  _force: 1000
+  _force: 700
   _defaultRayRange: 1000
 --- !u!114 &1549198091217206474
 MonoBehaviour:
@@ -1416,14 +1416,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6913933184875024873, guid: 902fa10f04901894bb600d17cebc30d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 53921a52ac869934f8cb0160cae7f33b, type: 2}
     - target: {fileID: 919132149155446097, guid: 902fa10f04901894bb600d17cebc30d6, type: 3}
       propertyPath: m_Name
-      value: Jumping (1)
+      value: Model
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 902fa10f04901894bb600d17cebc30d6, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0c2074e2142b6e8429418c4e6a730e98, type: 2}
+    - target: {fileID: 8426851862178416070, guid: 902fa10f04901894bb600d17cebc30d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7806c99ac453eb41b0d9ea2f7c36e22, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902fa10f04901894bb600d17cebc30d6, type: 3}
 --- !u!4 &6159332811848905765 stripped
@@ -1622,9 +1630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c616e460c02f14793db290f84e8e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 4295237445156842455}
-  _leftFootClip: {fileID: 8300000, guid: 09aa24706330c0e45ad41a6dddd64aa1, type: 3}
-  _rightFootClip: {fileID: 8300000, guid: 09aa24706330c0e45ad41a6dddd64aa1, type: 3}
 --- !u!114 &563416429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1652,8 +1657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa969c3edada504591e2bdf8e467adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSouce: {fileID: 4295237445156842455}
-  _attackSound: {fileID: 8300000, guid: 524517bf17492c844af829351d9b1529, type: 3}
 --- !u!65 &6805583739983367666
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public abstract class Projectile : MonoBehaviour
         _rigidbody.velocity = direction.normalized * force * Time.deltaTime;
     }
 
-    public virtual Transform GetClosestEnemy()
+    protected virtual Transform GetClosestEnemy()
     {
         _enemiesInScene = FindObjectsOfType<StickyMinion>();
         float closestDisteance = Mathf.Infinity;
@@ -62,7 +62,9 @@ public abstract class Projectile : MonoBehaviour
             if (currentDistance < closestDisteance)
             {
                 closestDisteance = currentDistance;
-                targetTransform = enemy.transform;
+
+                if (enemy.GetMinionState() == MinionState.ChasePlayer || enemy.GetMinionState() == MinionState.Spawning)
+                    targetTransform = enemy.transform;
             }
         }
 
