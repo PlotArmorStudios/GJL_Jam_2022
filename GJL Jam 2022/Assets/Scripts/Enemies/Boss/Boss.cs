@@ -34,7 +34,7 @@ public class Boss : MonoBehaviour
     private Animator _animator;
     private float _currentStoicTime;
 
-    private bool IsInStoicState { get; set; }
+    public bool IsInStoicState { get; set; }
 
     private void Start()
     {

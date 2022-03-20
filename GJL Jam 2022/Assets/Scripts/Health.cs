@@ -63,8 +63,6 @@ public abstract class Health : MonoBehaviour
 
         StartCoroutine(DepleteHPBar());
 
-        Debug.Log(gameObject.name + " took damage.");
-
         if (CurrentHealth <= 0 && IsAlive)
         {
             Debug.Log("Current health depleted");
