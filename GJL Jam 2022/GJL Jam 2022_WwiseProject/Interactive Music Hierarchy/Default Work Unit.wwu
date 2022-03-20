@@ -166,7 +166,7 @@
 							<ChildrenList>
 								<MusicSegment Name="Samani_CS_GameplayPre_3_18" ID="{3D48A260-3D52-4472-A624-C905C8EA5023}" ShortID="504644607">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="236521.744565217"/>
+										<Property Name="EndPosition" Type="Real64" Value="121739.130434783"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="138"/>
 									</PropertyList>
@@ -179,23 +179,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Samani_CS_Gameplay_Looped" ID="{5633818B-D675-44F8-A824-703633ABF590}" ShortID="251388709">
+										<MusicTrack Name="Samani_CS_Gameplay_Main" ID="{AB8BB066-9A92-4256-A3C1-9F5778CB3008}" ShortID="405742450">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Samani_CS_Gameplay_Looped" ID="{6C614FBB-5CAB-49EA-9BC5-B513E53544EC}">
+												<AudioFileSource Name="Samani_CS_GameplayPre_3_18" ID="{B9ED72BE-BA13-4E7E-9E6C-32AD90AF5CF4}">
 													<Language>SFX</Language>
-													<AudioFile>Samani_CS_Gameplay_Looped.wav</AudioFile>
+													<AudioFile>Samani_CS_GameplayPre_3_18.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="838436081"/>
+														<MediaID ID="627556170"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{4D458B49-0D74-4EE9-AA12-7ED762663E89}">
+												<MusicTransition Name="Root" ID="{5AC81724-5742-41B3-9C02-585A65F30468}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -206,18 +206,77 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{D8EA9468-32E9-4F9E-BEC6-85413BE4D982}">
+															<MusicTrackSequence Name="" ID="{DCA3FC83-D835-4366-B0D3-C4303894B344}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="Samani_CS_Gameplay_Looped" ID="{C094609C-157D-4B69-8B3F-B2D98B34AA3F}">
+																				<MusicClip Name="Samani_CS_GameplayPre_3_18" ID="{F2CA6107-591B-4F1E-8F88-D1931991D6B9}">
 																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="118260.875"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="118260.869565217"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="Samani_CS_Gameplay_Looped" ID="{6C614FBB-5CAB-49EA-9BC5-B513E53544EC}"/>
+																					<AudioSourceRef Name="Samani_CS_GameplayPre_3_18" ID="{B9ED72BE-BA13-4E7E-9E6C-32AD90AF5CF4}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{26BE54D2-95B7-4F11-A1D5-E3DC39B58D34}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>118.26087</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{7C4F96AF-47BC-4277-8936-CA5A12EF880E}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>118.26087</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{ED970FEF-1447-45F9-827A-7659A2B03A28}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>118.26087</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
