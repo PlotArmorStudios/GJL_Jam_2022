@@ -1965,7 +1965,9 @@
 							<ChildrenList>
 								<Effect Name="Chipmunk" ID="{54F9F04F-0D14-46AB-B38B-21CFD2EB46F6}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
 									<PropertyList>
+										<Property Name="DryLevel" Type="Real32" Value="-18"/>
 										<Property Name="Pitch" Type="Real32" Value="1200"/>
+										<Property Name="WetLevel" Type="Real32" Value="-9"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Monsterize" ID="{99F80B38-1C45-42CE-9BCD-E94F3885DCAA}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">

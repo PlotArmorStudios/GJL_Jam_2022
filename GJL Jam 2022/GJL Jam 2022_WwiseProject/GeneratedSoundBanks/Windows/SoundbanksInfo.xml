@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="1106856034">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="282621132">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -169,9 +169,10 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" GUID="{D09BD065-2551-4497-A254-9D46AF896B5E}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2062661402" Name="Stop_Minion_Movement" ObjectPath="\Events\Default Work Unit\Stop_Minion_Movement" GUID="{7E8624A4-F00D-439D-9D8C-503C997BCA50}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="4082352169">
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="2474368039">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

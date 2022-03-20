@@ -1285,6 +1285,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="UI_Turret_Ready" ID="{B3C627B9-BE1C-4897-8D7C-29D7920E93CA}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>UI_Turret_Ready.wav</AudioFile>
 											<MediaIDList>
@@ -1314,6 +1318,9 @@
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>50</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{55B333A9-AD16-43C1-B555-84F44F5DD29B}">
@@ -1345,6 +1352,7 @@
 												<Value>4</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -1356,11 +1364,13 @@
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-96</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{CD8E5AE6-02F5-4EC6-AB2E-4EDB47E105B8}">
 														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Min" Type="Real64" Value="-6"/>
 														</PropertyList>
 													</Modifier>
@@ -1374,6 +1384,17 @@
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom CreatedFrom="{54F9F04F-0D14-46AB-B38B-21CFD2EB46F6}">
+												<Effect Name="Chipmunk (Custom)" ID="{14890CAE-F0A5-441F-B9F9-E9C1B24021E0}" ShortID="648303106" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="-18"/>
+														<Property Name="Pitch" Type="Real32" Value="1200"/>
+														<Property Name="WetLevel" Type="Real32" Value="-9"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
