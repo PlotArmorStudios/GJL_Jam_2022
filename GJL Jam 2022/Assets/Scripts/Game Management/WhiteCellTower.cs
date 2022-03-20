@@ -40,7 +40,7 @@ public class WhiteCellTower : MonoBehaviour
     public float LifespanTimer = 5.0f; //seconds of life. Consider triple/quadupling that timer, if required?
 
     private float _timer, _setMaxTimer; //enable, as 'GUI' needs to show before disabling/destroying itself, timer wise.
-    private Image _timerGUI; //last minute addition, to update/calc 'fill' from compared
+    [SerializeField] private Image _timerGUI; //last minute addition, to update/calc 'fill' from compared
 
     //bullet/projectile variables
     public float BulletsPerSecond = 1.0f; //for "one bullet per second", tempo wise
@@ -48,9 +48,9 @@ public class WhiteCellTower : MonoBehaviour
     public float BulletVelocity = 15f; //not-so deprecated, as projectile prefab has it's internal velocity setup.
 
     //all set up, private references wise. May need adjustments, if attached to a different prefab.
-    private GameObject _turretSpark; //to maybe rapidly enable/disable, upon spawn.
+    [SerializeField] private GameObject _turretSpark; //to maybe rapidly enable/disable, upon spawn.
 
-    private Transform _firePoint; //where to fire pellet from, instead of "center mass".
+    [SerializeField] private Transform _firePoint; //where to fire pellet from, instead of "center mass".
     //current target/AOE, depending on 'distance' to nearest enemy/boss per 'tick' check?
     //private Transform _curTarget;//this should shift after a check, before firing at position wise.
 
@@ -68,12 +68,6 @@ public class WhiteCellTower : MonoBehaviour
         _timer = LifespanTimer;
         _setMaxTimer = LifespanTimer; //only enable this if NOT, Destroy this after a public delay/etc.
         //Destroy(gameObject, LifespanTimer); //destroy on start/enable/spawn, //DONOT enable until testing is done
-
-        //manually set to key indexes of White Cell tower.
-        _turretSpark = gameObject.transform.GetChild(2).gameObject;
-        _firePoint = gameObject.transform.GetChild(3).gameObject.transform;
-        _timerGUI = gameObject.transform.GetChild(4).GetChild(1).GetComponent<Image>(); //UI addition
-        //Debug.LogWarning("Image CHECK. Image is " + _timerGUI.name);
 
 //        BulletVelocity = Bullet.GetComponent<Projectile>(); //get Force value? Not required, as it's automatically set within bullet prefab
 
