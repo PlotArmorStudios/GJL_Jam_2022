@@ -22,9 +22,6 @@ public class DialogueManager : MonoBehaviour
     private bool _conversationInProgress;
     private DialogueTrigger _dialogueTrigger;
     
-    [Tooltip("The scene that loads when this dialogue is finished.")]
-    [SerializeField] private string _sceneToLoad;
-
     private SceneLoader _sceneLoader;
 
     private void Start()
