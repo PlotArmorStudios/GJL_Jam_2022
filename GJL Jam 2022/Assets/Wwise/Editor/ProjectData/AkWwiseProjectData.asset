@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585538292852927205
+    m_lastTime: -8585538159257797284
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585538292853877370
+    m_lastTime: -8585538159257877288
     List:
     - name: Play_Ambience
       guid: 250cd58382bafa4b9a97eafae60989b1
@@ -263,6 +263,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_UI_gamestart_or_reset
+      guid: cea340f6f1a4dd46968ad070891eee5c
+      id: 2785067377
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_UI_gamestart_or_reset
+        ObjectType: 3
+        guid: cea340f6f1a4dd46968ad070891eee5c
+      Path: Events\Default Work Unit\Play_UI_gamestart_or_reset
+      maxAttenuation: 0
+      maxDuration: 0.286667
+      minDuration: 0.286667
     - name: Play_White_Cell_Tower_Destoyed
       guid: af968004386c4b45ab95e7932875e682
       id: 3631933282

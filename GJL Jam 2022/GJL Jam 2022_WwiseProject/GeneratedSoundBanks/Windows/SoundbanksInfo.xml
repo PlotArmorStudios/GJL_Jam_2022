@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3453147362">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="2823444590">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -84,6 +84,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2785067377" Name="Play_UI_gamestart_or_reset" ObjectPath="\Events\Default Work Unit\Play_UI_gamestart_or_reset" GUID="{F640A3CE-A4F1-46DD-968A-D070891EEE5C}" DurationType="OneShot" DurationMin="0.286667" DurationMax="0.286667">
+					<IncludedMemoryFiles>
+						<File Id="453914791" Language="SFX">
+							<ShortName>UI_Start-Reset.wav</ShortName>
+							<Path>SFX\UI_Start-Reset_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3631933282" Name="Play_White_Cell_Tower_Destoyed" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Destoyed" GUID="{048096AF-6C38-454B-AB95-E7932875E682}" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
 					<IncludedMemoryFiles>
 						<File Id="665559782" Language="SFX">
@@ -136,7 +144,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="2870060586">
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="1142523710">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -151,9 +159,9 @@
 							<ShortName>Samani_CS_Cutscene_3_18.wav</ShortName>
 							<Path>SFX\Samani_CS_Cutscene_3_18_D79FB2B7.wem</Path>
 						</File>
-						<File Id="627556170" Language="SFX">
-							<ShortName>Samani_CS_GameplayPre_3_18.wav</ShortName>
-							<Path>SFX\Samani_CS_GameplayPre_3_18_D79FB2B7.wem</Path>
+						<File Id="838436081" Language="SFX">
+							<ShortName>Samani_CS_Gameplay_Looped.wav</ShortName>
+							<Path>SFX\Samani_CS_Gameplay_Looped_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -164,7 +172,7 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}">
 							<Media>
-								<File Id="627556170"/>
+								<File Id="838436081"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{6B1DB3DD-A505-4742-AD62-57F73E278F65}">

@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	777209537	Play_Damage_Projectile			\Default Work Unit\Play_Damage_Projectile	
 	2369417814	Play_White_Cell_Tower_Spawn			\Default Work Unit\Play_White_Cell_Tower_Spawn	
 	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
+	2785067377	Play_UI_gamestart_or_reset			\Default Work Unit\Play_UI_gamestart_or_reset	
 	2820289418	Play_Freeze_Shot			\Default Work Unit\Play_Freeze_Shot	
 	3631933282	Play_White_Cell_Tower_Destoyed			\Default Work Unit\Play_White_Cell_Tower_Destoyed	
 	3696688966	Play_White_Cell_Tower_Shoot			\Default Work Unit\Play_White_Cell_Tower_Shoot	
@@ -15,6 +16,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	316552023	FS 4	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 4		37940
 	324084362	Freeze Shot 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Freeze Shot\Freeze Shot 2		168064
 	352761285	FS 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 3		37940
+	453914791	gamestart or reset	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\UI_Start-Reset_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\gamestart or reset		27584
 	573538586	White Cell Tower Shoot 1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Shoot 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Shoot\White Cell Tower Shoot 1		72064
 	624557869	Freeze Shot 4	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Freeze Shot\Freeze Shot 4		168064
 	656278657	FS 1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 1		37940

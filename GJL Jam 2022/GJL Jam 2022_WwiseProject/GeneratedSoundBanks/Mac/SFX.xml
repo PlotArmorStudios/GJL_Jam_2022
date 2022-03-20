@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3453147362">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="2823444590">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -78,6 +78,14 @@
 						<File Id="952971703" Language="SFX">
 							<ShortName>Freeze Shot 1.wav</ShortName>
 							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2785067377" Name="Play_UI_gamestart_or_reset" ObjectPath="\Events\Default Work Unit\Play_UI_gamestart_or_reset" GUID="{F640A3CE-A4F1-46DD-968A-D070891EEE5C}" DurationType="OneShot" DurationMin="0.286667" DurationMax="0.286667">
+					<IncludedMemoryFiles>
+						<File Id="453914791" Language="SFX">
+							<ShortName>UI_Start-Reset.wav</ShortName>
+							<Path>SFX\UI_Start-Reset_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
