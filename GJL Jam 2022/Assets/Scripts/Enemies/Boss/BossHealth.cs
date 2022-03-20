@@ -13,6 +13,8 @@ public class BossHealth : Health
         
         base.TakeDamage(damage);
         OnTakeDamage?.Invoke(CurrentHealth / _maxHealth);
+
+       // AkSoundEngine.PostEvent("Play_Boss_Receive_Damage", gameObject); //Wwise Event for dameg sound
     }
     protected override void Die()
     {
