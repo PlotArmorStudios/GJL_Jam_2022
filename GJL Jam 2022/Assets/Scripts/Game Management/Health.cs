@@ -48,8 +48,8 @@ public abstract class Health : MonoBehaviour
         //simple set health to max value on initiation/setup of attached game object.
         CurrentHealth = _maxHealth; //can assign an int value to a float value
         
-        // Debug.Log(gameObject.name + "Max hp is: " + _maxHealth);
-        // Debug.Log(gameObject.name + "Current hp is: " + CurrentHealth);
+        Debug.Log(gameObject.name + "Max hp is: " + _maxHealth);
+        Debug.Log(gameObject.name + "Current hp is: " + CurrentHealth);
  
         _healthBar.fillAmount = CurrentHealth / _maxHealth;
         _healthText.text = CurrentHealth + " / " + _maxHealth.ToString();
@@ -65,7 +65,7 @@ public abstract class Health : MonoBehaviour
 
         if (CurrentHealth <= 0 && IsAlive)
         {
-            // Debug.Log("Current health depleted");
+            Debug.Log("Current health depleted");
             IsAlive = false;
             Die();
         }
@@ -75,7 +75,7 @@ public abstract class Health : MonoBehaviour
     [ContextMenu("Take Damage Test")]
     private void TakeDamageTestMethod()
     {
-        TakeDamage(10);
+        TakeDamage(50);
     }
 
     protected virtual IEnumerator DepleteHPBar()

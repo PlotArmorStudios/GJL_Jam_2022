@@ -10,7 +10,6 @@ public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool _sharedInstance;
     private List<GameObject> _pooledObjects;
-    private List<GameObject> _activeObjects;
     [SerializeField] private GameObject _objectPrefab;
     [SerializeField] private int _poolSize = 30;
     
@@ -19,7 +18,6 @@ public class ObjectPool : MonoBehaviour
     {
         _sharedInstance = this;
         _pooledObjects = new List<GameObject>();
-        _activeObjects = new List<GameObject>();
 
         GameObject temp;
         for (int i = 0; i < _poolSize; i++)
@@ -39,7 +37,6 @@ public class ObjectPool : MonoBehaviour
             if(!pooledObject.activeInHierarchy)
             {
                 pooledObject.SetActive(true);
-                _activeObjects.Add(pooledObject);
                 return pooledObject;
             }
         }   
@@ -48,15 +45,5 @@ public class ObjectPool : MonoBehaviour
         _pooledObjects.Add(myObject);
         _poolSize++;
         return myObject;
-    }
-
-    public List<GameObject> ResetActiveObjects()
-    {
-        int activeCount = _activeObjects.Count;
-
-        List<GameObject> temp = _activeObjects;
-        _activeObjects = new List<GameObject>();
-        
-        return temp;
     }
 }
