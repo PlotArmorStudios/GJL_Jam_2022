@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class AttackSounds : MonoBehaviour
 {
-    [SerializeField] private AudioSource _audioSouce;
-    [SerializeField] private AudioClip _attackSound;
-
     private JellyShotToggler _jellyShotToggler;
 
     private void Start()
