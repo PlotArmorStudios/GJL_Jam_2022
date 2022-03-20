@@ -6,19 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class BossHealth : Health
 {
-    public static event Action<float> OnTakeDamage;
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
 
     public override void TakeDamage(float damage)
     {
-        
+        _animator.SetTrigger("Take Damage");
         base.TakeDamage(damage);
-        OnTakeDamage?.Invoke(CurrentHealth / _maxHealth);
 
        // AkSoundEngine.PostEvent("Play_Boss_Receive_Damage", gameObject); //Wwise Event for dameg sound
     }
+
     protected override void Die()
     {
-        Debug.Log("Boss died");
+        _animator.SetTrigger("Die");
         GameManager.Instance.WinGame();
     }
 }

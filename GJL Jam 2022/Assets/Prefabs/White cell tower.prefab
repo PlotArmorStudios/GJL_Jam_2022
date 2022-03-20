@@ -71,7 +71,7 @@ MonoBehaviour:
   LifespanTimer: 15
   _timerGUI: {fileID: 4128405301835726368}
   BulletsPerSecond: 1
-  BulletVelocity: 15
+  BulletVelocity: 10
   _turretSpark: {fileID: 6119543548272314542}
   _firePoint: {fileID: 7034731272306814243}
   Bullet: {fileID: 800798369083468368, guid: 9051bc4ea94dc2a4bad3e2be883d0656, type: 3}
