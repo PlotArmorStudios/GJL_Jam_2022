@@ -6,7 +6,7 @@ public class WhiteBloodCellProjectile : Projectile
 
     private Boss _bossInscene;
 
-    public override Transform GetClosestEnemy()
+    protected override Transform GetClosestEnemy()
     {
         _bossInscene = FindObjectOfType<Boss>();
         var targetTransform = _bossInscene.transform;
@@ -17,12 +17,8 @@ public class WhiteBloodCellProjectile : Projectile
     protected override void OnCollisionEnter(Collision other)
     {
         var boss = other.gameObject.GetComponent<Boss>();
-        
-        if (boss)
-        {
-            boss.GetComponent<Health>().TakeDamage(_damage);
-            boss.GetComponent<Animator>().SetTrigger("Take Damage");
-        }
+
+        if (boss) boss.GetComponent<Health>().TakeDamage(_damage);
 
         base.OnCollisionEnter(other);
     }

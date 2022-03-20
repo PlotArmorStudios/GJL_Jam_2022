@@ -49,7 +49,7 @@ public class Boss : MonoBehaviour
     private float _currentStoicTime;
     private BossState _state;
 
-    private bool IsInStoicState { get; set; }
+    public bool IsInStoicState { get; set; }
 
     private void Start()
     {
