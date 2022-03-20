@@ -6,6 +6,7 @@
 				<SoundBank Name="SFX" ID="{37162748-BEFA-4D36-9488-69C1BEED08DE}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Footsteps" ID="{CCD4128E-9317-4168-84BF-B8BB256A8B63}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Minion_Movement" ID="{A34F73A1-71C3-419F-90CC-67ED931087D3}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Damage_Projectile" ID="{70166382-20A4-42AF-931E-94718A7D333F}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Ambience" ID="{D09BD065-2551-4497-A254-9D46AF896B5E}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_White_Cell_Tower_Destoyed" ID="{048096AF-6C38-454B-AB95-E7932875E682}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>

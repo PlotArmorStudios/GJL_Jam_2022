@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="2823444590">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="1322633478">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -78,6 +78,30 @@
 						<File Id="952971703" Language="SFX">
 							<ShortName>Freeze Shot 1.wav</ShortName>
 							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1995918564" Name="Play_Minion_Movement" ObjectPath="\Events\Default Work Unit\Play_Minion_Movement" GUID="{A34F73A1-71C3-419F-90CC-67ED931087D3}" MaxAttenuation="15." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="157224794" Language="SFX">
+							<ShortName>Minions Movement 2.wav</ShortName>
+							<Path>SFX\Minions Movement 2_10C4C929.wem</Path>
+						</File>
+						<File Id="333355356" Language="SFX">
+							<ShortName>Minions Movement 1.wav</ShortName>
+							<Path>SFX\Minions Movement 1_10C4C929.wem</Path>
+						</File>
+						<File Id="361344984" Language="SFX">
+							<ShortName>Minions Movement 3.wav</ShortName>
+							<Path>SFX\Minions Movement 3_3A55012E.wem</Path>
+						</File>
+						<File Id="659218870" Language="SFX">
+							<ShortName>Minions Movement 4.wav</ShortName>
+							<Path>SFX\Minions Movement 4_56E34FEC.wem</Path>
+						</File>
+						<File Id="1035963359" Language="SFX">
+							<ShortName>Minions Movement 5.wav</ShortName>
+							<Path>SFX\Minions Movement 5_AB431BFD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

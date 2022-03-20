@@ -176,6 +176,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Minion_Movement" ID="{A34F73A1-71C3-419F-90CC-67ED931087D3}">
+					<ChildrenList>
+						<Action Name="" ID="{8DF32D96-4D69-4A01-ADCE-E99E86AE2271}" ShortID="136624228">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Minion Movement" ID="{AF31CF0B-6CCE-471B-B4FE-0207BDA66BBD}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

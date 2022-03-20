@@ -747,6 +747,18 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Player_Death" ID="{A6C154D8-F675-41C6-A774-D449C1871540}" ShortID="110428045">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>37</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
@@ -757,6 +769,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Player_Death" ID="{D29D5B17-75B9-41A3-88A7-307B700162CF}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.15752122471098"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.15752122471098"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Player_Death.wav</AudioFile>
 											<MediaIDList>
@@ -1073,9 +1090,17 @@
 							<ObjectLists/>
 						</ActorMixer>
 						<ActorMixer Name="UI" ID="{C76DFEC4-9050-4D55-9977-437E0B1CC1D2}" ShortID="118737640">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom CreatedFrom="{515A0397-E199-4A60-9A7F-6AEE0BC6028F}">
+										<Effect Name="New_Wwise_RoomVerb (Custom)" ID="{8532EB95-C809-4DEA-889E-3E1D1C181EB8}" ShortID="636636192" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3"/>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
@@ -1083,6 +1108,25 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="gamestart or reset" ID="{F9AE7246-5401-4A88-8959-1D4D39FE0A27}" ShortID="582249636">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BF0139B5-0518-4EA0-B239-9D6DC971D50C}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
@@ -1225,6 +1269,7 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Minion Movement" ID="{AF31CF0B-6CCE-471B-B4FE-0207BDA66BBD}" ShortID="683544329">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Highpass" Type="int16">
 											<ModifierList>
 												<ModifierInfo>
@@ -1238,6 +1283,8 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
 											<ModifierList>
 												<ModifierInfo>
@@ -1250,7 +1297,21 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ModifierList>
 												<ModifierInfo>
@@ -1265,6 +1326,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Minions" ID="{994F4080-59A0-4F19-8530-A058EEDB385D}" WorkUnitID="{73600EC8-B7F7-4208-9C2D-5F15C7F19ADB}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
 										</Reference>

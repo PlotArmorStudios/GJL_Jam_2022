@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585538159257797284
+    m_lastTime: -8585538121457898726
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585538159257877288
+    m_lastTime: -8585538121457818776
     List:
     - name: Play_Ambience
       guid: 250cd58382bafa4b9a97eafae60989b1
@@ -178,6 +178,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.854061
       minDuration: 1.65178
+    - name: Play_Minion_Movement
+      guid: a1734fa3c3719f4190cc67ed931087d3
+      id: 1995918564
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Minion_Movement
+        ObjectType: 3
+        guid: a1734fa3c3719f4190cc67ed931087d3
+      Path: Events\Default Work Unit\Play_Minion_Movement
+      maxAttenuation: 15
+      maxDuration: 0.226562
+      minDuration: 0.151021
     - name: Play_Music
       guid: 470f67d716505043a8377d6cbea1ac28
       id: 2932040671
@@ -488,7 +505,7 @@ MonoBehaviour:
     m_lastTime: -8585538973423785900
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
