@@ -69,5 +69,8 @@ public abstract class Projectile : MonoBehaviour
         return targetTransform;
     }
 
-    protected abstract void OnCollisionEnter(Collision other);
+    protected virtual void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
+    }
 }
