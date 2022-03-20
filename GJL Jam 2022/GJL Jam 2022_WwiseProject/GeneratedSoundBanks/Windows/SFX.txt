@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
 	777209537	Play_Damage_Projectile			\Default Work Unit\Play_Damage_Projectile	
 	2369417814	Play_White_Cell_Tower_Spawn			\Default Work Unit\Play_White_Cell_Tower_Spawn	
+	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
 	2820289418	Play_Freeze_Shot			\Default Work Unit\Play_Freeze_Shot	
 	3631933282	Play_White_Cell_Tower_Destoyed			\Default Work Unit\Play_White_Cell_Tower_Destoyed	
 	3696688966	Play_White_Cell_Tower_Shoot			\Default Work Unit\Play_White_Cell_Tower_Shoot	
