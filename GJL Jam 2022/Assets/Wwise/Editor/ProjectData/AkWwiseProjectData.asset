@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585537920956317928
+    m_lastTime: -8585537909764159454
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585537920968255796
+    m_lastTime: -8585537909851208130
     List:
     - name: Health_Decrease
       guid: be1e4e2d19e0314e9fb16d058cfe7aee
@@ -447,6 +447,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 65d09bd051259744a2549d46af896b5e
       Path: Events\Default Work Unit\Stop_Ambience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Boss_Minion_Throw
+      guid: 43e15f078acdb548896ae88696841400
+      id: 2064431365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Stop_Boss_Minion_Throw
+        ObjectType: 3
+        guid: 43e15f078acdb548896ae88696841400
+      Path: Events\Default Work Unit\Stop_Boss_Minion_Throw
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

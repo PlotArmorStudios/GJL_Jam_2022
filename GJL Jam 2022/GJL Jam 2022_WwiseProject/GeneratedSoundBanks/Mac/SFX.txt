@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	833469641	Play_Low_Health			\Default Work Unit\Play_Low_Health	
 	1995918564	Play_Minion_Movement			\Default Work Unit\Play_Minion_Movement	
 	2062661402	Stop_Minion_Movement			\Default Work Unit\Stop_Minion_Movement	
+	2064431365	Stop_Boss_Minion_Throw			\Default Work Unit\Stop_Boss_Minion_Throw	
 	2369417814	Play_White_Cell_Tower_Spawn			\Default Work Unit\Play_White_Cell_Tower_Spawn	
 	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
 	2785067377	Play_UI_gamestart_or_reset			\Default Work Unit\Play_UI_gamestart_or_reset	

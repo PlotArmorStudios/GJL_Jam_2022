@@ -260,6 +260,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Boss_Minion_Throw" ID="{075FE143-CD8A-48B5-896A-E88696841400}">
+					<ChildrenList>
+						<Action Name="" ID="{E003C570-1C44-4F1B-A87C-EC76D4359676}" ShortID="741171309">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boss_Minion_Throw" ID="{62A65451-4266-4630-BB81-CFC286A28AC7}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
