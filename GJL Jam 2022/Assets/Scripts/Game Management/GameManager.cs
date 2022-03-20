@@ -12,7 +12,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private PlayerControl _player;
     private SceneLoader _sceneLoader;
+    
+    public bool GamePaused { get; private set; }
 
+    public static event Action OnGamePause;
+    public static event Action OnGameUnpause;
     public static event Action OnGameEnd;
 
     private void Awake()
@@ -20,6 +24,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         _player = FindObjectOfType<PlayerControl>();
         _sceneLoader = GetComponent<SceneLoader>();
+        GamePaused = false;
     }
 
     public void WinGame()
@@ -46,4 +51,17 @@ public class GameManager : MonoBehaviour
         _player.gameObject.SetActive(true);
         _player.GetComponent<FlashOnRespawn>().Flash();
     }
+
+    public void PauseGame()
+    {
+        OnGamePause?.Invoke();
+        GamePaused = true;
+    }
+
+    public void UnpauseGame()
+    {
+        OnGameUnpause?.Invoke();
+        GamePaused = false;
+    }
+
 }
