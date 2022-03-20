@@ -5,11 +5,11 @@ using UnityEngine;
 
 public abstract class Projectile : MonoBehaviour
 {
-    [SerializeField] protected float _speed;
+    [SerializeField] private float _speed;
     [SerializeField] private float _targetingDelay = .5f;
 
     protected StickyMinion[] _enemiesInScene;
-    protected Transform _closestEnemy;
+    private Transform _closestEnemy;
 
     private Rigidbody _rigidbody;
     private bool _target;
@@ -31,12 +31,12 @@ public abstract class Projectile : MonoBehaviour
         _target = true;
     }
 
-    protected void Update()
+    private void Update()
     {
         if (_target) TargetEnemy();
     }
 
-    protected virtual void TargetEnemy()
+    private void TargetEnemy()
     {
         if (_closestEnemy)
             transform.position =
