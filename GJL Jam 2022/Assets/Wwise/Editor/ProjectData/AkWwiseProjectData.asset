@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585537909764159454
+    m_lastTime: -8585537900431362686
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585537909851208130
+    m_lastTime: -8585537900442309604
     List:
     - name: Health_Decrease
       guid: be1e4e2d19e0314e9fb16d058cfe7aee
@@ -513,7 +513,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e429f1fb20556409b0ecbd50382da2e
     GuidInternal: 
-    m_lastTime: -8585537920968235773
+    m_lastTime: -8585537900442284599
     List:
     - name: Health
       guid: 9fddc2273e12df449aa40266301a9b03
@@ -638,7 +638,7 @@ MonoBehaviour:
     m_lastTime: -8585538973423785900
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
