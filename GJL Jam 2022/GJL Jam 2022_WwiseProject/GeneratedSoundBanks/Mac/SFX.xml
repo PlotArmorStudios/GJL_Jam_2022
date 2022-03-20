@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3453147362">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="1004948805">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -26,6 +26,26 @@
 						<File Id="945233997" Language="SFX">
 							<ShortName>Ambience 3.wav</ShortName>
 							<Path>SFX\Ambience 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="367978905" Name="Play_Boss_Receive_Damage" ObjectPath="\Events\Default Work Unit\Play_Boss_Receive_Damage" GUID="{EA3468F1-5763-431C-A850-04E570E5BDF0}" DurationType="OneShot" DurationMin="0.876833" DurationMax="1.001833">
+					<IncludedMemoryFiles>
+						<File Id="107208732" Language="SFX">
+							<ShortName>Boss_Receive_Damage_3.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_3_10C4C929.wem</Path>
+						</File>
+						<File Id="165612288" Language="SFX">
+							<ShortName>Boss_Receive_Damage_2.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_2_10C4C929.wem</Path>
+						</File>
+						<File Id="216341391" Language="SFX">
+							<ShortName>Boss_Receive_Damage_4.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_4_10C4C929.wem</Path>
+						</File>
+						<File Id="714773797" Language="SFX">
+							<ShortName>Boss_Receive_Damage_1.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -81,6 +101,46 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1995918564" Name="Play_Minion_Movement" ObjectPath="\Events\Default Work Unit\Play_Minion_Movement" GUID="{A34F73A1-71C3-419F-90CC-67ED931087D3}" MaxAttenuation="15." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="157224794" Language="SFX">
+							<ShortName>Minions Movement 2.wav</ShortName>
+							<Path>SFX\Minions Movement 2_10C4C929.wem</Path>
+						</File>
+						<File Id="333355356" Language="SFX">
+							<ShortName>Minions Movement 1.wav</ShortName>
+							<Path>SFX\Minions Movement 1_10C4C929.wem</Path>
+						</File>
+						<File Id="361344984" Language="SFX">
+							<ShortName>Minions Movement 3.wav</ShortName>
+							<Path>SFX\Minions Movement 3_3A55012E.wem</Path>
+						</File>
+						<File Id="659218870" Language="SFX">
+							<ShortName>Minions Movement 4.wav</ShortName>
+							<Path>SFX\Minions Movement 4_56E34FEC.wem</Path>
+						</File>
+						<File Id="1035963359" Language="SFX">
+							<ShortName>Minions Movement 5.wav</ShortName>
+							<Path>SFX\Minions Movement 5_AB431BFD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2785067377" Name="Play_UI_gamestart_or_reset" ObjectPath="\Events\Default Work Unit\Play_UI_gamestart_or_reset" GUID="{F640A3CE-A4F1-46DD-968A-D070891EEE5C}" DurationType="OneShot" DurationMin="0.286667" DurationMax="0.286667">
+					<IncludedMemoryFiles>
+						<File Id="453914791" Language="SFX">
+							<ShortName>UI_Start-Reset.wav</ShortName>
+							<Path>SFX\UI_Start-Reset_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3767047869" Name="Play_UI_Turret_Ready" ObjectPath="\Events\Default Work Unit\Play_UI_Turret_Ready" GUID="{37461038-6975-428A-8FFA-8634EABA7B76}" DurationType="OneShot" DurationMin="1.119083" DurationMax="1.119083">
+					<IncludedMemoryFiles>
+						<File Id="809197220" Language="SFX">
+							<ShortName>UI_Turret_Ready.wav</ShortName>
+							<Path>SFX\UI_Turret_Ready_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3631933282" Name="Play_White_Cell_Tower_Destoyed" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Destoyed" GUID="{048096AF-6C38-454B-AB95-E7932875E682}" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
 					<IncludedMemoryFiles>
 						<File Id="665559782" Language="SFX">
@@ -126,6 +186,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" GUID="{D09BD065-2551-4497-A254-9D46AF896B5E}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2062661402" Name="Stop_Minion_Movement" ObjectPath="\Events\Default Work Unit\Stop_Minion_Movement" GUID="{7E8624A4-F00D-439D-9D8C-503C997BCA50}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
