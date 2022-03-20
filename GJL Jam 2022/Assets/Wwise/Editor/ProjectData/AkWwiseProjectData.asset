@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585538038386247318
+    m_lastTime: -8585537961248318218
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,8 +108,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585538038386367339
+    m_lastTime: -8585537961248213208
     List:
+    - name: Health_Decrease
+      guid: be1e4e2d19e0314e9fb16d058cfe7aee
+      id: 1237767790
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Health_Decrease
+        ObjectType: 3
+        guid: be1e4e2d19e0314e9fb16d058cfe7aee
+      Path: Events\Default Work Unit\Health_Decrease
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Ambience
       guid: 250cd58382bafa4b9a97eafae60989b1
       id: 278617630
@@ -127,6 +144,23 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: Play_Boss_Minion_Throw
+      guid: 5b875deca0a6c043b8c791e399982e4d
+      id: 438343987
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Boss_Minion_Throw
+        ObjectType: 3
+        guid: 5b875deca0a6c043b8c791e399982e4d
+      Path: Events\Default Work Unit\Play_Boss_Minion_Throw
+      maxAttenuation: 100
+      maxDuration: 1.191896
+      minDuration: 0.707906
     - name: Play_Boss_Receive_Damage
       guid: f16834ea63571c43a85004e570e5bdf0
       id: 367978905
@@ -195,6 +229,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.854061
       minDuration: 1.65178
+    - name: Play_Low_Health
+      guid: b72e05f4962b914897d3a11088f5e632
+      id: 833469641
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2b353f5dce79fc4cb019499282eb2182
+      - ElementName: Play_Low_Health
+        ObjectType: 3
+        guid: b72e05f4962b914897d3a11088f5e632
+      Path: Events\Default Work Unit\Play_Low_Health
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Minion_Movement
       guid: a1734fa3c3719f4190cc67ed931087d3
       id: 1995918564
@@ -445,8 +496,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e429f1fb20556409b0ecbd50382da2e
     GuidInternal: 
-    m_lastTime: -8585538973432277381
-    List: []
+    m_lastTime: -8585537980402955271
+    List:
+    - name: Health
+      guid: 9fddc2273e12df449aa40266301a9b03
+      id: 3677180323
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0e429f1fb20556409b0ecbd50382da2e
+      - ElementName: Health
+        ObjectType: 13
+        guid: 9fddc2273e12df449aa40266301a9b03
+      Path: Game Parameters\Default Work Unit\Health
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -556,7 +621,7 @@ MonoBehaviour:
     m_lastTime: -8585538973423785900
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
