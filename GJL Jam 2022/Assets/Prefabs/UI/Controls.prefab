@@ -119,7 +119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8375583172954449962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8463663190489331008}
+        m_TargetAssemblyTypeName: PressSound, Assembly-CSharp
+        m_MethodName: Press
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8375583173515237720
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +444,7 @@ GameObject:
   - component: {fileID: 8375583174130102740}
   - component: {fileID: 8375583174130102741}
   - component: {fileID: 8375583174130102738}
+  - component: {fileID: 8463663190489331008}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -524,3 +537,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8463663190489331008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8375583174130102739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06569bb19df3aa34a8592811f532723c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

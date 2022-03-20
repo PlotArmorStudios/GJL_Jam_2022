@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1422226475	Music_Status			\Default Work Unit\Music_Status	
+
+Switch	ID	Name	Switch Group			Notes
+	679636833	MenuMusic	Music_Status			
+	2275179450	GameplayMusic	Music_Status			
+	3264177434	CutsceneMusic	Music_Status			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	540538168	Samani_CS_Menu_Main	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Samani_CS_Menu_Pre_3_18_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Menu Music\Samani_CS_Menu_Pre_3_18\Samani_CS_Menu_Main		12121236
+	579437306	Samani_CS_Cutscene_3_18	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Samani_CS_Cutscene_3_18_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Cutscene Music\Samani_CS_Cutscene_3_18\Samani_CS_Cutscene_3_18		9237088
+	627556170	Samani_CS_Gameplay_Main	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Samani_CS_GameplayPre_3_18_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Gameplay Music\Samani_CS_GameplayPre_3_18\Samani_CS_Gameplay_Main		23207100
+
