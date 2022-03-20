@@ -353,6 +353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06569bb19df3aa34a8592811f532723c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioClipName: {fileID: 0}
+  _audioSourceName: {fileID: 0}
 --- !u!1 &3761615431973942107
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,8 +389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 36.5}
-  m_SizeDelta: {x: 744, y: 578}
+  m_AnchoredPosition: {x: -413, y: 36.5}
+  m_SizeDelta: {x: 633, y: 632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3761615431973942110
 CanvasRenderer:
