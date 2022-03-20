@@ -17,7 +17,8 @@ public enum MinionState
     ChasePlayer,
     Sticking,
     StuckToPlayer,
-    Dead
+    Dead, 
+    Freeze
 }
 
 [RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth))]
@@ -47,6 +48,7 @@ public class StickyMinion : MonoBehaviour
     private SphereCollider _collider;
     private Rigidbody _rigidbody;
     private Transform _parent;
+    private Animator _animator;
 
     //Player Variables
     private Transform _player;
@@ -73,6 +75,7 @@ public class StickyMinion : MonoBehaviour
         _collider = GetComponent<SphereCollider>();
         _rigidbody = GetComponent<Rigidbody>();
         _addToAmmo = GetComponent<AddToAmmo>();
+        _animator = GetComponentInChildren<Animator>();
         PlayerHealth.OnPlayerDeath += Die;
     }
 
@@ -124,7 +127,7 @@ public class StickyMinion : MonoBehaviour
         else if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && _state == MinionState.Spawning)
         {
             _rigidbody.isKinematic = true;
-            Debug.Log("Yo it's theg ground");
+            _animator.SetTrigger("StartRunning");
             ChangeState(MinionState.ChasePlayer);
         }
     }
@@ -196,6 +199,8 @@ public class StickyMinion : MonoBehaviour
         _collider.enabled = false;
         _triggerZone.enabled = false;
 
+        _animator.SetTrigger("JumpStick");
+
         transform.SetParent(_player);
 
         Transform bodyPart = _playerBodyParts.GetRandomBodyPart();
@@ -244,6 +249,18 @@ public class StickyMinion : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private IEnumerator Frozen()
+    {
+        _navMeshAgent.enabled = false;
+        _triggerZone.enabled = false;
+        float prevSpeed = _animator.speed;
+        _animator.speed = 0;
+        yield return new WaitForSeconds(3f);
+        _navMeshAgent.enabled = true;
+        _triggerZone.enabled = true;
+        _animator.speed = prevSpeed;
+    }
+
     private void ChangeState(MinionState state)
     {
         if (gameObject.activeSelf == false) return;
@@ -288,6 +305,9 @@ public class StickyMinion : MonoBehaviour
 #endif
                 StartCoroutine(TriggerDeath());
                 break;
+            case MinionState.Freeze:
+                StartCoroutine(Frozen());
+                break;
         }
     }
 
@@ -307,7 +327,7 @@ public class StickyMinion : MonoBehaviour
     public void Freeze()
     {
         _addToAmmo.OnFreezeMinion();
-        Debug.Log("Freeze Minion");
+        ChangeState(MinionState.Freeze);
     }
 
     public void Kill()
