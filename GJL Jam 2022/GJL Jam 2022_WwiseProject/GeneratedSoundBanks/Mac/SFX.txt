@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
+	367978905	Play_Boss_Receive_Damage			\Default Work Unit\Play_Boss_Receive_Damage	
 	777209537	Play_Damage_Projectile			\Default Work Unit\Play_Damage_Projectile	
 	1995918564	Play_Minion_Movement			\Default Work Unit\Play_Minion_Movement	
 	2062661402	Stop_Minion_Movement			\Default Work Unit\Stop_Minion_Movement	
@@ -20,7 +21,10 @@ Effect plug-ins	ID	Name	Type				Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	79968391	Ambience 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Ambience 2_BBB18E0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 2		960064
 	106655348	White Cell Tower Spawn 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Spawn 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Spawn\White Cell Tower Spawn 2		192064
+	107208732	Boss_Receive_Damage_3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Boss_Receive_Damage_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Boss\Boss_Receive_Damage\Boss_Receive_Damage_3		84240
 	157224794	Minions Movement 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Minions Movement 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Minions\Minion Movement\Minions Movement 2		15064
+	165612288	Boss_Receive_Damage_2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Boss_Receive_Damage_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Boss\Boss_Receive_Damage\Boss_Receive_Damage_2		84240
+	216341391	Boss_Receive_Damage_4	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Boss_Receive_Damage_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Boss\Boss_Receive_Damage\Boss_Receive_Damage_4		84240
 	306471567	Damage Projectile	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Damage Projectile_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Damage Projectile		384064
 	316552023	FS 4	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 4		37940
 	324084362	Freeze Shot 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Freeze Shot\Freeze Shot 2		168064
@@ -36,6 +40,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	678228720	FS 5	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\FS 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Footsteps\FS 5		37940
 	688423534	White Cell Tower Shoot 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Shoot 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Shoot\White Cell Tower Shoot 3		72064
 	696907537	Freeze Shot 3	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Freeze Shot 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Freeze Shot\Freeze Shot 3		168064
+	714773797	Boss_Receive_Damage_1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Boss_Receive_Damage_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Boss\Boss_Receive_Damage\Boss_Receive_Damage_1		96240
 	740818002	Ambience 1	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\Ambience 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 1		1920064
 	809197220	UI_Turret_Ready	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\UI_Turret_Ready_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\UI\UI_Turret_Ready		107496
 	937808209	White Cell Tower Shoot 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Mac\SFX\White Cell Tower Shoot 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\White Cell Tower\White Cell Tower Shoot\White Cell Tower Shoot 2		72064

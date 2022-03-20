@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="282621132">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3173749300">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -29,6 +29,26 @@
 						<File Id="945233997" Language="SFX">
 							<ShortName>Ambience 3.wav</ShortName>
 							<Path>SFX\Ambience 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="367978905" Name="Play_Boss_Receive_Damage" ObjectPath="\Events\Default Work Unit\Play_Boss_Receive_Damage" GUID="{EA3468F1-5763-431C-A850-04E570E5BDF0}" DurationType="OneShot" DurationMin="0.876833" DurationMax="1.001833">
+					<IncludedMemoryFiles>
+						<File Id="107208732" Language="SFX">
+							<ShortName>Boss_Receive_Damage_3.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_3_10C4C929.wem</Path>
+						</File>
+						<File Id="165612288" Language="SFX">
+							<ShortName>Boss_Receive_Damage_2.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_2_10C4C929.wem</Path>
+						</File>
+						<File Id="216341391" Language="SFX">
+							<ShortName>Boss_Receive_Damage_4.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_4_10C4C929.wem</Path>
+						</File>
+						<File Id="714773797" Language="SFX">
+							<ShortName>Boss_Receive_Damage_1.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -177,7 +197,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="1142523710">
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="121684150">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

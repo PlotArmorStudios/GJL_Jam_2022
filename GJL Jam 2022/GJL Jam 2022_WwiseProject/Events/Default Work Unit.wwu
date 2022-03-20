@@ -212,6 +212,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Boss_Receive_Damage" ID="{EA3468F1-5763-431C-A850-04E570E5BDF0}">
+					<ChildrenList>
+						<Action Name="" ID="{0CA86B6E-0F85-450B-8102-5286096735E1}" ShortID="845817764">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boss_Receive_Damage" ID="{E435B2E5-86B1-43D5-818E-87AF923D83E4}" WorkUnitID="{E338BF9E-0BAA-44C1-ACA8-ABCC58AA461B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
