@@ -27,6 +27,9 @@ public class StickyMinion : MonoBehaviour
 {
     const float GRAVITY = -9.81f;
 
+    [SerializeField] private GameObject _crystalModel;
+    private Animator _crystalAnimator;
+
     [Header("Movement Attributes")]
     [SerializeField, Tooltip("How long in seconds the minion waits after spawning before chasing the player")]
     private float _timeBeforeMove = 0.5f;
@@ -78,6 +81,7 @@ public class StickyMinion : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _addToAmmo = GetComponent<AddToAmmo>();
         _animator = GetComponentInChildren<Animator>();
+        _crystalAnimator = _crystalModel.GetComponentInChildren<Animator>();
         PlayerHealth.OnPlayerDeath += Die;
     }
 
@@ -93,6 +97,7 @@ public class StickyMinion : MonoBehaviour
         _parent = transform.parent;
         _navMeshAgent.speed = Stats._speed;
         _inRangeOfPlayer = false;
+        _crystalModel.SetActive(false);
         RotateToFacePlayer();
     }
 
@@ -141,11 +146,15 @@ public class StickyMinion : MonoBehaviour
                 
                 ChangeState(MinionState.StuckToPlayer);
             }
-            else
+            else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
                 _rigidbody.isKinematic = true;
                 _animator.SetTrigger("StartRunning");
                 ChangeState(MinionState.ChasePlayer);
+            }
+            else
+            {
+                Kill();
             }
         }
     }
@@ -177,11 +186,6 @@ public class StickyMinion : MonoBehaviour
                                                Mathf.Sqrt(2 * (displacementY - throwHeight) / GRAVITY));
 
         _rigidbody.velocity = velocityY + velocityXZ;
-    }
-
-    public MinionState GetMinionState()
-    {
-        return _state;
     }
 
     private IEnumerator FollowPlayer()
@@ -279,10 +283,18 @@ public class StickyMinion : MonoBehaviour
         _triggerZone.enabled = false;
         float prevSpeed = _animator.speed;
         _animator.speed = 0;
+        _crystalModel.SetActive(true);
+        _crystalAnimator.SetTrigger("Grow");
+
         yield return new WaitForSeconds(3f);
+
         _navMeshAgent.enabled = true;
         _triggerZone.enabled = true;
         _animator.speed = prevSpeed;
+
+        _crystalAnimator.SetTrigger("Explode");
+        yield return new WaitForSeconds(1f);
+        ChangeState(MinionState.ChasePlayer);
     }
 
     private void ChangeState(MinionState state)
