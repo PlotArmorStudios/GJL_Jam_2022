@@ -76,6 +76,7 @@ public class StickyMinion : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _addToAmmo = GetComponent<AddToAmmo>();
         PlayerHealth.OnPlayerDeath += Die;
+        
     }
 
     private void OnEnable()
@@ -170,6 +171,8 @@ public class StickyMinion : MonoBehaviour
         OnStartChase?.Invoke();
 
         _navMeshAgent.enabled = true;
+
+         
 
         while (_state == MinionState.ChasePlayer)
         {
