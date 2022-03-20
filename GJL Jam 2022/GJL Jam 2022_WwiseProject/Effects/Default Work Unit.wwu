@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{28A92F55-ABD4-4A8C-9CF8-957C60D73381}" PersistMode="Standalone">
 			<ChildrenList>
 				<Effect Name="New_Wwise_RoomVerb" ID="{515A0397-E199-4A60-9A7F-6AEE0BC6028F}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3"/>
+				<Effect Name="New_Wwise_Stereo_Delay" ID="{C7D92E26-895D-4017-BA56-E69BE828C8BD}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

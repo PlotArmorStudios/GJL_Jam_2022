@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="1322633478">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="1106856034">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -110,6 +110,14 @@
 						<File Id="453914791" Language="SFX">
 							<ShortName>UI_Start-Reset.wav</ShortName>
 							<Path>SFX\UI_Start-Reset_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3767047869" Name="Play_UI_Turret_Ready" ObjectPath="\Events\Default Work Unit\Play_UI_Turret_Ready" GUID="{37461038-6975-428A-8FFA-8634EABA7B76}" DurationType="OneShot" DurationMin="1.119083" DurationMax="1.119083">
+					<IncludedMemoryFiles>
+						<File Id="809197220" Language="SFX">
+							<ShortName>UI_Turret_Ready.wav</ShortName>
+							<Path>SFX\UI_Turret_Ready_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

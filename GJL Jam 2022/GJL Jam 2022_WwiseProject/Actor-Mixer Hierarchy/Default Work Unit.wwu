@@ -1254,6 +1254,49 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
+								<Sound Name="UI_Turret_Ready" ID="{5B6DDF61-D6ED-428A-95BC-89C1DFC2E844}" ShortID="834019567">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{08709CDF-C2FC-4487-8AAD-3F3D6F01275B}"/>
+										</Reference>
+										<Reference Name="Effect1">
+											<Custom CreatedFrom="{ABFA9875-521E-451F-AAB9-AB148847B9C0}">
+												<Effect Name="Blue_Distant_Echoes (Custom)" ID="{8430EF63-650C-481D-BE80-16D088181696}" ShortID="299692516" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+													<PropertyList>
+														<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+														<Property Name="EnableFeedback" Type="bool" Value="True"/>
+														<Property Name="FilterFrequency" Type="Real32" Value="2507"/>
+														<Property Name="FilterGain" Type="Real32" Value="-24"/>
+														<Property Name="FilterType" Type="int32" Value="3"/>
+														<Property Name="LeftCrossfeed" Type="Real32" Value="-10"/>
+														<Property Name="LeftDelayTime" Type="Real32" Value="0.29"/>
+														<Property Name="RightCrossfeed" Type="Real32" Value="-8"/>
+														<Property Name="RightDelayTime" Type="Real32" Value="0.43"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FC5BFA4-6432-4AA8-A823-3654A5A8BE71}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Turret_Ready" ID="{B3C627B9-BE1C-4897-8D7C-29D7920E93CA}">
+											<Language>SFX</Language>
+											<AudioFile>UI_Turret_Ready.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809197220"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Turret_Ready" ID="{B3C627B9-BE1C-4897-8D7C-29D7920E93CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
