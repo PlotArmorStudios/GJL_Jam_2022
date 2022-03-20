@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour
     private Transform _minionSpawnPoint;
 
     [SerializeField] private MinionSpawner _minionSpawner;
+    [SerializeField] private float _throwDelay = 5f;
 
     [SerializeField, Tooltip("The height above spawn at which the thrown minion which reach its peak")]
     private float _throwHeight = 15f;
@@ -33,19 +34,19 @@ public class Boss : MonoBehaviour
 
     private Animator _animator;
     private float _currentStoicTime;
+    private float _currentMinionThrowTime;
 
     public bool IsInStoicState { get; set; }
 
-    private void Start()
-    {
-        _animator = GetComponentInChildren<Animator>(true);
-    }
+    private void Start() => _animator = GetComponentInChildren<Animator>(true);
+    private void OnEnable() => ThrowMinionAnimation.OnBossThrow += ThrowMinion;
+
+    private void OnDisable() => ThrowMinionAnimation.OnBossThrow -= ThrowMinion;
 
     /* Called by Animation event */
     [ContextMenu("Throw Minion")]
     public void ThrowMinion()
     {
-        _animator.SetTrigger("Throw");
         GameObject minion = _minionSpawner.SpawnStickyMinion(_minionSpawnPoint);
         minion.GetComponent<StickyMinion>().JumpAtPlayer(_throwHeight);
         OnMinionThrown.Invoke();
@@ -59,6 +60,13 @@ public class Boss : MonoBehaviour
         {
             OnBossDamage?.Invoke(_attackPower);
             _currentAttackTime = 0;
+        }
+
+        _currentMinionThrowTime += Time.deltaTime;
+        
+        if (_currentMinionThrowTime >= _throwDelay)
+        {
+            _animator.SetTrigger("Throw");
         }
 
         _currentStoicTime += Time.deltaTime;
