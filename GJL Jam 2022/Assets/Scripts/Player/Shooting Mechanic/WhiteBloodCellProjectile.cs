@@ -6,7 +6,7 @@ public class WhiteBloodCellProjectile : Projectile
 
     private Boss _bossInscene;
 
-    public override Transform GetClosestEnemy()
+    protected override Transform GetClosestEnemy()
     {
         _bossInscene = FindObjectOfType<Boss>();
         var targetTransform = _bossInscene.transform;
