@@ -25,7 +25,7 @@ public enum MinionState
 [RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth))]
 public class StickyMinion : MonoBehaviour
 {
-    const float GRAVITY = -9.81f;
+    const float GRAVITY = -7f;
 
     [SerializeField] private GameObject _crystalModel;
     private Animator _crystalAnimator;
@@ -71,7 +71,7 @@ public class StickyMinion : MonoBehaviour
 
     private void Awake()
     {
-        _player = GameObject.FindWithTag("Player").transform;
+        _player = PlayerReference.Player;
         _playerBodyParts = _player.GetComponent<BodyPartManager>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
@@ -83,7 +83,6 @@ public class StickyMinion : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _crystalAnimator = _crystalModel.GetComponentInChildren<Animator>();
         PlayerHealth.OnPlayerDeath += Die;
-        
     }
 
     private void OnEnable()
@@ -105,6 +104,11 @@ public class StickyMinion : MonoBehaviour
     private void Start()
     {
         _navMeshAgent.speed = Stats._speed;
+    }
+
+    public void SetPlayer(Transform player)
+    {
+        _player = player;
     }
 
     public MinionState GetMinionState()

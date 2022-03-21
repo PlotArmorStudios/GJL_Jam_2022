@@ -15,7 +15,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] private int _poolSize = 30;
     
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _sharedInstance = this;
         _pooledObjects = new List<GameObject>();
