@@ -56,7 +56,7 @@
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value=""/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value=""/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="O1ayhQGIrU+h3xqog54x70gnFjf6vjZNlIhpwb7tCN4="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="SCcWN/q+Nk2UiGnBvu0I3jtWsoUBiK1Pod8aqIOeMe8="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="wpO4nO2NQESV/0QBFjDtTAEnacL/////T6KSCvh+vUqo/n1qRuK1FQEnacL/////"/>
 				<Property Name="Interactive Music\x64_{3D48A260-3D52-4472-A624-C905C8EA5023} - SegmentEditorZoomInfo" Type="string" Value="p4GI5cBhS0AeXXTRRRftP78FxKbS0BxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>

@@ -18,7 +18,6 @@
 						<ObjectRef Name="Play_UI_gamestart_or_reset" ID="{F640A3CE-A4F1-46DD-968A-D070891EEE5C}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Low_Health" ID="{F4052EB7-2B96-4891-97D3-A11088F5E632}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Boss_Minion_Throw" ID="{075FE143-CD8A-48B5-896A-E88696841400}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_SFX" ID="{8C1D3E8E-30F1-4A7F-A31E-BB96941074EB}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Freeze_Shot" ID="{3F6EBDF2-4EBE-4B12-B0F1-895FC232203C}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{83D50C25-BA82-4BFA-9A97-EAFAE60989B1}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_White_Cell_Tower_Spawn" ID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}" WorkUnitID="{5D3F352B-79CE-4CFC-B019-499282EB2182}" Origin="Manual" Filter="7"/>

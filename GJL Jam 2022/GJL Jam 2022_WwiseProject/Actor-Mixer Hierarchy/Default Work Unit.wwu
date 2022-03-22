@@ -260,7 +260,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-9</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1446,9 +1446,10 @@
 								<Sound Name="UI_Turret_Ready" ID="{5B6DDF61-D6ED-428A-95BC-89C1DFC2E844}" ShortID="834019567">
 									<PropertyList>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
