@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jellyShotToggler: {fileID: 193731471795580345}
-  _force: 30
+  _force: 40
   _defaultRayRange: 1000
 --- !u!114 &1549198091217206474
 MonoBehaviour:

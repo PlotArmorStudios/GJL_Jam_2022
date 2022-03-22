@@ -10,6 +10,7 @@ public class FlashTutorial : MonoBehaviour
     private void FlashTutorialUI()
     {
         _tutorialUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void DeactivateTutorialUI()

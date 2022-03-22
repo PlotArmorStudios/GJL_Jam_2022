@@ -25,8 +25,9 @@ public class GameManager : MonoBehaviour
         Instance = this;
         _player = FindObjectOfType<PlayerControl>();
         _sceneLoader = GetComponent<SceneLoader>();
-        FlashTutorial();
     }
+
+    private void Start() => FlashTutorial();
 
     public void WinGame()
     {
@@ -56,8 +57,6 @@ public class GameManager : MonoBehaviour
     private void FlashTutorial()
     {
         OnFlashTutorial?.Invoke();
-        Time.timeScale = 0f;
-        GamePaused = true;
     }
 
     public void PauseGame()

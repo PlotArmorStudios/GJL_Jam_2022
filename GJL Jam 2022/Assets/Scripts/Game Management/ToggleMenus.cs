@@ -12,13 +12,13 @@ public class ToggleMenus : MonoBehaviour
     {
         GameManager.OnGamePause += ToggleMenuOn;
         GameManager.OnGameUnpause += ToggleMenuOff;
-        GameManager.OnFlashTutorial += ToggleHUD;
+        GameManager.OnFlashTutorial += ToggleUIOff;
     }
     private void OnDisable()
     {
         GameManager.OnGamePause -= ToggleMenuOn;
         GameManager.OnGameUnpause -= ToggleMenuOff;
-        GameManager.OnFlashTutorial -= ToggleHUD;
+        GameManager.OnFlashTutorial -= ToggleUIOff;
     }
 
     private void ToggleMenuOff()
@@ -33,8 +33,9 @@ public class ToggleMenus : MonoBehaviour
         _hudUI.gameObject.SetActive(false);
     }
 
-    private void ToggleHUD()
+    private void ToggleUIOff()
     {
+        _pauseMenu.gameObject.SetActive(false);
         _hudUI.gameObject.SetActive(false);
     }
 }
