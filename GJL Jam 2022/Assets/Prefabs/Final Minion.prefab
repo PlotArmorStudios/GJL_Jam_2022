@@ -3827,6 +3827,9 @@ MonoBehaviour:
   _timeBetweenAttacks: 1
   _timeBeforePlayerDamage: 0
   _numAttacks: 3
+  _bodyPartsLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []

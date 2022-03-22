@@ -10,7 +10,7 @@ public class BodyPartManager : MonoBehaviour
 {
     private Transform[] _bodyParts;
 
-    private void Awake() 
+    private void Start() 
     {
         BoxCollider[] colliders = GetComponentsInChildren<BoxCollider>();
         _bodyParts = new Transform[colliders.Length];

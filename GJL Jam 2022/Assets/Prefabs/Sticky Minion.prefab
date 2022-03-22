@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f73cce31ea8c842933bc25a9b27871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _crystalModel: {fileID: 0}
   _timeBeforeMove: 0.5
   _timeBetweenAttacks: 1
   _timeBeforePlayerDamage: 0
