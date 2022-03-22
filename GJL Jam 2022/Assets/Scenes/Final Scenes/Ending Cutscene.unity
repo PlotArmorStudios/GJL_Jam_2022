@@ -2532,8 +2532,7 @@ MonoBehaviour:
     - "I know the Body wants to save the world, but if it doesn\u2019t take care
       of itself, we\u2019re all going to be out of our jobs."
     - "I hear ya. With all that\u2019s going on out there, it makes sense that things
-      have been hard. The Body needs to know that if every life matters, there\u2019s
-      no shame in that starting with you sometimes, you know? "
+      have been hard."
     - "The Body needs to know that if every life matters, there\u2019s no shame in
       that starting with you sometimes, you know? "
     - Put on your own oxygen mask first before assisting others and all that.
@@ -2555,7 +2554,7 @@ MonoBehaviour:
     - What? No.
     - Turns out it was all in vein.
     - All right, sheesh, this is your stop. Get out of here! Haha. Enjoy your vacation.
-    - Ha! Will do. Take care of yourself. See you on the other side.
+    - Ha! Will do. See you on the other side.
     NumberOfContinues: 010000000100000001000000010000000100000001000000020000000300000001000000020000000100000001000000010000000100000001000000010000000100000001000000
 --- !u!224 &8493723171148552500
 RectTransform:
