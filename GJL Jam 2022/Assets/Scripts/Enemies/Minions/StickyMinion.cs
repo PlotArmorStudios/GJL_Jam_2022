@@ -95,7 +95,7 @@ public class StickyMinion : MonoBehaviour
         _rigidbody.isKinematic = true;
         gameObject.layer = 0;
         _parent = transform.parent;
-        _navMeshAgent.speed = Stats._speed;
+        _navMeshAgent.speed = Stats.Speed;
         _inRangeOfPlayer = false;
         _crystalModel.SetActive(false);
         RotateToFacePlayer();
@@ -103,7 +103,7 @@ public class StickyMinion : MonoBehaviour
 
     private void Start()
     {
-        _navMeshAgent.speed = Stats._speed;
+        _navMeshAgent.speed = Stats.Speed;
     }
 
     public MinionState GetMinionState()
@@ -193,9 +193,7 @@ public class StickyMinion : MonoBehaviour
         OnStartChase?.Invoke();
 
         _navMeshAgent.enabled = true;
-
          
-
         while (_state == MinionState.ChasePlayer)
         {
             _navMeshAgent.destination = _player.position;
@@ -209,7 +207,7 @@ public class StickyMinion : MonoBehaviour
 
         for (int i = 0; i < _numAttacks; i++)
         {
-            _player.GetComponent<Health>().TakeDamage(Stats._damage);
+            _player.GetComponent<Health>().TakeDamage(Stats.Damage);
             OnHitPlayer.Invoke();
 #if DebugStateMachine
             Debug.Log("hit player");
@@ -281,20 +279,20 @@ public class StickyMinion : MonoBehaviour
     private IEnumerator Frozen()
     {
         StopCoroutine(Frozen());
+        float prevSpeed = _animator.speed;
         _navMeshAgent.enabled = false;
         _triggerZone.enabled = false;
-        float prevSpeed = _animator.speed;
         _animator.speed = 0;
         _crystalModel.SetActive(true);
         _crystalAnimator.SetTrigger("Grow");
 
         yield return new WaitForSeconds(3f);
 
+        _crystalAnimator.SetTrigger("Explode");
         _navMeshAgent.enabled = true;
         _triggerZone.enabled = true;
         _animator.speed = prevSpeed;
 
-        _crystalAnimator.SetTrigger("Explode");
         yield return new WaitForSeconds(1f);
         ChangeState(MinionState.ChasePlayer);
     }

@@ -116,7 +116,7 @@ MonoBehaviour:
   _timeUntilThrowMinions: 4
   _delayWhenTakeDamage: 1
   _stoicDelay: 10
-  _stoicDuration: 3
+  _stoicDuration: 5
   OnMinionThrown:
     m_PersistentCalls:
       m_Calls: []
