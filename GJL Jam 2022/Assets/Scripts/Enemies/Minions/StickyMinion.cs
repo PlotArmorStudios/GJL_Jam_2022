@@ -273,7 +273,7 @@ public class StickyMinion : MonoBehaviour
         OnDie?.Invoke();
         
         UnstickFromPlayer(0f);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.5f);
         StopAllCoroutines();
         gameObject.SetActive(false);
     }

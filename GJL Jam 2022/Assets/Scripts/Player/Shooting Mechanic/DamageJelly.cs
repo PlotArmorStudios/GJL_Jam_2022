@@ -8,8 +8,10 @@ public class DamageJelly : Projectile
         if (other.gameObject.CompareTag("Player")) return;
 
         var minion = other.gameObject.GetComponent<StickyMinion>();
-        if (minion) minion.Kill();
-
-        base.OnCollisionEnter(other);
+        if (minion)
+        {
+            minion.Kill();
+            Destroy(gameObject);
+        }
     }
 }

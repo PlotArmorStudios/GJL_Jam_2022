@@ -7,6 +7,7 @@ public abstract class Projectile : MonoBehaviour
 {
     [SerializeField] protected float _speed;
     [SerializeField] private float _targetingDelay = .5f;
+    [SerializeField] private float _timeUntilSelfDestruct = 10f;
 
     protected StickyMinion[] _enemiesInScene;
     protected Transform _closestEnemy;
@@ -22,6 +23,7 @@ public abstract class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _closestEnemy = GetClosestEnemy();
         _target = false;
+        Destroy(gameObject, _timeUntilSelfDestruct);
         StartCoroutine(DelayEnemyTargeting());
     }
 
@@ -63,7 +65,7 @@ public abstract class Projectile : MonoBehaviour
             {
                 closestDisteance = currentDistance;
 
-                if (enemy.GetMinionState() == MinionState.ChasePlayer || enemy.GetMinionState() == MinionState.Spawning)
+                //if (enemy.GetMinionState() == MinionState.ChasePlayer || enemy.GetMinionState() == MinionState.Spawning)
                     targetTransform = enemy.transform;
             }
         }
@@ -73,6 +75,6 @@ public abstract class Projectile : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision other)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
