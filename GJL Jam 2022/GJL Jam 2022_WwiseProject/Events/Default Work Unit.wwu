@@ -127,6 +127,10 @@
 				<Event Name="Play_Music" ID="{D7670F47-5016-4350-A837-7D6CBEA1AC28}">
 					<ChildrenList>
 						<Action Name="" ID="{A4A115CD-295B-4B4A-8584-6677D2015FD0}" ShortID="217056143">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Music" ID="{0EEC3279-9077-4BA6-804B-5652B9390A08}" WorkUnitID="{FA7BBCB3-88DA-4BAA-B9B7-3B9BACA569B0}"/>

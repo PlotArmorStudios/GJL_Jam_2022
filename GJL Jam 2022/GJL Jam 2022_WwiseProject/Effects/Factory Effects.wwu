@@ -1418,9 +1418,11 @@
 										<Property Name="DecayTime" Type="Real32" Value="10"/>
 										<Property Name="Density" Type="Real32" Value="100"/>
 										<Property Name="Diffusion" Type="Real32" Value="53"/>
+										<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-25"/>
 										<Property Name="ERPattern" Type="int32" Value="30"/>
-										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
+										<Property Name="EnableToneControls" Type="bool" Value="True"/>
+										<Property Name="Filter1Freq" Type="Real32" Value="300"/>
 										<Property Name="Filter2Freq" Type="Real32" Value="2200"/>
 										<Property Name="Filter2InsertPos" Type="int32" Value="0"/>
 										<Property Name="Filter2Q" Type="Real32" Value="0.1"/>
@@ -1429,7 +1431,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="10"/>
 										<Property Name="PreDelay" Type="Real32" Value="100"/>
 										<Property Name="Quality" Type="int32" Value="6"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-14"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-16"/>
 										<Property Name="RoomSize" Type="Real32" Value="71"/>
 										<Property Name="StereoWidth" Type="Real32" Value="130"/>
 									</PropertyList>
@@ -1484,6 +1486,7 @@
 									<PropertyList>
 										<Property Name="Density" Type="Real32" Value="100"/>
 										<Property Name="Diffusion" Type="Real32" Value="45"/>
+										<Property Name="DryLevel" Type="Real32" Value="-6.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-17"/>
 										<Property Name="ERPattern" Type="int32" Value="30"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="300"/>
