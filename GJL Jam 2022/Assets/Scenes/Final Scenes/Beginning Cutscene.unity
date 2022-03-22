@@ -467,6 +467,7 @@ MonoBehaviour:
     - Solly
     - Iggy
     - Solly
+    - Iggy
     - Solly
     - Solly
     - Solly
@@ -481,6 +482,8 @@ MonoBehaviour:
     - Could be worse. I could be headed to sector A55.
     - Ha! Just wear your gas mask if you get sent that route, you got it?
     - "You don\u2019t have to tell me. That\u2019s something you only forget once!"
+    - Man, seriously, though, changes need to be mae. We're getting deployed constantly
+      these days.
     - "Yeah, the Body isn\u2019t taking good care of itself lately. It must be hard
       times out there. Diet, sleep, exercise\u2014all of it seems to have gone out
       the window."
@@ -492,7 +495,7 @@ MonoBehaviour:
       big guns to take it down, and we\u2019re getting stretched pretty thin.\r\n"
     - "Ain\u2019t that the truth. And this big gun is just about to the drop point.
       See you on the other side!"
-    NumberOfContinues: 010000000100000001000000010000000100000001000000010000000100000004000000010000000100000001000000
+    NumberOfContinues: 01000000010000000100000001000000010000000100000001000000010000000100000001000000030000000100000001000000
 --- !u!1 &470981648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,7 +1784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2861358554680351367, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
       propertyPath: m_Name
-      value: Dialogue Box (1)
+      value: Dialogue Box
       objectReference: {fileID: 0}
     - target: {fileID: 2861358555800214123, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
