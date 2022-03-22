@@ -6,7 +6,7 @@ using UnityEngine.UI; //for manual hack on "hey, child of child"
 public class WhiteCellTower : MonoBehaviour
 {
     /* Code written by Andrew Letailleur, @ 15 March, 2022
- * Code edited by Andrew Letailleur, @ 19 March, 2022 */
+ * Code edited by Andrew Letailleur, @ 21 March, 2022 */
 
     #region Summary & Credits
 
@@ -33,7 +33,7 @@ public class WhiteCellTower : MonoBehaviour
     #endregion
 
     //Future/Temp notes
-    ///Figuire out how to 'spawn aim' away from player, on Awake/Start of this object, yo
+    ///Any last minute polish, from notes and such?
 
     //publlic variables, to be declared on top. Easy editing wise
     //lifespan timer variables
@@ -52,7 +52,7 @@ public class WhiteCellTower : MonoBehaviour
 
     [SerializeField] private Transform _firePoint; //where to fire pellet from, instead of "center mass".
     //current target/AOE, depending on 'distance' to nearest enemy/boss per 'tick' check?
-    //private Transform _curTarget;//this should shift after a check, before firing at position wise.
+    private Transform _curTarget;//this should shift after a check, before firing at position wise.
 
     //Public for now. Need to grab/serialize as an easy reference later, GameObject projectile wise. Until then, it's public
     public GameObject Bullet; //equals a "tiny sphere", to fire/fling at enemy. "Cell" wise...
@@ -90,7 +90,7 @@ public class WhiteCellTower : MonoBehaviour
         if (_bps_timer <= 0.0f)
         {
             ///only call TargetEnemy when required upon firing. NOT constantly, to 'save' on RAM/memory usage?
-            //TargetEnemy();// foreach inefficient. Could be called at occasionally?
+            TargetEnemy();// foreach inefficient. Could be called at occasionally?
             if (Bullet != null)
             {
                 FireCell();
@@ -102,8 +102,8 @@ public class WhiteCellTower : MonoBehaviour
         else
         {
             //deduct _bps_timer, by real time/frames.
-            _bps_timer -=
-                (Time.deltaTime * BulletsPerSecond); //BPS, "accelerates" the ticks, on how fast/often the turret fires.
+            _bps_timer -= (Time.deltaTime * BulletsPerSecond);
+            //BPS, "accelerates" the ticks, on how fast/often the turret fires.
         } //end if. Under deduct by firing rate, yo
 
         //Step C: Countdown/deprecate this Game Object, if enabled here past bullet fire code
@@ -126,67 +126,40 @@ public class WhiteCellTower : MonoBehaviour
         } //remove from scene.
     }
 
-    #region DeprecatedRotationCode
 
-    ///DEPRECATED,  but still there under the lens of "sample aim bot logic"
-    //counts the amount of enemies with the "Enemy" tag (not boss), iteratively setting aim to the nearest enemy to the turret.
-    /*    private void TargetEnemy()
-        {//ref: https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html
-            _curTarget = null;//clear the target, before assigning a new object ref
-            GameObject[] _foes = GameObject.FindGameObjectsWithTag("Enemy");
-            Debug.Log("Amount of Enemies found: " + _foes.Length);
+    //targets the 'boss character', and rotates turret to aim at the boss position
+    private void TargetEnemy()
+    {//ref: https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html
 
-            foreach (GameObject _foe in _foes)
-            {
-                if (_curTarget == null)
-                { _curTarget = _foe.transform; }
-                else
-                {//compare by (a-b).magnitute, transform.position wise
-                    float aDist = Vector3.Distance(
-                        gameObject.transform.position,
-                        _curTarget.transform.position);
-                    float bDist = Vector3.Distance(
-                        gameObject.transform.position,
-                        _foe.transform.position);
-                    if (bDist < aDist)
-                    { _curTarget = _foe.transform; }
-                    //compare distance between _foe.transform, and curTarget.transform
-                    //... to the White Cell tower. Ref; https://iqcode.com/code/typescript/how-to-compare-distance-between-2-objects-unity
-                }//endif
-            }//end foreach loop
-        }//end TargetEnemy
+        if (_curTarget == null)//might
+        { _curTarget = FindObjectOfType<BossHealth>().gameObject.transform; }
 
-    */
-    /*  Later excerpt/s, under the lens of 'adjust rotation over time'
-             if (_curTarget != null)///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
-            {//Debug.Log("Adjusting Rotation check...");
-
-                    //first, rotate the tower
+        if (_curTarget != null)
+        {
+            if (_curTarget != null)///Rotation is tilted "2.5D", to bar a 'rotating' turret glitch from clipping the ground
+            {///Debug.Log("Adjusting Rotation check...");
+                //first, get target position, at the 'same height' ratio
                 Vector3 _sameAim = _curTarget.position;
                 //bar object tilting upwards/downwards, glitch
                 _sameAim.y = gameObject.transform.position.y;
-                //gameObject.transform.LookAt(_sameAim);//old version, LookAt wise
+                //next, rotate the tower, without tilting upwards/downwards
                 Quaternion _slerpAim = Quaternion.LookRotation(
                     _sameAim - gameObject.transform.position
                 );//new version, "organic/Slerp" wise. May not be 'as' accurate though by itself
                 transform.rotation = Quaternion.Slerp(
                     transform.rotation, _slerpAim, Time.deltaTime
                 );//end object transform, turret edition
-
-                    //next, "sharp aim" the barrel, to the 'precise' position of target?
+                //last, "sharp aim" the barrel, to the 'precise' position of target?
                 _firePoint.transform.LookAt(_curTarget);//haaack 'tinker'
                 //end aim adjustment, 'zone in' wise.
 
                 ///PS: Object aimed at would have been "_curTarget", IF the 'barrel/head' can rotate without issue
             }//end "if there's a target" if
+        }//end TargetEnemy
+    }
 
-
-     */
-
-    #endregion
-
-    //fire a projectile, from the "White Cell tower", defense bullet wise.
-    private void FireCell()
+//fire a projectile, from the "White Cell tower", defense bullet wise.
+private void FireCell()
     {
         TurretInvoke();
         AkSoundEngine.PostEvent("Play_White_Cell_Tower_Shoot", gameObject);
