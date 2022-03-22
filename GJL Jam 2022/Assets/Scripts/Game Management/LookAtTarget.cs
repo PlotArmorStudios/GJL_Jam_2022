@@ -20,6 +20,6 @@ public class LookAtTarget : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(_target);
+        transform.LookAt(2*transform.position - _target.position);
     }
 }
