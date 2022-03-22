@@ -13,7 +13,7 @@ public class AmmoManager : MonoBehaviour
     public int CurrentAmmo { get; set; }
 
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         AddToAmmo.OnMinionFreeze += AddAmmo;
     }
@@ -38,7 +38,7 @@ public class AmmoManager : MonoBehaviour
         RefreshUI();
     }
 
-    protected void RefreshUI()
+    protected virtual void RefreshUI()
     {
         foreach (var ammoUI in _ammoUI)
         {
@@ -51,7 +51,7 @@ public class AmmoManager : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         AddToAmmo.OnMinionFreeze -= AddAmmo;
     }

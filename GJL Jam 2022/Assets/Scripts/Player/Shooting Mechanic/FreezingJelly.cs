@@ -8,7 +8,10 @@ public class FreezingJelly : Projectile
         if (other.gameObject.CompareTag("Player")) return;
 
         var minion = other.gameObject.GetComponent<StickyMinion>();
-        if (minion) minion.Freeze();
-        base.OnCollisionEnter(other);
+        if (minion)
+        {
+            minion.Freeze();
+            Destroy(gameObject);
+        }
     }
 }

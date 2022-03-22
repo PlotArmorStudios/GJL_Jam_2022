@@ -55,12 +55,14 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         OnGamePause?.Invoke();
+        Time.timeScale = 0f;
         GamePaused = true;
     }
 
     public void UnpauseGame()
     {
         OnGameUnpause?.Invoke();
+        Time.timeScale = 1f;
         GamePaused = false;
     }
 

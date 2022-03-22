@@ -11,6 +11,9 @@ public enum JellyToShoot
 
 public class JellyShotToggler : MonoBehaviour
 {
+    public static event Action OnToggleFreezingJelly;
+    public static event Action OnToggleDamageJelly;
+
     [SerializeField] private Animator _animator;
     [SerializeField] private JellyToShoot _jellyToShoot = JellyToShoot.FreezingJelly;
     [SerializeField] private GameObject _damageJelly;
@@ -21,6 +24,7 @@ public class JellyShotToggler : MonoBehaviour
     private GameObject _currentJelly;
     private DamageJellyAmmoManager _ammoManager;
     private float _currentFireTime;
+
     public JellyToShoot JellyToShoot => _jellyToShoot;
     public GameObject CurrentJelly => _currentJelly;
 
@@ -37,12 +41,12 @@ public class JellyShotToggler : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             if (_currentFireTime < _fireTimeDelay) return;
-            
+
             if (_jellyToShoot == JellyToShoot.DamageJelly && _ammoManager.CurrentAmmo > 0)
                 _animator.SetBool("Shooting", true);
             else if (_jellyToShoot != JellyToShoot.DamageJelly)
                 _animator.SetBool("Shooting", true);
-            
+
             _currentFireTime = 0;
         }
         else
@@ -55,9 +59,15 @@ public class JellyShotToggler : MonoBehaviour
     private void ToggleJellyToShoot()
     {
         if (_jellyToShoot == JellyToShoot.FreezingJelly)
+        {
             _jellyToShoot = JellyToShoot.DamageJelly;
+            OnToggleDamageJelly?.Invoke();
+        }
         else if (_jellyToShoot == JellyToShoot.DamageJelly)
+        {
             _jellyToShoot = JellyToShoot.FreezingJelly;
+            OnToggleFreezingJelly?.Invoke();
+        }
 
         switch (_jellyToShoot)
         {

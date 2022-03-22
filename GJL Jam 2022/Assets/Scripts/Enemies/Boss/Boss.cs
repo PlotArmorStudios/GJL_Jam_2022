@@ -32,11 +32,18 @@ public class Boss : MonoBehaviour
 
     [SerializeField, Tooltip("The height above spawn at which the thrown minion which reach its peak")]
     private float _throwHeight = 10f;
+
     [SerializeField] private float _timeBetweenThrows = 5f;
-    [SerializeField, Tooltip("How long the boss will wait to start throwing minions when the game starts or the player dies")] float _timeUntilThrowMinions = 10f;
-    [SerializeField, Tooltip("How long the boss is unable to throw minions for after taking damage")] private float _delayWhenTakeDamage = 3f;
+
+    [SerializeField,
+     Tooltip("How long the boss will wait to start throwing minions when the game starts or the player dies")]
+    float _timeUntilThrowMinions = 10f;
+
+    [SerializeField, Tooltip("How long the boss is unable to throw minions for after taking damage")]
+    private float _delayWhenTakeDamage = 3f;
+
     private IEnumerator _waitingRoutine, _throwingRoutine;
-    [SerializeField] private float _throwDelay = 4f;
+    //[SerializeField] private float _throwDelay = 4f;
 
     [Header("Stoic Attributes")] [SerializeField]
     private float _stoicDelay = 10f;
@@ -57,12 +64,26 @@ public class Boss : MonoBehaviour
     {
         _animator = GetComponentInChildren<Animator>(true);
         ChangeState(BossState.Waiting);
+    }
+
+    private void OnEnable()
+    {
         BossHealth.OnTakeDamage += TakeDamage;
         PlayerHealth.OnPlayerDeath += StartWait;
+        
+        //Boss script is too high a level for animations to have access to methods.
+        //ThrowMinionAnimation is 1 level lower and events can be called from animations.
+        ThrowMinionAnimation.OnBossThrow += ThrowMinion;
+        ThrowMinionAnimation.OnBossStopThrow += StopThrowingMinions;
     }
-    private void OnEnable() => ThrowMinionAnimation.OnBossThrow += ThrowMinion;
 
-    private void OnDisable() => ThrowMinionAnimation.OnBossThrow -= ThrowMinion;
+    private void OnDisable()
+    {
+        BossHealth.OnTakeDamage -= TakeDamage;
+        PlayerHealth.OnPlayerDeath -= StartWait;
+        ThrowMinionAnimation.OnBossThrow -= ThrowMinion;
+        ThrowMinionAnimation.OnBossStopThrow -= StopThrowingMinions;
+    }
 
     /* Called by Animation event */
     [ContextMenu("Throw Minion")]
@@ -71,8 +92,8 @@ public class Boss : MonoBehaviour
         GameObject minion = _minionSpawner.SpawnStickyMinion(_minionSpawnPoint);
         minion.GetComponent<StickyMinion>().JumpAtPlayer(_throwHeight);
         OnMinionThrown.Invoke();
-        
-        //delete this once Finishthrow animation event linked
+
+        //This works fine
         FinishThrow();
     }
 
@@ -102,13 +123,7 @@ public class Boss : MonoBehaviour
             _currentAttackTime = 0;
         }
 
-        _currentMinionThrowTime += Time.deltaTime;
-        
-        if (_currentMinionThrowTime >= _throwDelay)
-        {
-            _animator.SetTrigger("Throw");
-        }
-
+     
         _currentStoicTime += Time.deltaTime;
 
         if (_currentStoicTime >= _stoicDelay)
@@ -129,18 +144,15 @@ public class Boss : MonoBehaviour
                 StartCoroutine(_throwingRoutine);
                 break;
             case BossState.Throwing:
-                //_animator.SetTrigger("Throw");
-                
-                //delete this once animation linked
-                ThrowMinion();
+                _animator.SetTrigger("Throw");
                 break;
             case BossState.Waiting:
-                _waitingRoutine = WaitForPlayer(_timeUntilThrowMinions); 
+                _waitingRoutine = WaitForPlayer(_timeUntilThrowMinions);
                 StartCoroutine(_waitingRoutine);
                 Debug.Log("Waiting");
                 break;
             case BossState.TakeDamage:
-                _waitingRoutine = WaitForPlayer(_delayWhenTakeDamage); 
+                _waitingRoutine = WaitForPlayer(_delayWhenTakeDamage);
                 StartCoroutine(_waitingRoutine);
                 Debug.Log("Damaged");
                 break;
@@ -166,6 +178,7 @@ public class Boss : MonoBehaviour
         {
             _minionSpawner.IncreaseMaxLevel();
         }
+
         if (!IsInStoicState)
         {
             ChangeState(BossState.TakeDamage);
