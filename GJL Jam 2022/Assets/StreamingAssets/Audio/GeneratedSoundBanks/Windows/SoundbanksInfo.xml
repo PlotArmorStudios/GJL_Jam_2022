@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3792131380">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" GUID="{83D50C25-BA82-4BFA-9A97-EAFAE60989B1}" MaxAttenuation="100." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="79968391" Language="SFX">
+							<ShortName>Ambience 2.wav</ShortName>
+							<Path>SFX\Ambience 2_BBB18E0F.wem</Path>
+						</File>
+						<File Id="740818002" Language="SFX">
+							<ShortName>Ambience 1.wav</ShortName>
+							<Path>SFX\Ambience 1_10C4C929.wem</Path>
+						</File>
+						<File Id="945233997" Language="SFX">
+							<ShortName>Ambience 3.wav</ShortName>
+							<Path>SFX\Ambience 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="438343987" Name="Play_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Play_Boss_Minion_Throw" GUID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}" MaxAttenuation="100." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="176956802" Language="SFX">
+							<ShortName>Boss_Minion_Throw_03.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_03_10C4C929.wem</Path>
+						</File>
+						<File Id="249568830" Language="SFX">
+							<ShortName>Boss_Minion_Throw_01.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_01_10C4C929.wem</Path>
+						</File>
+						<File Id="866826885" Language="SFX">
+							<ShortName>Boss_Minion_Throw_04.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_04_10C4C929.wem</Path>
+						</File>
+						<File Id="989782220" Language="SFX">
+							<ShortName>Boss_Minion_Throw_02.wav</ShortName>
+							<Path>SFX\Boss_Minion_Throw_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="367978905" Name="Play_Boss_Receive_Damage" ObjectPath="\Events\Default Work Unit\Play_Boss_Receive_Damage" GUID="{EA3468F1-5763-431C-A850-04E570E5BDF0}" DurationType="OneShot" DurationMin="0.876833" DurationMax="1.001833">
+					<IncludedMemoryFiles>
+						<File Id="107208732" Language="SFX">
+							<ShortName>Boss_Receive_Damage_3.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_3_10C4C929.wem</Path>
+						</File>
+						<File Id="165612288" Language="SFX">
+							<ShortName>Boss_Receive_Damage_2.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_2_10C4C929.wem</Path>
+						</File>
+						<File Id="216341391" Language="SFX">
+							<ShortName>Boss_Receive_Damage_4.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_4_10C4C929.wem</Path>
+						</File>
+						<File Id="714773797" Language="SFX">
+							<ShortName>Boss_Receive_Damage_1.wav</ShortName>
+							<Path>SFX\Boss_Receive_Damage_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="777209537" Name="Play_Damage_Projectile" ObjectPath="\Events\Default Work Unit\Play_Damage_Projectile" GUID="{70166382-20A4-42AF-931E-94718A7D333F}" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
+					<IncludedMemoryFiles>
+						<File Id="306471567" Language="SFX">
+							<ShortName>Damage Projectile.wav</ShortName>
+							<Path>SFX\Damage Projectile_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" GUID="{CCD4128E-9317-4168-84BF-B8BB256A8B63}" DurationType="OneShot" DurationMin="0.372398" DurationMax="0.418002">
+					<IncludedMemoryFiles>
+						<File Id="316552023" Language="SFX">
+							<ShortName>FS 4.wav</ShortName>
+							<Path>SFX\FS 4_10C4C929.wem</Path>
+						</File>
+						<File Id="352761285" Language="SFX">
+							<ShortName>FS 3.wav</ShortName>
+							<Path>SFX\FS 3_10C4C929.wem</Path>
+						</File>
+						<File Id="656278657" Language="SFX">
+							<ShortName>FS 1.wav</ShortName>
+							<Path>SFX\FS 1_10C4C929.wem</Path>
+						</File>
+						<File Id="678228720" Language="SFX">
+							<ShortName>FS 5.wav</ShortName>
+							<Path>SFX\FS 5_10C4C929.wem</Path>
+						</File>
+						<File Id="952253448" Language="SFX">
+							<ShortName>FS 2.wav</ShortName>
+							<Path>SFX\FS 2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2820289418" Name="Play_Freeze_Shot" ObjectPath="\Events\Default Work Unit\Play_Freeze_Shot" GUID="{3F6EBDF2-4EBE-4B12-B0F1-895FC232203C}" DurationType="OneShot" DurationMin="1.65178" DurationMax="1.854061">
+					<IncludedMemoryFiles>
+						<File Id="324084362" Language="SFX">
+							<ShortName>Freeze Shot 2.wav</ShortName>
+							<Path>SFX\Freeze Shot 2_10C4C929.wem</Path>
+						</File>
+						<File Id="624557869" Language="SFX">
+							<ShortName>Freeze Shot 4.wav</ShortName>
+							<Path>SFX\Freeze Shot 4_10C4C929.wem</Path>
+						</File>
+						<File Id="696907537" Language="SFX">
+							<ShortName>Freeze Shot 3.wav</ShortName>
+							<Path>SFX\Freeze Shot 3_10C4C929.wem</Path>
+						</File>
+						<File Id="952971703" Language="SFX">
+							<ShortName>Freeze Shot 1.wav</ShortName>
+							<Path>SFX\Freeze Shot 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="833469641" Name="Play_Low_Health" ObjectPath="\Events\Default Work Unit\Play_Low_Health" GUID="{F4052EB7-2B96-4891-97D3-A11088F5E632}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="280563068" Language="SFX">
+							<ShortName>Low_Health_Hearbeat.wav</ShortName>
+							<Path>SFX\Low_Health_Hearbeat_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1995918564" Name="Play_Minion_Movement" ObjectPath="\Events\Default Work Unit\Play_Minion_Movement" GUID="{A34F73A1-71C3-419F-90CC-67ED931087D3}" MaxAttenuation="15." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="157224794" Language="SFX">
+							<ShortName>Minions Movement 2.wav</ShortName>
+							<Path>SFX\Minions Movement 2_10C4C929.wem</Path>
+						</File>
+						<File Id="333355356" Language="SFX">
+							<ShortName>Minions Movement 1.wav</ShortName>
+							<Path>SFX\Minions Movement 1_10C4C929.wem</Path>
+						</File>
+						<File Id="361344984" Language="SFX">
+							<ShortName>Minions Movement 3.wav</ShortName>
+							<Path>SFX\Minions Movement 3_3A55012E.wem</Path>
+						</File>
+						<File Id="659218870" Language="SFX">
+							<ShortName>Minions Movement 4.wav</ShortName>
+							<Path>SFX\Minions Movement 4_56E34FEC.wem</Path>
+						</File>
+						<File Id="1035963359" Language="SFX">
+							<ShortName>Minions Movement 5.wav</ShortName>
+							<Path>SFX\Minions Movement 5_AB431BFD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2785067377" Name="Play_UI_gamestart_or_reset" ObjectPath="\Events\Default Work Unit\Play_UI_gamestart_or_reset" GUID="{F640A3CE-A4F1-46DD-968A-D070891EEE5C}" DurationType="OneShot" DurationMin="0.286667" DurationMax="0.286667">
+					<IncludedMemoryFiles>
+						<File Id="453914791" Language="SFX">
+							<ShortName>UI_Start-Reset.wav</ShortName>
+							<Path>SFX\UI_Start-Reset_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3767047869" Name="Play_UI_Turret_Ready" ObjectPath="\Events\Default Work Unit\Play_UI_Turret_Ready" GUID="{37461038-6975-428A-8FFA-8634EABA7B76}" DurationType="OneShot" DurationMin="1.119083" DurationMax="1.119083">
+					<IncludedMemoryFiles>
+						<File Id="809197220" Language="SFX">
+							<ShortName>UI_Turret_Ready.wav</ShortName>
+							<Path>SFX\UI_Turret_Ready_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3631933282" Name="Play_White_Cell_Tower_Destoyed" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Destoyed" GUID="{048096AF-6C38-454B-AB95-E7932875E682}" DurationType="OneShot" DurationMin="1.887748" DurationMax="2.118926">
+					<IncludedMemoryFiles>
+						<File Id="665559782" Language="SFX">
+							<ShortName>White Cell tower Destroyed.wav</ShortName>
+							<Path>SFX\White Cell tower Destroyed_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3696688966" Name="Play_White_Cell_Tower_Shoot" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Shoot" GUID="{DB006DFC-2D8A-465F-87BB-8AF8A989F648}" MaxAttenuation="40." DurationType="OneShot" DurationMin="0.75" DurationMax="0.75">
+					<IncludedMemoryFiles>
+						<File Id="573538586" Language="SFX">
+							<ShortName>White Cell Tower Shoot 1.wav</ShortName>
+							<Path>SFX\White Cell Tower Shoot 1_10C4C929.wem</Path>
+						</File>
+						<File Id="688423534" Language="SFX">
+							<ShortName>White Cell Tower Shoot 3.wav</ShortName>
+							<Path>SFX\White Cell Tower Shoot 3_10C4C929.wem</Path>
+						</File>
+						<File Id="937808209" Language="SFX">
+							<ShortName>White Cell Tower Shoot 2.wav</ShortName>
+							<Path>SFX\White Cell Tower Shoot 2_10C4C929.wem</Path>
+						</File>
+						<File Id="1002143263" Language="SFX">
+							<ShortName>White Cell Tower Shoot 4.wav</ShortName>
+							<Path>SFX\White Cell Tower Shoot 4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2369417814" Name="Play_White_Cell_Tower_Spawn" ObjectPath="\Events\Default Work Unit\Play_White_Cell_Tower_Spawn" GUID="{AD8D3511-881B-4C40-8EBE-EF3A38520671}" DurationType="OneShot" DurationMin="2.387748" DurationMax="2.618926">
+					<IncludedMemoryFiles>
+						<File Id="106655348" Language="SFX">
+							<ShortName>White Cell Tower Spawn 2.wav</ShortName>
+							<Path>SFX\White Cell Tower Spawn 2_10C4C929.wem</Path>
+						</File>
+						<File Id="990054460" Language="SFX">
+							<ShortName>White Cell Tower Spawn 1.wav</ShortName>
+							<Path>SFX\White Cell Tower Spawn 1_10C4C929.wem</Path>
+						</File>
+						<File Id="1070491165" Language="SFX">
+							<ShortName>White Cell Tower Spawn 3.wav</ShortName>
+							<Path>SFX\White Cell Tower Spawn 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" GUID="{D09BD065-2551-4497-A254-9D46AF896B5E}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2064431365" Name="Stop_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Stop_Boss_Minion_Throw" GUID="{075FE143-CD8A-48B5-896A-E88696841400}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2062661402" Name="Stop_Minion_Movement" ObjectPath="\Events\Default Work Unit\Stop_Minion_Movement" GUID="{7E8624A4-F00D-439D-9D8C-503C997BCA50}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="Health" ObjectPath="\Game Parameters\Default Work Unit\Health" GUID="{27C2DD9F-123E-44DF-9AA4-0266301A9B03}"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="2090104906">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="4194470128">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" GUID="{D7670F47-5016-4350-A837-7D6CBEA1AC28}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="540538168" Language="SFX">
+							<ShortName>Samani_CS_Menu_Pre_3_18.wav</ShortName>
+							<Path>SFX\Samani_CS_Menu_Pre_3_18_D79FB2B7.wem</Path>
+						</File>
+						<File Id="579437306" Language="SFX">
+							<ShortName>Samani_CS_Cutscene_3_18.wav</ShortName>
+							<Path>SFX\Samani_CS_Cutscene_3_18_D79FB2B7.wem</Path>
+						</File>
+						<File Id="838436081" Language="SFX">
+							<ShortName>Samani_CS_Gameplay_Looped.wav</ShortName>
+							<Path>SFX\Samani_CS_Gameplay_Looped_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D869889E-837B-4E70-9FF6-3E3A1BBA5184}">
+							<Media>
+								<File Id="579437306"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}">
+							<Media>
+								<File Id="838436081"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6B1DB3DD-A505-4742-AD62-57F73E278F65}">
+							<Media>
+								<File Id="540538168"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" GUID="{96F32463-FC6D-48B1-A7BE-3A450CE03F45}" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="1422226475" Name="Music_Status" ObjectPath="\Switches\Default Work Unit\Music_Status" GUID="{E1A43367-6A63-48E1-9C98-6837218E1D41}">
+					<Switches>
+						<Switch Id="3264177434" Name="CutsceneMusic" ObjectPath="\Switches\Default Work Unit\Music_Status\CutsceneMusic" GUID="{D869889E-837B-4E70-9FF6-3E3A1BBA5184}"/>
+						<Switch Id="679636833" Name="MenuMusic" ObjectPath="\Switches\Default Work Unit\Music_Status\MenuMusic" GUID="{6B1DB3DD-A505-4742-AD62-57F73E278F65}"/>
+						<Switch Id="2275179450" Name="GameplayMusic" ObjectPath="\Switches\Default Work Unit\Music_Status\GameplayMusic" GUID="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
