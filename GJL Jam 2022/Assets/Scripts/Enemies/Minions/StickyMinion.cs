@@ -71,7 +71,7 @@ public class StickyMinion : MonoBehaviour
 
     private void Awake()
     {
-        _player = PlayerReference.Player;
+        _player = GameObject.FindWithTag("Player").transform;
         _playerBodyParts = _player.GetComponent<BodyPartManager>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
@@ -104,11 +104,6 @@ public class StickyMinion : MonoBehaviour
     private void Start()
     {
         _navMeshAgent.speed = Stats._speed;
-    }
-
-    public void SetPlayer(Transform player)
-    {
-        _player = player;
     }
 
     public MinionState GetMinionState()

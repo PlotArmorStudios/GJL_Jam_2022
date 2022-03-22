@@ -7,6 +7,13 @@ public class PlayerReference : MonoBehaviour
     public static Transform Player { get;  private set; }
     private void Awake() 
     {
-        Player = transform;    
+        if (Player != null)
+            Player = transform;    
+    }
+
+    public GameObject GetPlayer()
+    {
+
+        return gameObject;
     }
 }

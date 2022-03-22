@@ -155,6 +155,11 @@ public class Boss : MonoBehaviour
     }
 
     [ContextMenu("Boss takes damage")]
+    private void TakeDamageTest()
+    {
+        TakeDamage(10);
+    }
+
     public void TakeDamage(float healthPercent)
     {
         while (1 - healthPercent > _minionSpawner.GetLevelProgress())
@@ -174,6 +179,11 @@ public class Boss : MonoBehaviour
     }
 
     [ContextMenu("WaitForPlayer")]
+    private void WaitForPlayerTest()
+    {
+        StartWait(0);
+    }
+
     public void StartWait(float unused)
     {
         ChangeState(BossState.Waiting);
