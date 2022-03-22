@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca296934e7aa69f4ebedc2a8735a26dc, type: 3}
+  m_Name: 7C348136-99D6-4836-B3F8-63383879947E
+  m_EditorClassIdentifier: 
+  objectName: Set_Switch_CutsceneMusic
+  id: 3222573726
+  guid: 7C348136-99D6-4836-B3F8-63383879947E
