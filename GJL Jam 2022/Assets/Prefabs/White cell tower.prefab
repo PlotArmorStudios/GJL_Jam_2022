@@ -5432,20 +5432,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 48071cbf1b2bc4446921aec08eeb7b22, type: 3}
   m_PrefabInstance: {fileID: 4862061782232205018}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1682804326244230772
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5744599434427710347}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.09
-  m_Direction: 2
-  m_Center: {x: -0.00000017881393, y: 2.21, z: 0.9}
 --- !u!64 &3440267055965986980
 MeshCollider:
   m_ObjectHideFlags: 0
