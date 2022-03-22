@@ -16,7 +16,7 @@ public class PlayerHealth : Health
     {
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
         {
-            _healthBar.fillAmount -= .05f;
+            _healthBar.fillAmount -= .01f;
             _secondHPBar.fillAmount = _healthBar.fillAmount;
 
             _changingHealth = _healthBar.fillAmount * _maxHealth;
