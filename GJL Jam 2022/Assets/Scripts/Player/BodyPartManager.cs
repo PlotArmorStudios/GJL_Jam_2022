@@ -10,7 +10,7 @@ public class BodyPartManager : MonoBehaviour
 {
     private Transform[] _bodyParts;
 
-    private void Awake() 
+    private void Start() 
     {
         BoxCollider[] colliders = GetComponentsInChildren<BoxCollider>();
         _bodyParts = new Transform[colliders.Length];
@@ -20,7 +20,6 @@ public class BodyPartManager : MonoBehaviour
             _bodyParts[i].tag = "BodyPart";
             _bodyParts[i].gameObject.layer = LayerMask.NameToLayer("BodyParts");
             Vector3 worldPos = colliders[i].transform.TransformPoint(colliders[i].center);
-            Debug.Log("Body part: " + colliders[i].gameObject.name);
         }
     }
 

@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2861358554680351360, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 52.0085
+      value: 52.008545
       objectReference: {fileID: 0}
     - target: {fileID: 2861358554680351360, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Box
       objectReference: {fileID: 0}
+    - target: {fileID: 2861358555800214122, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.5999756
+      objectReference: {fileID: 0}
     - target: {fileID: 2861358555800214123, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -296,17 +300,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 8493723171257194085}
-    - target: {fileID: 2861358555800214123, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayNextName
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861358555800214123, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DisplayNextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 2861358555800214123, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TrySetTransitionNumber
+    - target: {fileID: 2861358556765144805, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.2000122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9102d72407dc04cbf7917fea7acfc4, type: 3}
@@ -1427,6 +1423,35 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1297083203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297083196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73d766c98dfa8446b724121305dd0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7b8377456550e6949adc50eee8c33b6e, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &1297083206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,10 +2232,10 @@ RectTransform:
   m_Father: {fileID: 8493723171092499695}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8493723170387878523
 MonoBehaviour:
@@ -2284,7 +2309,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2515,8 +2540,7 @@ MonoBehaviour:
     - "I know the Body wants to save the world, but if it doesn\u2019t take care
       of itself, we\u2019re all going to be out of our jobs."
     - "I hear ya. With all that\u2019s going on out there, it makes sense that things
-      have been hard. The Body needs to know that if every life matters, there\u2019s
-      no shame in that starting with you sometimes, you know? "
+      have been hard."
     - "The Body needs to know that if every life matters, there\u2019s no shame in
       that starting with you sometimes, you know? "
     - Put on your own oxygen mask first before assisting others and all that.
@@ -2538,7 +2562,7 @@ MonoBehaviour:
     - What? No.
     - Turns out it was all in vein.
     - All right, sheesh, this is your stop. Get out of here! Haha. Enjoy your vacation.
-    - Ha! Will do. Take care of yourself. See you on the other side.
+    - Ha! Will do. See you on the other side.
     NumberOfContinues: 010000000100000001000000010000000100000001000000020000000300000001000000020000000100000001000000010000000100000001000000010000000100000001000000
 --- !u!224 &8493723171148552500
 RectTransform:
@@ -2554,10 +2578,10 @@ RectTransform:
   m_Father: {fileID: 8493723171092499695}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.526917, y: 0}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 56.526917, y: -1.6489258}
+  m_SizeDelta: {x: -1720, y: -968.7292}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8493723171148552501
 MonoBehaviour:

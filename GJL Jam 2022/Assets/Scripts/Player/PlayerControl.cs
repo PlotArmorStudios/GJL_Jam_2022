@@ -61,13 +61,24 @@ public class PlayerControl : MonoBehaviour
         }
 
         //Will likely convert to rigidbody movement for better results
-        Jump();
-
+        //Jump();
+        ApplyGravity();
         if (_groundDetect.ToggleGroundedState() && _falltime > 0)
         {
             _falltime = 0;
             _verticalVelocity = 0;
         }
+    }
+
+    private void ApplyGravity()
+    {
+        _falltime += Time.deltaTime;
+        _verticalVelocity -= _gravity * _falltime * _falltime;
+
+        if (Movement.magnitude > 0.1f)
+            MoveDirection = new Vector3(MoveDirection.x, _verticalVelocity, MoveDirection.z);
+        else
+            MoveDirection = new Vector3(0, _verticalVelocity, 0);
     }
 
     private void Jump()

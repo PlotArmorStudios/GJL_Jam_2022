@@ -4939,5 +4939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cde8a70b5d4131b5a5fddc09bd1317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  _targetingDelay: 0.5
+  _speed: 20
+  _targetingDelay: 0.3
+  _timeUntilSelfDestruct: 5

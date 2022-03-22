@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3164819466794575710}
   - component: {fileID: 8013310840473183969}
   - component: {fileID: -7539823345442044968}
+  - component: {fileID: -6106645840132085192}
   m_Layer: 0
   m_Name: Sticky Minion
   m_TagString: Untagged
@@ -118,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f73cce31ea8c842933bc25a9b27871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _crystalModel: {fileID: 0}
   _timeBeforeMove: 0.5
   _timeBetweenAttacks: 1
   _timeBeforePlayerDamage: 0
@@ -217,6 +219,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a71036ebb079b45a5ca84af3f4a886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6106645840132085192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975116807412659123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b527a3100dc1094fb0cdc6581589324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &3406019162391789810
 PrefabInstance:
   m_ObjectHideFlags: 0

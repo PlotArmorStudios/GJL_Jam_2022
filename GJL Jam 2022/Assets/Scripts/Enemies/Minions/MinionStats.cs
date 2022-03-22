@@ -8,16 +8,16 @@ using UnityEngine;
 
 public struct MinionStats
 {
-    public int _level;
-    public float _damage;
-    public float _speed;
-    public float _size;
+    public int Level;
+    public float Damage;
+    public float Speed;
+    public float Size;
 
     public MinionStats(int level, float damage, float speed, float size)
     {
-        _level = level;
-        _damage = damage;
-        _speed = speed;
-        _size = size;
+        Level = level;
+        Damage = damage;
+        Speed = speed;
+        Size = size;
     }
 }

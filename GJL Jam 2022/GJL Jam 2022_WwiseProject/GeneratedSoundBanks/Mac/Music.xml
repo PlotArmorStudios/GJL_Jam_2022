@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="2870060586">
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="4194470128">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -23,9 +23,9 @@
 							<ShortName>Samani_CS_Cutscene_3_18.wav</ShortName>
 							<Path>SFX\Samani_CS_Cutscene_3_18_D79FB2B7.wem</Path>
 						</File>
-						<File Id="627556170" Language="SFX">
-							<ShortName>Samani_CS_GameplayPre_3_18.wav</ShortName>
-							<Path>SFX\Samani_CS_GameplayPre_3_18_D79FB2B7.wem</Path>
+						<File Id="838436081" Language="SFX">
+							<ShortName>Samani_CS_Gameplay_Looped.wav</ShortName>
+							<Path>SFX\Samani_CS_Gameplay_Looped_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -36,7 +36,7 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{B6FCC51E-4DDC-4C2D-8201-0C5CAB2D7C4D}">
 							<Media>
-								<File Id="627556170"/>
+								<File Id="838436081"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{6B1DB3DD-A505-4742-AD62-57F73E278F65}">

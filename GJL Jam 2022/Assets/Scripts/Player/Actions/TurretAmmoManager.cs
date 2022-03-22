@@ -10,6 +10,6 @@ public class TurretAmmoManager : AmmoManager
     {
         base.AddAmmo();
         // reload event goes here
-        Debug.Log("Play turret reload sound");
+        AkSoundEngine.PostEvent("Play_UI_Turret_Ready", gameObject);
     }
 }

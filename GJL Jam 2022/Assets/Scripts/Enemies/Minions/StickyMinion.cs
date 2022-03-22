@@ -18,13 +18,17 @@ public enum MinionState
     ChasePlayer,
     Sticking,
     StuckToPlayer,
-    Dead
+    Dead, 
+    Freeze
 }
 
 [RequireComponent(typeof(NavMeshAgent), typeof(EnemyHealth))]
 public class StickyMinion : MonoBehaviour
 {
-    const float GRAVITY = -9.81f;
+    const float GRAVITY = -7f;
+
+    [SerializeField] private GameObject _crystalModel;
+    private Animator _crystalAnimator;
 
     [Header("Movement Attributes")]
     [SerializeField, Tooltip("How long in seconds the minion waits after spawning before chasing the player")]
@@ -39,6 +43,7 @@ public class StickyMinion : MonoBehaviour
     [SerializeField, Tooltip("How many times a stuck enemy will damage the player before it dies")]
     private int _numAttacks = 3;
 
+    [SerializeField] private LayerMask _bodyPartsLayerMask;
     //General Attributes
     public MinionStats Stats { get; set; }
 
@@ -49,11 +54,11 @@ public class StickyMinion : MonoBehaviour
     private SphereCollider _collider;
     private Rigidbody _rigidbody;
     private Transform _parent;
+    private Animator _animator;
 
     //Player Variables
     private Transform _player;
     private BodyPartManager _playerBodyParts;
-    private int _bodyPartsLayerMask = 1 << 8;
     private bool _inRangeOfPlayer;
 
     [Header("Events")] public UnityEvent OnSpawn;
@@ -66,7 +71,7 @@ public class StickyMinion : MonoBehaviour
 
     private void Awake()
     {
-        _player = GameObject.FindWithTag("Player").transform;
+        _player = FindObjectOfType<PlayerControl>().transform;
         _playerBodyParts = _player.GetComponent<BodyPartManager>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
@@ -75,6 +80,8 @@ public class StickyMinion : MonoBehaviour
         _collider = GetComponent<SphereCollider>();
         _rigidbody = GetComponent<Rigidbody>();
         _addToAmmo = GetComponent<AddToAmmo>();
+        _animator = GetComponentInChildren<Animator>();
+        _crystalAnimator = _crystalModel.GetComponentInChildren<Animator>();
         PlayerHealth.OnPlayerDeath += Die;
     }
 
@@ -88,18 +95,32 @@ public class StickyMinion : MonoBehaviour
         _rigidbody.isKinematic = true;
         gameObject.layer = 0;
         _parent = transform.parent;
-        _navMeshAgent.speed = Stats._speed;
+        _navMeshAgent.speed = Stats.Speed;
         _inRangeOfPlayer = false;
+        _crystalModel.SetActive(false);
+        RotateToFacePlayer();
     }
 
     private void Start()
     {
-        _navMeshAgent.speed = Stats._speed;
+        _navMeshAgent.speed = Stats.Speed;
+    }
+
+    public MinionState GetMinionState()
+    {
+        return _state;
+    }
+
+    private void RotateToFacePlayer()
+    {
+        Vector3 lookDirection = _player.position - transform.position;
+        lookDirection.y = 0;
+        transform.rotation = Quaternion.LookRotation(lookDirection);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.GetComponent<PlayerControl>())
         {
             if (_state == MinionState.ChasePlayer)
             {
@@ -112,22 +133,29 @@ public class StickyMinion : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Player" && _state == MinionState.Spawning)
+    private void OnCollisionEnter(Collision other) {
+        if (_state == MinionState.Spawning)
         {
-            _rigidbody.isKinematic = true;
-            _navMeshAgent.enabled = false;
-            _collider.enabled = false;
-            _triggerZone.enabled = false;
-            transform.SetParent(_player);
-
-            ChangeState(MinionState.StuckToPlayer);
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && _state == MinionState.Spawning)
-        {
-            _rigidbody.isKinematic = true;
-            ChangeState(MinionState.ChasePlayer);
+            if (other.gameObject.GetComponent<PlayerControl>())
+            {
+                _rigidbody.isKinematic = true;
+                _navMeshAgent.enabled = false;
+                _collider.enabled = false;
+                _triggerZone.enabled = false;
+                transform.SetParent(_player);
+                
+                ChangeState(MinionState.StuckToPlayer);
+            }
+            else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                _rigidbody.isKinematic = true;
+                _animator.SetTrigger("StartRunning");
+                ChangeState(MinionState.ChasePlayer);
+            }
+            else
+            {
+                Kill();
+            }
         }
     }
 
@@ -160,17 +188,12 @@ public class StickyMinion : MonoBehaviour
         _rigidbody.velocity = velocityY + velocityXZ;
     }
 
-    public MinionState GetMinionState()
-    {
-        return _state;
-    }
-
     private IEnumerator FollowPlayer()
     {
         OnStartChase?.Invoke();
 
         _navMeshAgent.enabled = true;
-
+         
         while (_state == MinionState.ChasePlayer)
         {
             _navMeshAgent.destination = _player.position;
@@ -184,7 +207,7 @@ public class StickyMinion : MonoBehaviour
 
         for (int i = 0; i < _numAttacks; i++)
         {
-            _player.GetComponent<Health>().TakeDamage(Stats._damage);
+            _player.GetComponent<Health>().TakeDamage(Stats.Damage);
             OnHitPlayer.Invoke();
 #if DebugStateMachine
             Debug.Log("hit player");
@@ -202,6 +225,8 @@ public class StickyMinion : MonoBehaviour
         _navMeshAgent.enabled = false;
         _collider.enabled = false;
         _triggerZone.enabled = false;
+
+        _animator.SetTrigger("JumpStick");
 
         transform.SetParent(_player);
 
@@ -244,11 +269,32 @@ public class StickyMinion : MonoBehaviour
     private IEnumerator TriggerDeath()
     {
         OnDie?.Invoke();
-
+        
         UnstickFromPlayer(0f);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.1f);
         StopAllCoroutines();
         gameObject.SetActive(false);
+    }
+
+    private IEnumerator Frozen()
+    {
+        StopCoroutine(Frozen());
+        float prevSpeed = _animator.speed;
+        _navMeshAgent.enabled = false;
+        _triggerZone.enabled = false;
+        _animator.speed = 0;
+        _crystalModel.SetActive(true);
+        _crystalAnimator.SetTrigger("Grow");
+
+        yield return new WaitForSeconds(3f);
+
+        _crystalAnimator.SetTrigger("Explode");
+        _navMeshAgent.enabled = true;
+        _triggerZone.enabled = true;
+        _animator.speed = prevSpeed;
+
+        yield return new WaitForSeconds(1f);
+        ChangeState(MinionState.ChasePlayer);
     }
 
     private void ChangeState(MinionState state)
@@ -294,7 +340,11 @@ public class StickyMinion : MonoBehaviour
 #if DebugStateMachine
                 Debug.Log("Dead");
 #endif
+                StopAllCoroutines();
                 StartCoroutine(TriggerDeath());
+                break;
+            case MinionState.Freeze:
+                StartCoroutine(Frozen());
                 break;
         }
     }
@@ -315,12 +365,12 @@ public class StickyMinion : MonoBehaviour
     public void Freeze()
     {
         _addToAmmo.OnFreezeMinion();
-        Debug.Log("Freeze Minion");
+        ChangeState(MinionState.Freeze);
     }
 
     public void Kill()
     {
-        gameObject.SetActive(false);
+        ChangeState(MinionState.Dead);
     }
 
     private void OnDisable()

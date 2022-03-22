@@ -10,10 +10,10 @@ public class AmmoManager : MonoBehaviour
     [SerializeField] protected List<RectTransform> _ammoUI;
     [SerializeField] protected int _maxAmmo = 4;
 
-    public int CurrentAmmo { get; set; }
+    public int CurrentAmmo { get; private set; }
 
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         AddToAmmo.OnMinionFreeze += AddAmmo;
     }
@@ -38,7 +38,7 @@ public class AmmoManager : MonoBehaviour
         RefreshUI();
     }
 
-    protected void RefreshUI()
+    protected virtual void RefreshUI()
     {
         foreach (var ammoUI in _ammoUI)
         {
@@ -51,7 +51,7 @@ public class AmmoManager : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         AddToAmmo.OnMinionFreeze -= AddAmmo;
     }

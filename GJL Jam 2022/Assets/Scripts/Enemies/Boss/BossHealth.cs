@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class BossHealth : Health
 {
     private Animator _animator;
+    public static event Action<float> OnTakeDamage;
 
     private void Start()
     {
@@ -17,6 +18,8 @@ public class BossHealth : Health
     {
         _animator.SetTrigger("Take Damage");
         base.TakeDamage(damage);
+        OnTakeDamage?.Invoke(damage);
+       AkSoundEngine.PostEvent("Play_Boss_Receive_Damage", gameObject); //Wwise Event for dameg sound
     }
 
     protected override void Die()

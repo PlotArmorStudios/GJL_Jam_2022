@@ -4941,3 +4941,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _targetingDelay: 0.5
+  _timeUntilSelfDestruct: 5

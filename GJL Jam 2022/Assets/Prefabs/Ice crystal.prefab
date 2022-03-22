@@ -4895,6 +4895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6746000255009157464}
   - component: {fileID: 6920651190948503769}
+  - component: {fileID: 3361645088836197389}
   m_Layer: 0
   m_Name: Ice crystal
   m_TagString: Untagged
@@ -4938,6 +4939,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3361645088836197389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6256990622284229602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256c121af9ad7d54880a00178a2cb689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5105587009085110957
 PrefabInstance:
   m_ObjectHideFlags: 0
