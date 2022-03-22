@@ -113,9 +113,8 @@ MonoBehaviour:
   _minionSpawner: {fileID: 0}
   _throwHeight: 5
   _timeBetweenThrows: 5
-  _timeUntilThrowMinions: 10
-  _delayWhenTakeDamage: 3
-  _throwDelay: 4
+  _timeUntilThrowMinions: 4
+  _delayWhenTakeDamage: 1
   _stoicDelay: 10
   _stoicDuration: 3
   OnMinionThrown:

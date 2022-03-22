@@ -10,7 +10,7 @@ public class AmmoManager : MonoBehaviour
     [SerializeField] protected List<RectTransform> _ammoUI;
     [SerializeField] protected int _maxAmmo = 4;
 
-    public int CurrentAmmo { get; set; }
+    public int CurrentAmmo { get; private set; }
 
 
     protected virtual void OnEnable()

@@ -65,7 +65,7 @@ public abstract class Projectile : MonoBehaviour
             {
                 closestDisteance = currentDistance;
 
-                //if (enemy.GetMinionState() == MinionState.ChasePlayer || enemy.GetMinionState() == MinionState.Spawning)
+                if (enemy.GetMinionState() == MinionState.ChasePlayer || enemy.GetMinionState() == MinionState.Spawning)
                     targetTransform = enemy.transform;
             }
         }

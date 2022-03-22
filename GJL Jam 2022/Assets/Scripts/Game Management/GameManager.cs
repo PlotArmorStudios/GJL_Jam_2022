@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     
     public bool GamePaused { get; private set; }
 
+    public static event Action OnFlashTutorial;
     public static event Action OnGamePause;
     public static event Action OnGameUnpause;
     public static event Action OnGameEnd;
@@ -24,8 +25,9 @@ public class GameManager : MonoBehaviour
         Instance = this;
         _player = FindObjectOfType<PlayerControl>();
         _sceneLoader = GetComponent<SceneLoader>();
-        GamePaused = false;
     }
+
+    private void Start() => FlashTutorial();
 
     public void WinGame()
     {
@@ -52,6 +54,11 @@ public class GameManager : MonoBehaviour
         _player.GetComponent<FlashOnRespawn>().Flash();
     }
 
+    private void FlashTutorial()
+    {
+        OnFlashTutorial?.Invoke();
+    }
+
     public void PauseGame()
     {
         OnGamePause?.Invoke();
@@ -65,5 +72,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         GamePaused = false;
     }
-
 }
