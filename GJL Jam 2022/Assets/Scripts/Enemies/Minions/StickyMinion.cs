@@ -43,6 +43,7 @@ public class StickyMinion : MonoBehaviour
     [SerializeField, Tooltip("How many times a stuck enemy will damage the player before it dies")]
     private int _numAttacks = 3;
 
+    [SerializeField] private LayerMask _bodyPartsLayerMask;
     //General Attributes
     public MinionStats Stats { get; set; }
 
@@ -58,7 +59,6 @@ public class StickyMinion : MonoBehaviour
     //Player Variables
     private Transform _player;
     private BodyPartManager _playerBodyParts;
-    private int _bodyPartsLayerMask = 1 << 8;
     private bool _inRangeOfPlayer;
 
     [Header("Events")] public UnityEvent OnSpawn;
@@ -71,7 +71,7 @@ public class StickyMinion : MonoBehaviour
 
     private void Awake()
     {
-        _player = GameObject.FindWithTag("Player").transform;
+        _player = FindObjectOfType<PlayerControl>().transform;
         _playerBodyParts = _player.GetComponent<BodyPartManager>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
@@ -120,7 +120,7 @@ public class StickyMinion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.GetComponent<PlayerControl>())
         {
             if (_state == MinionState.ChasePlayer)
             {
@@ -136,7 +136,7 @@ public class StickyMinion : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (_state == MinionState.Spawning)
         {
-            if (other.gameObject.tag == "Player")
+            if (other.gameObject.GetComponent<PlayerControl>())
             {
                 _rigidbody.isKinematic = true;
                 _navMeshAgent.enabled = false;
