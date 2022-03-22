@@ -83,7 +83,7 @@ public abstract class Health : MonoBehaviour
         //yield return _healthBar.fillAmount != CurrentHealth / _maxHealth;
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
         {
-            _healthBar.fillAmount -= .05f;
+            _healthBar.fillAmount -= .01f;
 
             _changingHealth = _healthBar.fillAmount * _maxHealth;
             
