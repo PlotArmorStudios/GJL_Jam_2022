@@ -16,14 +16,15 @@ public class SceneLoader : MonoBehaviour
         if (_transitionToggle)
             StartCoroutine(PlayTransition(_sceneToLoad));
         else
-            SceneManager.LoadScene(_sceneToLoad);
+            TransitionScene(_sceneToLoad);
     }
+
     public void LoadScene(string scene)
     {
         if (_transitionToggle)
             StartCoroutine(PlayTransition(scene));
         else
-            SceneManager.LoadScene(scene);
+            TransitionScene(scene);
     }
 
     public void LoadScene(string scene, bool transitionToggle)
@@ -31,7 +32,7 @@ public class SceneLoader : MonoBehaviour
         if (transitionToggle)
             StartCoroutine(PlayTransition(scene));
         else
-            SceneManager.LoadScene(scene);
+            TransitionScene(scene);
     }
 
     private IEnumerator PlayTransition(string scene)
@@ -46,6 +47,13 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
 
+        TransitionScene(scene);
+    }
+
+    private void TransitionScene(string scene)
+    {
+        if (GameManager.Instance)
+            GameManager.Instance.UnpauseGame();
         SceneManager.LoadScene(scene);
     }
 }
