@@ -70,6 +70,7 @@ public class Boss : MonoBehaviour
     {
         BossHealth.OnTakeDamage += TakeDamage;
         PlayerHealth.OnPlayerDeath += StartWait;
+        
         //Boss script is too high a level for animations to have access to methods.
         //ThrowMinionAnimation is 1 level lower and events can be called from animations.
         ThrowMinionAnimation.OnBossThrow += ThrowMinion;
@@ -92,7 +93,7 @@ public class Boss : MonoBehaviour
         minion.GetComponent<StickyMinion>().JumpAtPlayer(_throwHeight);
         OnMinionThrown.Invoke();
 
-        //delete this once Finishthrow animation event linked
+        //This works fine
         FinishThrow();
     }
 
@@ -122,14 +123,7 @@ public class Boss : MonoBehaviour
             _currentAttackTime = 0;
         }
 
-        _currentMinionThrowTime += Time.deltaTime;
-
-        // if (_currentMinionThrowTime >= _throwDelay)
-        // {
-        //     _animator.SetTrigger("Throw");
-        //     _currentMinionThrowTime = 0;
-        // }
-
+     
         _currentStoicTime += Time.deltaTime;
 
         if (_currentStoicTime >= _stoicDelay)
