@@ -14,7 +14,7 @@ public class StickyMinionPool : ObjectPool
         StickyMinion stickyMinion = minion.GetComponent<StickyMinion>();
         stickyMinion.Stats = stats;
         minion.GetComponent<EnemyHealth>().SetNewMaxHealth(maxHealth);
-        float size = stats._size;
+        float size = stats.Size;
         minion.transform.localScale = new Vector3(size, size, size);
         return minion;
     }
