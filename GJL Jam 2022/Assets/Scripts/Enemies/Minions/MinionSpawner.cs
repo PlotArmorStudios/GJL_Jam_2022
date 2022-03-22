@@ -13,7 +13,7 @@ public enum SpawnerState { Spawning, Waiting }
 public class MinionSpawner : MonoBehaviour
 {
     [Header("Spawner Attributes")]
-    [SerializeField, Tooltip("How much lower than current max level enemies can be")] private int _randomLevelVariation = 5; 
+    [SerializeField, Tooltip("How much lower than current max level enemies can be")] private int _randomLevelVariation = 2; 
 
     [Header("Minion attribute bounds")]
     [SerializeField] private int _maxLevel = 10;
@@ -31,21 +31,46 @@ public class MinionSpawner : MonoBehaviour
     private void Awake() 
     {
         _stickyMinionPool =  GetComponent<StickyMinionPool>();
+        PlayerHealth.OnPlayerDeath += ResetMinions;
     }
 
     private void OnEnable() 
     {
-        _currMaxLevel = 4;
+        _currMaxLevel = 2;
         _currMinLevel = 0;
     }
 
     public void IncreaseMaxLevel()
     {
-        _currMaxLevel++;
-        if (_currMaxLevel >= _randomLevelVariation)
+        if (_currMaxLevel < _maxLevel)
+        {
+            _currMaxLevel++;
+            Debug.Log("New max level: " + _currMaxLevel);
+        }
+        if (_currMaxLevel > _randomLevelVariation && _currMinLevel < _currMaxLevel)
         {
             _currMinLevel++;
+            Debug.Log("New min level: " + _currMinLevel);
         }
+    }
+
+    public float GetLevelProgress()
+    {
+        return (float)_currMaxLevel / _maxLevel;
+    }
+
+
+    public void ResetMinions(float unused)
+    {
+        List<GameObject> activeMinions = _stickyMinionPool.ResetActiveObjects();
+        int i = 0;
+        foreach (GameObject minionObject in activeMinions)
+        {
+            StickyMinion minion = minionObject.GetComponent<StickyMinion>();
+            minion.Kill();
+            i++;
+        }
+        Debug.Log("Reset " + i + " minions");
     }
 
     public GameObject SpawnStickyMinion(Transform spawnPoint)
