@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 7046837343642315847}
   - component: {fileID: 193731471298223446}
   - component: {fileID: 1763272667}
+  - component: {fileID: 1763272652}
   m_Layer: 6
   m_Name: New Model Import Base
   m_TagString: Player
@@ -220,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4221972627865243a1c0d812ad1fcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 6.5
   turnSmoothTime: 0.1
   _jumpForce: 10
   _gravity: 10
@@ -322,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jellyShotToggler: {fileID: 193731471795580345}
-  _force: 500
+  _force: 30
   _defaultRayRange: 1000
 --- !u!114 &1549198091217206474
 MonoBehaviour:
@@ -412,6 +413,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6423adccef1b4c40ae30ffc0ef02727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1763272652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193731471298223435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261861daaa5241009096a75264b72923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _freezingJellyUI: {fileID: 0}
+  _damageJellyUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &193731472606061021
 GameObject:
   m_ObjectHideFlags: 0
