@@ -20,8 +20,7 @@ public class PlayerHealth : Health
             _secondHPBar.fillAmount = _healthBar.fillAmount;
 
             _changingHealth = _healthBar.fillAmount * _maxHealth;
-
-            _healthText.text = _changingHealth.ToString("0") + " / " + _maxHealth.ToString();
+            _healthText.text = CurrentHealth.ToString("0") + " / " + _maxHealth.ToString();
             
             yield return null;
         }
