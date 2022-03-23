@@ -22,7 +22,7 @@ public class WhiteBloodCellProjectile : Projectile
         return targetTransform;
     }
 
-    protected override void OnCollisionEnter(Collision other)
+    protected override void OnTriggerEnter(Collider other)
     {
         var boss = other.gameObject.GetComponent<Boss>();
         var tower = other.gameObject.GetComponent<WhiteCellTower>();
@@ -37,6 +37,6 @@ public class WhiteBloodCellProjectile : Projectile
 
         if (tower) return;
 
-        base.OnCollisionEnter(other);
+        base.OnTriggerEnter(other);
     }
 }
