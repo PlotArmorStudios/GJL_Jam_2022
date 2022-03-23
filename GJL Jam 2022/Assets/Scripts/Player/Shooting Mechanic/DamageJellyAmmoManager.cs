@@ -35,7 +35,7 @@ public class DamageJellyAmmoManager : AmmoManager
         image.color = new Color(1, 1, 1, 1f);
         yield break;
     }
-    
+
     protected override void RefreshUI()
     {
         foreach (var ammoUI in _ammoUI)
@@ -50,7 +50,7 @@ public class DamageJellyAmmoManager : AmmoManager
             StartCoroutine(BrightenAmmoUI(ammoImage));
         }
     }
-    
+
     public override void AddAmmo()
     {
         if (CurrentAmmo < _maxAmmo)
@@ -58,7 +58,8 @@ public class DamageJellyAmmoManager : AmmoManager
 
         if (_ammoStep >= _requiredAmmoStep)
         {
-            base.AddAmmo();
+            if (CurrentAmmo < _maxAmmo) CurrentAmmo++;
+            if (_jellyShotToggler.JellyToShoot == JellyToShoot.DamageJelly) RefreshUI();
             _ammoStep = 0;
         }
     }
