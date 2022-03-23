@@ -43,6 +43,8 @@ public abstract class Projectile : MonoBehaviour
         if (_closestEnemy)
             transform.position =
                 Vector3.MoveTowards(transform.position, _closestEnemy.position, _speed * Time.deltaTime);
+        if (_closestEnemy && _closestEnemy.GetComponent<Collider>().enabled == false)
+            _closestEnemy = GetClosestEnemy();
     }
 
     public void Shoot(Vector3 direction, float force)
@@ -73,8 +75,8 @@ public abstract class Projectile : MonoBehaviour
         return targetTransform;
     }
 
-    protected virtual void OnCollisionEnter(Collision other)
+    protected virtual void OnTriggerEnter(Collider other) 
     {
-        //Destroy(gameObject);
+        //Destroy(gameObject);    
     }
 }

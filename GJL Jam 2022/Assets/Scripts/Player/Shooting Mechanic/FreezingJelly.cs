@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FreezingJelly : Projectile
 {
-    protected override void OnCollisionEnter(Collision other)
+    protected override void OnTriggerEnter(Collider other) 
     {
         if (other.gameObject.CompareTag("BodyPart")) return;
         if (other.gameObject.CompareTag("Player")) return;
