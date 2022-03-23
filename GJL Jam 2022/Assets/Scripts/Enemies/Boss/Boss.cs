@@ -214,4 +214,9 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(_stoicDuration);
         IsInStoicState = false;
     }
+
+    private IEnumerator ToggleStoicColorTransition()
+    {
+        yield break;
+    }
 }

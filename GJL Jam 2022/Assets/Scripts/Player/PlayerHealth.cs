@@ -12,6 +12,12 @@ public class PlayerHealth : Health
     [SerializeField] private float _kidneyDamage = 30f;
     [SerializeField] private Image _secondHPBar;
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        _secondHPBar.fillAmount = _healthBar.fillAmount;
+    }
+    
     protected override IEnumerator DepleteHPBar()
     {
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)

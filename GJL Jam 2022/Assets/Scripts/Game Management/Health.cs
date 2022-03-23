@@ -60,7 +60,9 @@ public abstract class Health : MonoBehaviour
     {
         _changingHealth = CurrentHealth;
         CurrentHealth -= damage;
-        
+
+        if (CurrentHealth < 0) CurrentHealth = 0;
+
         StopCoroutine(DepleteHPBar());
         StartCoroutine(DepleteHPBar());
 
