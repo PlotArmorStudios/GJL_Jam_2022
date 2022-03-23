@@ -57,12 +57,17 @@ public class WhiteCellTower : MonoBehaviour
     //Public for now. Need to grab/serialize as an easy reference later, GameObject projectile wise. Until then, it's public
     public GameObject Bullet; //equals a "tiny sphere", to fire/fling at enemy. "Cell" wise...
     private Animator _animator;
+    private Transform _boss;
 
     // Start is called before the first frame update
     void Start()
     {
         //first, initiate/setup timers
 
+        _boss = FindObjectOfType<Boss>().transform;
+        Vector3 lookDirection = _boss.position - transform.position;
+        lookDirection.y = transform.position.y;
+        transform.rotation = Quaternion.LookRotation(lookDirection);
         _animator = GetComponent<Animator>();
         _bps_timer = 1.0f; //to represent 'a' second
         _timer = LifespanTimer;
