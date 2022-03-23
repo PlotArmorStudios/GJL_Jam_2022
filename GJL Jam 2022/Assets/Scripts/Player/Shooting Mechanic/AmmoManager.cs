@@ -26,15 +26,13 @@ public class AmmoManager : MonoBehaviour
 
     public virtual void SubtractAmmo()
     {
-        CurrentAmmo--;
+        if (CurrentAmmo > 0) CurrentAmmo--;
         RefreshUI();
     }
 
-
     public virtual void AddAmmo()
     {
-        if (CurrentAmmo < _maxAmmo)
-            CurrentAmmo++;
+        if (CurrentAmmo < _maxAmmo) CurrentAmmo++;
         RefreshUI();
     }
 
