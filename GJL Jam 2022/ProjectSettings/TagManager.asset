@@ -18,8 +18,8 @@ TagManager:
   - IgnorePlayer
   - BodyParts
   - Tower
-  - 
-  - 
+  - Projectiles
+  - NoPhysics
   - 
   - 
   - 
