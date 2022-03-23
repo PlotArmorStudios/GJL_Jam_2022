@@ -92,6 +92,7 @@ public class Boss : MonoBehaviour
         GameObject minion = _minionSpawner.SpawnStickyMinion(_minionSpawnPoint);
         minion.GetComponent<StickyMinion>().JumpAtPlayer(_throwHeight);
         OnMinionThrown.Invoke();
+        AkSoundEngine.PostEvent("Play_Boss_Minion_Throw", gameObject);
 
         //This works fine
         FinishThrow();

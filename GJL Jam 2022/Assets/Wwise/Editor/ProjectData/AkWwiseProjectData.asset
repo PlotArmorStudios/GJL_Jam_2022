@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 1bbfe230631f7f4ba7365c17759d47dd
     GuidInternal: 
-    m_lastTime: -8585539491459467283
+    m_lastTime: -8585538973423750887
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a4bfc51f3264a84aa8233654a5a8be71
     GuidInternal: 
-    m_lastTime: -8585539491461299537
+    m_lastTime: -8585538973430507079
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 1dac198034777646bf2fb55c08a2a7cb
     GuidInternal: 
-    m_lastTime: -8585536256636837711
+    m_lastTime: -8585536242469174884
     List:
     - name: Music
       guid: 3b56b2850188ad4fa1df1aa8839e31ef
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2b353f5dce79fc4cb019499282eb2182
     GuidInternal: 
-    m_lastTime: -8585536256638527372
+    m_lastTime: -8585535331687635825
     List:
     - name: Health_Decrease
       guid: be1e4e2d19e0314e9fb16d058cfe7aee
@@ -159,8 +159,8 @@ MonoBehaviour:
         guid: 5b875deca0a6c043b8c791e399982e4d
       Path: Events\Default Work Unit\Play_Boss_Minion_Throw
       maxAttenuation: 100
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.191896
+      minDuration: 0.707906
     - name: Play_Boss_Receive_Damage
       guid: f16834ea63571c43a85004e570e5bdf0
       id: 367978905
@@ -513,7 +513,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e429f1fb20556409b0ecbd50382da2e
     GuidInternal: 
-    m_lastTime: -8585536256638507379
+    m_lastTime: -8585536242480411163
     List:
     - name: Health
       guid: 9fddc2273e12df449aa40266301a9b03
@@ -541,7 +541,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7cc3790fcf0cc448a2a1fd8d48232267
     GuidInternal: 
-    m_lastTime: -8585539491459497268
+    m_lastTime: -8585538973423850918
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -555,7 +555,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9f70caac1a47444dad5fb47fa68d6a97
     GuidInternal: 
-    m_lastTime: -8585538085842411885
+    m_lastTime: -8585538851308802386
     List:
     - name: Music_Status
       guid: 6733a4e1636ae1489c986837218e1d41
@@ -635,7 +635,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 7c6519635a90b24397c482bc7a26d98b
     GuidInternal: 
-    m_lastTime: -8585539491459477273
+    m_lastTime: -8585538973423785900
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3792131380">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="197125588">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -32,7 +32,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="438343987" Name="Play_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Play_Boss_Minion_Throw" GUID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}" MaxAttenuation="100." DurationType="Infinite">
+				<Event Id="438343987" Name="Play_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Play_Boss_Minion_Throw" GUID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.707906" DurationMax="1.191896">
 					<IncludedMemoryFiles>
 						<File Id="176956802" Language="SFX">
 							<ShortName>Boss_Minion_Throw_03.wav</ShortName>
@@ -229,7 +229,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="4194470128">
+		<SoundBank Id="3991942870" GUID="{85B2563B-8801-4FAD-A1DF-1AA8839E31EF}" Language="SFX" Hash="1533432975">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
