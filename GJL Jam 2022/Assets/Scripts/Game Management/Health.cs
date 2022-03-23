@@ -28,9 +28,9 @@ public abstract class Health : MonoBehaviour
     [SerializeField] protected int _maxHealth = 100; //public reference, for easy User-Interface editing
     [SerializeField] protected Image _healthBar;
     [SerializeField] protected TMP_Text _healthText;
-    
+
     public bool IsAlive { get; set; }
-    
+
     protected float CurrentHealth { get; set; }
     protected float _changingHealth;
 
@@ -47,10 +47,10 @@ public abstract class Health : MonoBehaviour
     {
         //simple set health to max value on initiation/setup of attached game object.
         CurrentHealth = _maxHealth; //can assign an int value to a float value
-        
+
         Debug.Log(gameObject.name + "Max hp is: " + _maxHealth);
         Debug.Log(gameObject.name + "Current hp is: " + CurrentHealth);
- 
+
         _healthBar.fillAmount = CurrentHealth / _maxHealth;
         _healthText.text = CurrentHealth + " / " + _maxHealth.ToString();
         IsAlive = true;
@@ -60,7 +60,8 @@ public abstract class Health : MonoBehaviour
     {
         _changingHealth = CurrentHealth;
         CurrentHealth -= damage;
-
+        
+        StopCoroutine(DepleteHPBar());
         StartCoroutine(DepleteHPBar());
 
         if (CurrentHealth <= 0 && IsAlive)
@@ -80,15 +81,14 @@ public abstract class Health : MonoBehaviour
 
     protected virtual IEnumerator DepleteHPBar()
     {
-        //yield return _healthBar.fillAmount != CurrentHealth / _maxHealth;
         while (_healthBar.fillAmount > CurrentHealth / _maxHealth)
         {
             _healthBar.fillAmount -= .01f;
 
             _changingHealth = _healthBar.fillAmount * _maxHealth;
-            
-            _healthText.text = _changingHealth.ToString("0") + " / " + _maxHealth.ToString();
-            
+
+            _healthText.text = CurrentHealth.ToString("0") + " / " + _maxHealth.ToString();
+
             yield return null;
         }
     }
