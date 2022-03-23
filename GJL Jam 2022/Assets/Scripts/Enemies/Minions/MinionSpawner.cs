@@ -87,6 +87,7 @@ public class MinionSpawner : MonoBehaviour
         int maxHealth = (int)(_minStartingHealth + _maxStartingHealth * multiplier);
         GameObject minion = _stickyMinionPool.GetObject(stats, maxHealth);
         minion.transform.position = spawnPoint.position;
+        minion.GetComponent<StickyMinion>().RotateToFacePlayer();
         minion.SetActive(true);
         return minion;
     }
