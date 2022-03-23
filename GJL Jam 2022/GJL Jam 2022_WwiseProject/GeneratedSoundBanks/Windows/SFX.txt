@@ -23,6 +23,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	299692516	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
 	636636192	New_Wwise_RoomVerb (Custom)	Wwise RoomVerb			
 	648303106	Chipmunk (Custom)	Wwise Pitch Shifter			
+	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	79968391	Ambience 2	C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\.cache\Windows\SFX\Ambience 2_BBB18E0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Environment\Ambience\Ambience 2		960064
