@@ -17,7 +17,6 @@ public class PlaceTurrets : MonoBehaviour
         var towerRotation = gameObject.transform.parent.transform.rotation;
         // * Quaternion.Euler(0, 180, 0)
         Instantiate(_whiteCellTower, towerPlacementVector, towerRotation);
-        _turretAmmoManager.SubtractAmmo();
     }
 
     private void OnDrawGizmos()

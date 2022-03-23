@@ -10,8 +10,7 @@ public class AmmoManager : MonoBehaviour
     [SerializeField] protected List<RectTransform> _ammoUI;
     [SerializeField] protected int _maxAmmo = 4;
 
-    public int CurrentAmmo { get; private set; }
-
+    public int CurrentAmmo { get; protected set; }
 
     protected virtual void OnEnable()
     {
@@ -26,15 +25,13 @@ public class AmmoManager : MonoBehaviour
 
     public virtual void SubtractAmmo()
     {
-        CurrentAmmo--;
+        if (CurrentAmmo > 0) CurrentAmmo--;
         RefreshUI();
     }
 
-
     public virtual void AddAmmo()
     {
-        if (CurrentAmmo < _maxAmmo)
-            CurrentAmmo++;
+        if (CurrentAmmo < _maxAmmo) CurrentAmmo++;
         RefreshUI();
     }
 
