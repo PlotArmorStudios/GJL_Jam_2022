@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class GameObjectDisabler : MonoBehaviour
 {
+    [SerializeField] private GameObject[] _toEnable;
+    [SerializeField] private GameObject[] _toDisable;
     public void DisableGameObject()
     {
-        gameObject.SetActive(false);
+        foreach (GameObject g in _toEnable)
+        {
+            g.SetActive(true);
+        }
+
+        foreach (GameObject g in _toDisable)
+        {
+            g.SetActive(false);
+        }
     }
 }
