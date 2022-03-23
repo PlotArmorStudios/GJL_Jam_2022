@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5010568106794955573}
   - component: {fileID: 5884299781841305650}
   - component: {fileID: 2693715746510367793}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile_trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: -7922259371732586688}
   - component: {fileID: -5836985950768292015}
   - component: {fileID: 478823361331021094}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Freezing Jelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}

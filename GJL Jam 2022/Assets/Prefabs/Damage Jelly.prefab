@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4609783628464372960}
   - component: {fileID: 7056029853080296438}
   - component: {fileID: 2559860873309535178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile_trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   - component: {fileID: 7970010890564946536}
   - component: {fileID: -709727651076982116}
   - component: {fileID: -760720708883222065}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Damage Jelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
