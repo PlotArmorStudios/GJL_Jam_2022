@@ -551,6 +551,7 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Boss_Receive_Damage" ID="{E435B2E5-86B1-43D5-818E-87AF923D83E4}" ShortID="330603272">
 									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
