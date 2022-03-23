@@ -111,11 +111,12 @@ public class StickyMinion : MonoBehaviour
         return _state;
     }
 
-    private void RotateToFacePlayer()
+    public void RotateToFacePlayer()
     {
         Vector3 lookDirection = _player.position - transform.position;
         lookDirection.y = 0;
         transform.rotation = Quaternion.LookRotation(lookDirection);
+        Debug.Log("facing player");
     }
 
     private void OnTriggerEnter(Collider other)
