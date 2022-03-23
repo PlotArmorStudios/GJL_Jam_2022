@@ -22288,6 +22288,26 @@ PrefabInstance:
       propertyPath: m_BlendShapeWeights.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3361645088836197389, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+      propertyPath: _toEnable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361645088836197389, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+      propertyPath: _toDisable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361645088836197389, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+      propertyPath: _toEnable.Array.data[0]
+      value: 
+      objectReference: {fileID: 849985869619471127}
+    - target: {fileID: 3361645088836197389, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+      propertyPath: _toDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 5340100944606180460}
+    - target: {fileID: 3361645088836197389, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+      propertyPath: _toDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 6256990620965525618}
     - target: {fileID: 6256990622284229602, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
       propertyPath: m_Name
       value: Ice crystal
@@ -22362,5 +22382,15 @@ GameObject:
 --- !u!4 &6746000253140959944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6746000255009157464, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+  m_PrefabInstance: {fileID: 1906996112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &849985869619471127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 849985870972801159, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
+  m_PrefabInstance: {fileID: 1906996112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5340100944606180460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5340100945920444412, guid: 86c8363b5d4bef9478e12a68b85c1bce, type: 3}
   m_PrefabInstance: {fileID: 1906996112}
   m_PrefabAsset: {fileID: 0}
