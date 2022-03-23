@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2592562593874282996}
   - component: {fileID: 3860956474080807484}
   - component: {fileID: 761661983102900458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WhiteCell Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
