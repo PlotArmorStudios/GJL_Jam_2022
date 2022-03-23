@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     [SerializeField] private float _dialogueTypeTime = .2f;
+    [SerializeField] private float _delayDialogueAmount = 1.5f;
 
     private Queue<string> _sentences;
     private Queue<string> _names;
@@ -31,6 +32,12 @@ public class DialogueManager : MonoBehaviour
         _transitionNumbers = new Queue<int>();
         _sceneLoader = GetComponent<SceneLoader>();
         _dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+        StartCoroutine(DelayTriggerDialogue());
+    }
+
+    private IEnumerator DelayTriggerDialogue()
+    {
+        yield return new WaitForSeconds(_delayDialogueAmount);
         _dialogueTrigger.TriggerDialogue();
     }
 

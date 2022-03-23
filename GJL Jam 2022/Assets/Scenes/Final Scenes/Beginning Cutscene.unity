@@ -333,6 +333,7 @@ MonoBehaviour:
   _dialogueText: {fileID: 2119240757}
   _animator: {fileID: 111252177}
   _dialogueTypeTime: 0.015
+  _delayDialogueAmount: 1.2
 --- !u!1 &445958165
 GameObject:
   m_ObjectHideFlags: 0
