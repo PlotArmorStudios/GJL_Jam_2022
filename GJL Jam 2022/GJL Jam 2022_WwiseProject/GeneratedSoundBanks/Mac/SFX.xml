@@ -8,7 +8,7 @@
 		<ExternalSourcesOutputRoot>C:\Users\Harleen\Documents\GitHub\GJL_Jam_2022\GJL Jam 2022\GJL Jam 2022_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<SoundBanks>
-		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="3792131380">
+		<SoundBank Id="393239870" GUID="{37162748-BEFA-4D36-9488-69C1BEED08DE}" Language="SFX" Hash="420162023">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -29,7 +29,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="438343987" Name="Play_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Play_Boss_Minion_Throw" GUID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}" MaxAttenuation="100." DurationType="Infinite">
+				<Event Id="438343987" Name="Play_Boss_Minion_Throw" ObjectPath="\Events\Default Work Unit\Play_Boss_Minion_Throw" GUID="{EC5D875B-A6A0-43C0-B8C7-91E399982E4D}" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.707906" DurationMax="1.191896">
 					<IncludedMemoryFiles>
 						<File Id="176956802" Language="SFX">
 							<ShortName>Boss_Minion_Throw_03.wav</ShortName>
